@@ -1,0 +1,114 @@
+<!-- ALLOWOVERWRITE-F1900BC811E5E70C3D77F93287FFCD8C -->
+
+
+ <form [formGroup]="invoiceLineForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
+        <mat-tab-group >        	
+        	 <mat-tab label="Main">        	 
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="lineTotal" id="invoiceLineLineTotal" type="number" placeholder="LineTotal"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="notes" id="invoiceLineNotes" type="text" placeholder="Notes"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="product" id="invoiceLineProduct" type="text" placeholder="Product"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="productCode" id="invoiceLineProductCode" type="text" placeholder="ProductCode"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="quantity" id="invoiceLineQuantity" type="number" placeholder="Quantity"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="subTotal" id="invoiceLineSubTotal" type="number" placeholder="SubTotal"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="taxExempt" id="invoiceLineTaxExempt" type="checkbox" placeholder="TaxExempt"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="taxTotal" id="invoiceLineTaxTotal" type="number" placeholder="TaxTotal"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="unitCost" id="invoiceLineUnitCost" type="number" placeholder="UnitCost"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 
+			 </mat-tab>
+
+        	 
+    	
+        	 
+        	 
+        	 </mat-tab-group>
+   <div style="padding-top: 10px;">
+	    <button mat-raised-button color="primary" ng-click="save()">Save</button>
+   </div>
+        	 
+   </form>

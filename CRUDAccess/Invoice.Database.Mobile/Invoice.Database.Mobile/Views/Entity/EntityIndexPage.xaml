@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Database.Mobile.ViewModels"
+             x:Class="Database.Mobile.Views.Entity.EntityIndexPage" Title="Entity">
+             
+   <ContentPage.BindingContext>
+    <viewModels:EntityIndexViewModel/>
+	</ContentPage.BindingContext>
+  <StackLayout Orientation="Vertical" Margin="10">      
+	  <ListView ItemsSource="{Binding EntityViews}"
+	            ItemTapped="Handle_ItemTapped"
+	            CachingStrategy="RecycleElement"
+	            RowHeight="60">
+	            
+	    <!--Built in Cells-->
+	    <!--<ListView.ItemTemplate>
+	      <DataTemplate>
+	        <TextCell />
+	      </DataTemplate>
+	    </ListView.ItemTemplate>-->
+	    
+	    <!--Custom View Cells-->
+	    
+	    <ListView.ItemTemplate>
+	      <DataTemplate>
+	        <ViewCell>
+	          <StackLayout Orientation="Vertical">
+	          	<Label Text="{Binding Address}" FontSize="Medium" />
+	          	<StackLayout Orientation="Horizontal">
+	                    <Label Text="{Binding EntityExternalRef}" FontSize="Small" />      
+	                    <Label Text="{Binding EntityId}" FontSize="Small" />      
+	                    <Label Text="{Binding LogoURL}" FontSize="Small" />      
+	                    <Label Text="{Binding Name}" FontSize="Small" />      
+
+	          	</StackLayout>
+			  </StackLayout>
+			</ViewCell>
+	      </DataTemplate>
+	    </ListView.ItemTemplate>    
+	  </ListView>
+     <Button Margin="10" WidthRequest="100"  Text="Add Entity"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddEntityCommand}"></Button>
+  </StackLayout>
+</ContentPage>
+<!-- ALLOWOVERWRITE-0F7DBC6E34D9B9C8ED75D58655580912 -->

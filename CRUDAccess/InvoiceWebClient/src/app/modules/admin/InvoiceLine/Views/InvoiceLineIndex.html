@@ -1,0 +1,48 @@
+<!-- ALLOWOVERWRITE-766428F1BF95112EB9C144A0C211B732 -->
+
+<div class="app-datatable">
+<ngx-datatable
+  class='material'
+  [rows]='rows'
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="45"
+  [scrollbarV]="true"
+  [limit]="10"
+  (page)="onPage($event)" style="width: 100%; height: 100%; position: relative" >
+  <ngx-datatable-column name="InvoiceLineId" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="LineTotal" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="Notes" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="Product" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="ProductCode" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="Quantity" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="SubTotal" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="TaxExempt" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="TaxTotal" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="UnitCost" width="300"></ngx-datatable-column> 
+  
+  <ngx-datatable-column name="Edit" width="300" prop="invoiceLineId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+      <button mat-icon-button	routerLink="/admin/invoiceLine/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
+
+    </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Delete" width="300" prop="invoiceLineId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button mat-icon-button	(click)="delete(value)" color="warn"><mat-icon>delete</mat-icon></button>
+
+      </ng-template>
+    </ngx-datatable-column>
+  
+  
+</ngx-datatable>
+
+<a mat-raised-button color="primary" href="/admin/invoiceLine/add">Add InvoiceLine</a>
+
+</div>
+
+
+
+
+

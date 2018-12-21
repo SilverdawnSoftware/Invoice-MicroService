@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Invoice</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Silverdawn.Exceptions\Silverdawn.Exceptions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Transactions\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+</Project>

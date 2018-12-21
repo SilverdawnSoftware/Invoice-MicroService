@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Database.Mobile.ViewModels"
+             x:Class="Database.Mobile.Views.Customer.CustomerIndexPage" Title="Customer">
+             
+   <ContentPage.BindingContext>
+    <viewModels:CustomerIndexViewModel/>
+	</ContentPage.BindingContext>
+  <StackLayout Orientation="Vertical" Margin="10">      
+	  <ListView ItemsSource="{Binding CustomerViews}"
+	            ItemTapped="Handle_ItemTapped"
+	            CachingStrategy="RecycleElement"
+	            RowHeight="60">
+	            
+	    <!--Built in Cells-->
+	    <!--<ListView.ItemTemplate>
+	      <DataTemplate>
+	        <TextCell />
+	      </DataTemplate>
+	    </ListView.ItemTemplate>-->
+	    
+	    <!--Custom View Cells-->
+	    
+	    <ListView.ItemTemplate>
+	      <DataTemplate>
+	        <ViewCell>
+	          <StackLayout Orientation="Vertical">
+	          	<Label Text="{Binding Active}" FontSize="Medium" />
+	          	<StackLayout Orientation="Horizontal">
+	                    <Label Text="{Binding CustomerExteranlRef}" FontSize="Small" />      
+	                    <Label Text="{Binding CustomerId}" FontSize="Small" />      
+	                    <Label Text="{Binding EmalAddress}" FontSize="Small" />      
+	                    <Label Text="{Binding IsCompany}" FontSize="Small" />      
+	                    <Label Text="{Binding Name}" FontSize="Small" />      
+	                    <Label Text="{Binding PhoneNumber}" FontSize="Small" />      
+	                    <Label Text="{Binding TaxNo}" FontSize="Small" />      
+
+	          	</StackLayout>
+			  </StackLayout>
+			</ViewCell>
+	      </DataTemplate>
+	    </ListView.ItemTemplate>    
+	  </ListView>
+     <Button Margin="10" WidthRequest="100"  Text="Add Customer"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddCustomerCommand}"></Button>
+  </StackLayout>
+</ContentPage>
+<!-- ALLOWOVERWRITE-A16F6A40C8ADBD6C1D5EA4F27609D8FE -->

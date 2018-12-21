@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Database.Mobile.ViewModels"
+             x:Class="Database.Mobile.Views.InvoiceLine.InvoiceLineEditPage" Title="InvoiceLine List">
+    <ContentPage.BindingContext>
+        <viewModels:InvoiceLineEditViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Margin="10">
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="InvoiceLineId: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="invoiceLineId" Text="{Binding InvoiceLineId}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="LineTotal: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="lineTotal" Text="{Binding LineTotal}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Notes: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="notes" Text="{Binding Notes}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Product: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="product" Text="{Binding Product}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="ProductCode: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="productCode" Text="{Binding ProductCode}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Quantity: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="quantity" Text="{Binding Quantity}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="SubTotal: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="subTotal" Text="{Binding SubTotal}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="TaxExempt: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="taxExempt" Text="{Binding TaxExempt}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="TaxTotal: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="taxTotal" Text="{Binding TaxTotal}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="UnitCost: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="unitCost" Text="{Binding UnitCost}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+             
+
+             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Cancel" WidthRequest="120" Margin="10" Command="{Binding CancelCommand}" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White"></Button>
+                    <Button Text="Save"  WidthRequest="120"  Margin="10" BackgroundColor="CornflowerBlue" TextColor="White" Command="{Binding SaveCommand}" HorizontalOptions="EndAndExpand" ></Button>
+              </StackLayout>           
+         </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>
+<!-- ALLOWOVERWRITE-AECF329F170A42A2D46CBF3686DFDF20 -->

@@ -1,0 +1,56 @@
+<!-- ALLOWOVERWRITE-934F17E40A5A448B4ED35744F14DB4E6 -->
+
+<div class="app-datatable">
+<ngx-datatable
+  class='material'
+  [rows]='rows'
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="45"
+  [scrollbarV]="true"
+  [limit]="10"
+  (page)="onPage($event)" style="width: 100%; height: 100%; position: relative" >
+  <ngx-datatable-column name="BillngAddress" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="CreatedDate" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="DueDate" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="EmailTo" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="GrandTotal" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="InvoiceEmailed" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="InvoiceId" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="InvoiceNo" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="OrderedBy" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="PaidAmount" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="PaidDate" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="PaidTax" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="PaymentDetails" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="PurchaseOrderRef" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="ShippingAddress" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="SubTotal" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="Tax" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="TermsAndConditions " width="300"></ngx-datatable-column> 
+  
+  <ngx-datatable-column name="Edit" width="300" prop="invoiceId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+      <button mat-icon-button	routerLink="/admin/invoice/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
+
+    </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Delete" width="300" prop="invoiceId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button mat-icon-button	(click)="delete(value)" color="warn"><mat-icon>delete</mat-icon></button>
+
+      </ng-template>
+    </ngx-datatable-column>
+  
+  
+</ngx-datatable>
+
+<a mat-raised-button color="primary" href="/admin/invoice/add">Add Invoice</a>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,46 @@
+<!-- ALLOWOVERWRITE-5BDA0623FD01C52F587BB732505BABD9 -->
+
+<div class="app-datatable">
+<ngx-datatable
+  class='material'
+  [rows]='rows'
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="45"
+  [scrollbarV]="true"
+  [limit]="10"
+  (page)="onPage($event)" style="width: 100%; height: 100%; position: relative" >
+  <ngx-datatable-column name="Active" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="CustomerExteranlRef" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="CustomerId" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="EmalAddress" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="IsCompany" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="Name" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="PhoneNumber" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="TaxNo" width="300"></ngx-datatable-column> 
+  
+  <ngx-datatable-column name="Edit" width="300" prop="customerId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+      <button mat-icon-button	routerLink="/admin/customer/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
+
+    </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Delete" width="300" prop="customerId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button mat-icon-button	(click)="delete(value)" color="warn"><mat-icon>delete</mat-icon></button>
+
+      </ng-template>
+    </ngx-datatable-column>
+  
+  
+</ngx-datatable>
+
+<a mat-raised-button color="primary" href="/admin/customer/add">Add Customer</a>
+
+</div>
+
+
+
+
+

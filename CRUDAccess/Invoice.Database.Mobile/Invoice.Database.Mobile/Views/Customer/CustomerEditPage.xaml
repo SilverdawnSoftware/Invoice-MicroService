@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Database.Mobile.ViewModels"
+             x:Class="Database.Mobile.Views.Customer.CustomerEditPage" Title="Customer List">
+    <ContentPage.BindingContext>
+        <viewModels:CustomerEditViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Margin="10">
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Active: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="active" Text="{Binding Active}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="CustomerExteranlRef: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="customerExteranlRef" Text="{Binding CustomerExteranlRef}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="CustomerId: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="customerId" Text="{Binding CustomerId}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="EmalAddress: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="emalAddress" Text="{Binding EmalAddress}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="IsCompany: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="isCompany" Text="{Binding IsCompany}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Name: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="name" Text="{Binding Name}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="PhoneNumber: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="phoneNumber" Text="{Binding PhoneNumber}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="TaxNo: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="taxNo" Text="{Binding TaxNo}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+             
+		
+			 <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                    <Button Text="View Tasks" Margin="0,10,0,0"  WidthRequest="120"  Command="{Binding ViewAddresssCommand}" BackgroundColor="White" TextColor="CornflowerBlue" ></Button>
+                    <Label HorizontalOptions="EndAndExpand" Text=">" Margin="10,20,0,0"></Label>
+                </StackLayout>
+
+		
+			 <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                    <Button Text="View Tasks" Margin="0,10,0,0"  WidthRequest="120"  Command="{Binding ViewInvoicesCommand}" BackgroundColor="White" TextColor="CornflowerBlue" ></Button>
+                    <Label HorizontalOptions="EndAndExpand" Text=">" Margin="10,20,0,0"></Label>
+                </StackLayout>
+
+
+             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Cancel" WidthRequest="120" Margin="10" Command="{Binding CancelCommand}" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White"></Button>
+                    <Button Text="Save"  WidthRequest="120"  Margin="10" BackgroundColor="CornflowerBlue" TextColor="White" Command="{Binding SaveCommand}" HorizontalOptions="EndAndExpand" ></Button>
+              </StackLayout>           
+         </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>
+<!-- ALLOWOVERWRITE-756B8BD6B736BC2B09E0A06238D34AA7 -->

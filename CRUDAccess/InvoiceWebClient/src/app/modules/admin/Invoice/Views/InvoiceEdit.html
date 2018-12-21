@@ -1,0 +1,237 @@
+<!-- ALLOWOVERWRITE-5999753420BACBE26D84EF27A58FCEFF -->
+
+
+ <form [formGroup]="invoiceForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
+        <mat-tab-group >        	
+        	 <mat-tab label="Main">        	 
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+					
+					 <div class="form-group">
+					 		
+                            <label for="invoiceBillngAddress" class="col-sm-2 control-label">BillngAddress</label>
+                            <div class="col-sm-10">
+
+                                <select id="invoiceBillngAddress" class="form-control" ng-model="invoiceView.billngAddressAddressId" ng-options="address.addressId as address.postZipCode for address in addresss" required>
+                                    <option value="">-- Choose Address --</option>
+                                </select>
+                            </div>
+                       	</div>
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="createdDate" id="invoiceCreatedDate" type="date" placeholder="CreatedDate"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="dueDate" id="invoiceDueDate" type="date" placeholder="DueDate"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="emailTo" id="invoiceEmailTo" type="text" placeholder="EmailTo"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="grandTotal" id="invoiceGrandTotal" type="number" placeholder="GrandTotal"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="invoiceEmailed" id="invoiceInvoiceEmailed" type="checkbox" placeholder="InvoiceEmailed"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="invoiceNo" id="invoiceInvoiceNo" type="number" placeholder="InvoiceNo"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="orderedBy" id="invoiceOrderedBy" type="text" placeholder="OrderedBy"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="paidAmount" id="invoicePaidAmount" type="number" placeholder="PaidAmount"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="paidDate" id="invoicePaidDate" type="date" placeholder="PaidDate"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="paidTax" id="invoicePaidTax" type="number" placeholder="PaidTax"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="paymentDetails" id="invoicePaymentDetails" type="text" placeholder="PaymentDetails"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="purchaseOrderRef" id="invoicePurchaseOrderRef" type="text" placeholder="PurchaseOrderRef"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="shippingAddress" id="invoiceShippingAddress" type="text" placeholder="ShippingAddress"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="subTotal" id="invoiceSubTotal" type="number" placeholder="SubTotal"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="tax" id="invoiceTax" type="number" placeholder="Tax"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
+                                <input matInput formControlName="termsAndConditions " id="invoiceTermsAndConditions " type="text" placeholder="TermsAndConditions "  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 
+			 </mat-tab>
+
+        	 
+    		
+    	<mat-tab label="InvoiceLine"> 
+    				 <ngx-datatable
+            class='material'
+            [rows]='invoiceLinerows'
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="40"
+            [scrollbarV]="true"
+            (page)="onPage($event)">
+   						<ngx-datatable-column name="InvoiceLineId" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Quantity" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="UnitCost" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="SubTotal" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="TaxTotal" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="LineTotal" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Product" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="TaxExempt" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="ProductCode" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Notes" width="300"></ngx-datatable-column> 
+   			<ngx-datatable-column name="Edit" width="300" prop="invoiceLineId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+      <button mat-icon-button	routerLink="/admin/invoiceLine/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
+
+    </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Delete" width="300" prop="invoiceLineId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button mat-icon-button	(click)="deleteInvoiceLine(value)" color="warn"><mat-icon>delete</mat-icon></button>
+
+      </ng-template>
+    </ngx-datatable-column>			
+   			</ngx-datatable>
+    				 <a mat-raised-button color="primary" href="/admin/invoiceLine/add?invoiceInvoiceId={{invoiceView.invoiceId}}">Add</a>
+    		</mat-tab>	
+    	
+        	 
+        	 
+        	 </mat-tab-group>
+   <div style="padding-top: 10px;">
+	    <button mat-raised-button color="primary" ng-click="save()">Save</button>
+   </div>
+        	 
+   </form>

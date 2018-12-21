@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Database.Mobile.ViewModels"
+             x:Class="Database.Mobile.Views.Entity.EntityEditPage" Title="Entity List">
+    <ContentPage.BindingContext>
+        <viewModels:EntityEditViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Margin="10">
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Address: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="address" Text="{Binding Address}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="EntityExternalRef: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="entityExternalRef" Text="{Binding EntityExternalRef}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="EntityId: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="entityId" Text="{Binding EntityId}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="LogoURL: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="logoURL" Text="{Binding LogoURL}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Name: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="name" Text="{Binding Name}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+             
+		
+			 <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                    <Button Text="View Tasks" Margin="0,10,0,0"  WidthRequest="120"  Command="{Binding ViewCustomersCommand}" BackgroundColor="White" TextColor="CornflowerBlue" ></Button>
+                    <Label HorizontalOptions="EndAndExpand" Text=">" Margin="10,20,0,0"></Label>
+                </StackLayout>
+
+
+             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Cancel" WidthRequest="120" Margin="10" Command="{Binding CancelCommand}" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White"></Button>
+                    <Button Text="Save"  WidthRequest="120"  Margin="10" BackgroundColor="CornflowerBlue" TextColor="White" Command="{Binding SaveCommand}" HorizontalOptions="EndAndExpand" ></Button>
+              </StackLayout>           
+         </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>
+<!-- ALLOWOVERWRITE-16167C3D36F389200C4C2C36755B9EAC -->

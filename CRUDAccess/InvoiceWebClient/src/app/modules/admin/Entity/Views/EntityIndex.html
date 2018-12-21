@@ -1,0 +1,43 @@
+<!-- ALLOWOVERWRITE-FD72270B95773F2F48DC5BBDE2AAA246 -->
+
+<div class="app-datatable">
+<ngx-datatable
+  class='material'
+  [rows]='rows'
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="45"
+  [scrollbarV]="true"
+  [limit]="10"
+  (page)="onPage($event)" style="width: 100%; height: 100%; position: relative" >
+  <ngx-datatable-column name="Address" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="EntityExternalRef" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="EntityId" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="LogoURL" width="300"></ngx-datatable-column> 
+  <ngx-datatable-column name="Name" width="300"></ngx-datatable-column> 
+  
+  <ngx-datatable-column name="Edit" width="300" prop="entityId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+      <button mat-icon-button	routerLink="/admin/entity/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
+
+    </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Delete" width="300" prop="entityId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button mat-icon-button	(click)="delete(value)" color="warn"><mat-icon>delete</mat-icon></button>
+
+      </ng-template>
+    </ngx-datatable-column>
+  
+  
+</ngx-datatable>
+
+<a mat-raised-button color="primary" href="/admin/entity/add">Add Entity</a>
+
+</div>
+
+
+
+
+
