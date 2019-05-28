@@ -1,5 +1,6 @@
-// ALLOWOVERWRITE-2C7E90461D36438B2A509DAC417D945B
+// ALLOWOVERWRITE-CF4111E2F0FE20ABAFAEDD953962C0A5
 
+					import {InvoiceStatus} from "../../Enums/InvoiceStatus"
 
     export interface IInvoiceView {
       billngAddressAddressId: number;
@@ -11,13 +12,16 @@
       invoiceEmailed: boolean;    	
       invoiceId: number;    	
       invoiceNo: number;    	
+      notes: string;    	
       orderedBy: string;    	
       paidAmount: number;    	
       paidDate: string;    	
       paidTax: number;    	
       paymentDetails: string;    	
       purchaseOrderRef: string;    	
-      shippingAddress: string;    	
+      shippingAddressAddressId: number;
+      shippingAddressPostZipCode: string;		    			
+      status: InvoiceStatus;    	
       subTotal: number;    	
       tax: number;    	
       termsAndConditions : string;    	
@@ -36,13 +40,16 @@
       invoiceEmailed: boolean;    	
       invoiceId: number;    	
       invoiceNo: number;    	
+      notes: string;    	
       orderedBy: string;    	
       paidAmount: number;    	
       paidDate: string;    	
       paidTax: number;    	
       paymentDetails: string;    	
       purchaseOrderRef: string;    	
-      shippingAddress: string;    	
+      shippingAddressAddressId: number;
+      shippingAddressPostZipCode: string;		    			
+      status: InvoiceStatus;    	
       subTotal: number;    	
       tax: number;    	
       termsAndConditions : string;    	
@@ -54,3 +61,4 @@
 	  constructor() {
 	  }
     }
+

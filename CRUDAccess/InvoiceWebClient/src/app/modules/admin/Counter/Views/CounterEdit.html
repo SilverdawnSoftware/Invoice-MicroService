@@ -1,0 +1,31 @@
+<!-- ALLOWOVERWRITE-393BA34B99437A93AB9E8E6D8A3BC13D -->
+
+
+ <form [formGroup]="counterForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
+        <mat-tab-group >        	
+        	 <mat-tab label="Main">        	 
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="value" id="counterValue" type="number" placeholder="Value"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+			 </mat-tab>
+
+        	 
+    	
+        	 
+        	 
+        	 </mat-tab-group>
+   <div style="padding-top: 10px;">
+	    <button mat-raised-button color="primary" ng-click="save()">Save</button>
+   </div>
+        	 
+   </form>

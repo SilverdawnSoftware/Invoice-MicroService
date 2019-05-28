@@ -6,12 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Silverdawn.Exceptions\Silverdawn.Exceptions.csproj" />
+    <Folder Include="Transactions\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Transactions\" />
-    <Folder Include="Views\" />
+    <ProjectReference Include="..\..\Silverdawn.Exceptions\SilverdawnSoftware.Exceptions.csproj" />
   </ItemGroup>
 
 </Project>

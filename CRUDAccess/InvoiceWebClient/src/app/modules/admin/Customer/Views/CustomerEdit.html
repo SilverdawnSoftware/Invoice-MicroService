@@ -1,4 +1,4 @@
-<!-- ALLOWOVERWRITE-3B340940B50C8D623F529F28E0977D4C -->
+<!-- ALLOWOVERWRITE-4BE70B3B37B1255805A441175756D379 -->
 
 
  <form [formGroup]="customerForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
@@ -147,6 +147,8 @@
    						<ngx-datatable-column name="ShippingAddress" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="TermsAndConditions " width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="PaymentDetails" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Status" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Notes" width="300"></ngx-datatable-column> 
    			<ngx-datatable-column name="Edit" width="300" prop="invoiceId">
       <ng-template let-value="value" ngx-datatable-cell-template>
       <button mat-icon-button	routerLink="/admin/invoice/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-66CF068CBFA3EF1C8F7A2D002DA3D874
+// ALLOWOVERWRITE-D381104C9181600260ED3C038E9284DE
 
 using System;
 using System.Collections.Generic;
@@ -76,12 +76,13 @@ namespace Database.Transactions.Model
     	   	
     	
     	/// <summary>
-        /// 
+        /// Primary Key for Invoices
         /// </summary>	
         [DataMember(Name = "invoiceInvoiceId")] 
     	public int InvoiceInvoiceId { get; set; } 
     }    	    	
 }
+
 
 
 

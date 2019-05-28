@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Database\Invoice.Database.csproj" />
+    <ProjectReference Include="..\..\Database\Silverdawnsoftware.Invoice.Database.csproj" />
   </ItemGroup>
 
 </Project>

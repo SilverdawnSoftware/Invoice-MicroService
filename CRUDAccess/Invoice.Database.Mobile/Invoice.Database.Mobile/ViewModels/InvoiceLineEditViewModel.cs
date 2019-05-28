@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-69ED3536313C68E293A13AECFB5B97F0
+// ALLOWOVERWRITE-C623E401E5629DCE2B52FC67FE6A9D2D
 
 using System;
 using System.ComponentModel;
@@ -315,7 +315,7 @@ namespace Database.Mobile.ViewModels
 	    	
     	
     	/// <summary>
-        /// 
+        /// Primary Key for Invoices
         /// </summary>	
        
 		 public int  InvoiceInvoiceId 
@@ -398,6 +398,7 @@ namespace Database.Mobile.ViewModels
      
     }
 }
+
 
 
 

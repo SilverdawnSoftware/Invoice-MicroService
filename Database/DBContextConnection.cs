@@ -21,7 +21,9 @@ namespace SilverdawnSoftware.Invoice.Database
 
             //optionsBuilder.UseSqlServer(conn);
 
-           optionsBuilder.UseSqlServer(@"Server=.;Database=InvoiceMicroService;Trusted_Connection=True;MultipleActiveResultSets=true");
+           optionsBuilder
+               .UseLazyLoadingProxies()
+               .UseSqlServer(@"Server=.;Database=InvoiceMicroService;Trusted_Connection=True;MultipleActiveResultSets=true");
         }	
 
 

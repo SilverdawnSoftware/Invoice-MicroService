@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-AEBDA472849818066E89DE50A8DB39B2
+// ALLOWOVERWRITE-AFE0EEAF89868BD907A362EAB15409D3
 
 using System;
 using System.Collections.Generic;
@@ -55,7 +55,7 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 	    	
 	    	
 	    	/// <summary>
-            /// 
+            /// Primary Key for Invoices
             /// </summary>	
 	    	public int  InvoiceId  { get; set; } 	    	
 	    	
@@ -64,6 +64,12 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
             /// 
             /// </summary>	
 	    	public int  InvoiceNo  { get; set; } 	    	
+	    	
+	    	
+	    	/// <summary>
+            /// 
+            /// </summary>	
+	    	public string  Notes  { get; set; } 	    	
 	    	
 	    	
 	    	/// <summary>
@@ -100,12 +106,17 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
             /// 
             /// </summary>	
 	    	public string  PurchaseOrderRef  { get; set; } 	    	
-	    	
-	    	
-	    	/// <summary>
+			    		
+    		/// <summary>
+            ///  
+            /// </summary>	
+			    		
+			public int ShippingAddressAddressId { get; set; }   
+			    		
+    		/// <summary>
             /// 
             /// </summary>	
-	    	public string  ShippingAddress  { get; set; } 	    	
+			public string ShippingAddressPostZipCode { get; set; }   
 	    	
 	    	
 	    	/// <summary>
@@ -157,13 +168,22 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 		    	result.InvoiceEmailed = item.InvoiceEmailed;     
 		    	result.InvoiceId = item.InvoiceId;     
 		    	result.InvoiceNo = item.InvoiceNo;     
+		    	result.Notes = item.Notes;     
 		    	result.OrderedBy = item.OrderedBy;     
 		    	result.PaidAmount = item.PaidAmount;     
 		    	result.PaidDate = item.PaidDate;     
 		    	result.PaidTax = item.PaidTax;     
 		    	result.PaymentDetails = item.PaymentDetails;     
 		    	result.PurchaseOrderRef = item.PurchaseOrderRef;     
-		    	result.ShippingAddress = item.ShippingAddress;     
+				//if (item.ShippingAddress != null) 
+				//{   	
+				result.ShippingAddressAddressId= item.ShippingAddressAddressId;
+				//result.ShippingAddressAddressId= item.ShippingAddress.AddressId;
+				//} 
+				//if (item.ShippingAddress != null) 
+				//{   	
+				//result.ShippingAddressPostZipCode= item.ShippingAddress.PostZipCode;
+				//} 
 		    	result.SubTotal = item.SubTotal;     
 		    	result.Tax = item.Tax;     
 		    	result.TermsAndConditions  = item.TermsAndConditions ;     
@@ -183,5 +203,6 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
    
     }
 }
+
 
 

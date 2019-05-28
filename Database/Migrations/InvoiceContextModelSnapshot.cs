@@ -15,7 +15,7 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -48,6 +48,18 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Addresss");
+                });
+
+            modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Counter", b =>
+                {
+                    b.Property<string>("Name")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Value");
+
+                    b.HasKey("Name");
+
+                    b.ToTable("Counters");
                 });
 
             modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Customer", b =>
@@ -120,6 +132,8 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
 
                     b.Property<int>("InvoiceNo");
 
+                    b.Property<string>("Notes");
+
                     b.Property<string>("OrderedBy");
 
                     b.Property<double>("PaidAmount");
@@ -132,7 +146,9 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
 
                     b.Property<string>("PurchaseOrderRef");
 
-                    b.Property<string>("ShippingAddress");
+                    b.Property<int>("ShippingAddressAddressId");
+
+                    b.Property<int>("Status");
 
                     b.Property<decimal>("SubTotal");
 

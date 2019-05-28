@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Database.Mobile.ViewModels"
+             x:Class="Database.Mobile.Views.Counter.CounterIndexPage" Title="Counter">
+             
+   <ContentPage.BindingContext>
+    <viewModels:CounterIndexViewModel/>
+	</ContentPage.BindingContext>
+  <StackLayout Orientation="Vertical" Margin="10">      
+	  <ListView ItemsSource="{Binding CounterViews}"
+	            ItemTapped="Handle_ItemTapped"
+	            CachingStrategy="RecycleElement"
+	            RowHeight="60">
+	            
+	    <!--Built in Cells-->
+	    <!--<ListView.ItemTemplate>
+	      <DataTemplate>
+	        <TextCell />
+	      </DataTemplate>
+	    </ListView.ItemTemplate>-->
+	    
+	    <!--Custom View Cells-->
+	    
+	    <ListView.ItemTemplate>
+	      <DataTemplate>
+	        <ViewCell>
+	          <StackLayout Orientation="Vertical">
+	          	<Label Text="{Binding Name}" FontSize="Medium" />
+	          	<StackLayout Orientation="Horizontal">
+	                    <Label Text="{Binding Value}" FontSize="Small" />      
+
+	          	</StackLayout>
+			  </StackLayout>
+			</ViewCell>
+	      </DataTemplate>
+	    </ListView.ItemTemplate>    
+	  </ListView>
+     <Button Margin="10" WidthRequest="100"  Text="Add Counter"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddCounterCommand}"></Button>
+  </StackLayout>
+</ContentPage>
+<!-- ALLOWOVERWRITE -->

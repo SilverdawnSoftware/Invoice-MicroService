@@ -1,4 +1,4 @@
-<!-- ALLOWOVERWRITE-5999753420BACBE26D84EF27A58FCEFF -->
+<!-- ALLOWOVERWRITE-2D16E89BEBA80DEA06C668D1D59253AB -->
 
 
  <form [formGroup]="invoiceForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
@@ -90,6 +90,16 @@
         	 			<div fxFlex>	
 	    	            	    				
                          <mat-form-field>                            
+                                <input matInput formControlName="notes" id="invoiceNotes" type="text" placeholder="Notes"  required/>
+						</mat-form-field>                       
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+	    	            	    				
+                         <mat-form-field>                            
                                 <input matInput formControlName="orderedBy" id="invoiceOrderedBy" type="text" placeholder="OrderedBy"  required/>
 						</mat-form-field>                       
                         
@@ -148,9 +158,26 @@
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
+					
+					 <div class="form-group">
+					 		
+                            <label for="invoiceShippingAddress" class="col-sm-2 control-label">ShippingAddress</label>
+                            <div class="col-sm-10">
+
+                                <select id="invoiceShippingAddress" class="form-control" ng-model="invoiceView.shippingAddressAddressId" ng-options="address.addressId as address.postZipCode for address in addresss" required>
+                                    <option value="">-- Choose Address --</option>
+                                </select>
+                            </div>
+                       	</div>
+                        
+
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
 	    	            	    				
                          <mat-form-field>                            
-                                <input matInput formControlName="shippingAddress" id="invoiceShippingAddress" type="text" placeholder="ShippingAddress"  required/>
+                                <input matInput formControlName="status" id="invoiceStatus" type="InvoiceStatus" placeholder="Status"  required/>
 						</mat-form-field>                       
                         
 

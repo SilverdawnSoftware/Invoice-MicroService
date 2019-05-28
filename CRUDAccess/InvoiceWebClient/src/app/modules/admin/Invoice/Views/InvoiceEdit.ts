@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-44CA76BF7FA686F94293340E9ECEEA03
+// ALLOWOVERWRITE-EED98F3D4BA49B581E0C41226C5DB00E
 
 import { Component,OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
@@ -64,13 +64,14 @@ import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"
 	    				grandTotal: 0, 
 	    				invoiceEmailed: "", 
 	    				invoiceNo: 0, 
+	    				notes: "", 
 	    				orderedBy: "", 
 	    				paidAmount: 0, 
 	    				paidDate: new Date().toISOString().substring(0, 10), 
 	    				paidTax: 0, 
 	    				paymentDetails: "", 
 	    				purchaseOrderRef: "", 
-	    				shippingAddress: "", 
+	    				status: , 
 	    				subTotal: 0, 
 	    				tax: 0, 
 	    				termsAndConditions : "", 

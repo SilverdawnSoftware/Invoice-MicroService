@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-E9AFE5DC8A9C469ABD3EC0A6633C6663
+// ALLOWOVERWRITE-72053EF8FA1A82BBBB5881E262A2D8AE
 
 using System;
 using System.Collections.Generic;
@@ -42,7 +42,7 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
 	    		public bool InvoiceEmailed  { get; set; } 
 	    		
 	    		 /// <summary>
-                  /// 
+                  /// Primary Key for Invoices
                   /// </summary>	    		
 	    		public int InvoiceId  { get; set; } 
 	    		
@@ -50,6 +50,11 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
                   /// 
                   /// </summary>	    		
 	    		public int InvoiceNo  { get; set; } 
+	    		
+	    		 /// <summary>
+                  /// 
+                  /// </summary>	    		
+	    		public string Notes  { get; set; } 
 	    		
 	    		 /// <summary>
                   /// 
@@ -80,11 +85,11 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
                   /// 
                   /// </summary>	    		
 	    		public string PurchaseOrderRef  { get; set; } 
-	    		
-	    		 /// <summary>
+				
+				/// <summary>
                   /// 
-                  /// </summary>	    		
-	    		public string ShippingAddress  { get; set; } 
+                  /// </summary>	  
+				public int ShippingAddressAddressId  { get; set; } 				
 	    		
 	    		 /// <summary>
                   /// 
@@ -109,6 +114,7 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
     	public int CustomerCustomerId { get; set; } 
     }    	    	
 }
+
 
 
 

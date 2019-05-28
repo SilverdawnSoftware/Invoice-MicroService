@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-1B0A0323DDDA4F49A2171203D57B7B90
+// ALLOWOVERWRITE-56BADF495C280CB149269CC52C5C1D73
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,7 @@ namespace SilverdawnSoftware.Invoice.Database
         public DbSet<Address> Addresss { get; set; } 
         public DbSet<InvoiceLine> InvoiceLines { get; set; } 
         public DbSet<Entity> Entitys { get; set; } 
+        public DbSet<Counter> Counters { get; set; } 
      
 
 	

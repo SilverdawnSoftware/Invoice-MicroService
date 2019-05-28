@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-3E1C34C52E928B9E71F1BDCAF172D694
+// ALLOWOVERWRITE-48C06177DC0F11780A018748C2C37520
 
 using System;
 using System.ComponentModel;
@@ -10,35 +10,23 @@ using Database.Transactions.Model;
 using Database.Views;
 using Database.Views.Model;
 using Database.Mobile.Annotations;
-
 using Xamarin.Forms;
-
 namespace Database.Mobile.ViewModels
 {
-
     public class InvoiceEditViewModel : INotifyPropertyChanged
     {
-
-
         public InvoiceEditViewModel()
         {
-            SaveCommand=new Command( async () => await Save());
-            CancelCommand = new Command(async () => await Cancel());
-           	
-           	ViewInvoiceLinesCommand = new Command(async () => await ViewInvoiceLines());
-           	
-            
+           SaveCommand=new Command( async () => await Save());
+           CancelCommand = new Command(async () => await Cancel());
+           ViewInvoiceLinesCommand = new Command(async () => await ViewInvoiceLines());
         }
-
-      
 
         public ICommand SaveCommand { get; private set; }
 
         public ICommand CancelCommand { get; private set; }
 
 
-           	
-           	
         public ICommand ViewInvoiceLinesCommand { get; private set; }
          
         public async Task ViewInvoiceLines()
@@ -47,8 +35,6 @@ namespace Database.Mobile.ViewModels
                 await invoiceLines.GetInvoiceLinesForInvoice(InvoiceId);
                 MessagingCenter.Send<InvoiceEditViewModel, InvoiceLineIndexViewModel>(this, "ShowInvoiceLines", invoiceLines);
         }
-           	
-
 
         public async Task Cancel()
         {
@@ -57,15 +43,12 @@ namespace Database.Mobile.ViewModels
             else
                 InvoiceView=new InvoiceView();
         }
-
         public async Task Load(int invoiceId)
         {
             var uv=new InvoiceViews();
 
             this.InvoiceView = await uv.Get(invoiceId);
         }
-
-
 
         public async Task Save()
         {
@@ -81,14 +64,12 @@ namespace Database.Mobile.ViewModels
 	            {
 	                InvoiceView = await uv.InvoiceAdd(this.GetInvoiceAdd());
 	            }
-            }
+          }
             catch (Exception ex)
             {
             	 MessagingCenter.Send(this, "Save error");
-            }
-          
+            }          
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -97,7 +78,6 @@ namespace Database.Mobile.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
 
         private InvoiceView _invoiceView = new InvoiceView();
 
@@ -119,6 +99,7 @@ namespace Database.Mobile.ViewModels
                 OnPropertyChanged("InvoiceEmailed");
                 OnPropertyChanged("InvoiceId");
                 OnPropertyChanged("InvoiceNo");
+                OnPropertyChanged("Notes");
                 OnPropertyChanged("OrderedBy");
                 OnPropertyChanged("PaidAmount");
                 OnPropertyChanged("PaidDate");
@@ -126,15 +107,13 @@ namespace Database.Mobile.ViewModels
                 OnPropertyChanged("PaymentDetails");
                 OnPropertyChanged("PurchaseOrderRef");
                 OnPropertyChanged("ShippingAddress");
+                OnPropertyChanged("Status");
                 OnPropertyChanged("SubTotal");
                 OnPropertyChanged("Tax");
                 OnPropertyChanged("TermsAndConditions ");
                               
             }
         }
-
-		
-       	  	 
         /// <summary>
         /// is class
         /// </summary>	
@@ -153,8 +132,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.BillngAddressAddressId;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -173,8 +150,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.CreatedDate;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -193,8 +168,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.DueDate;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -213,8 +186,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.EmailTo;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -233,8 +204,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.GrandTotal;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -253,8 +222,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.InvoiceEmailed;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -273,8 +240,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.InvoiceId;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -293,8 +258,24 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.InvoiceNo;
             } 
          } 	    	
-	    	
-       	 
+        /// <summary>
+        /// 
+        /// </summary>	
+        public string  Notes 
+        {
+            set
+            {
+                if (InvoiceView.Notes != value)
+                {
+                    InvoiceView.Notes = value;
+                    OnPropertyChanged("Notes");
+                }
+            }
+            get
+            {
+                return InvoiceView.Notes;
+            } 
+         } 	    	
         /// <summary>
         /// 
         /// </summary>	
@@ -313,8 +294,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.OrderedBy;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -333,8 +312,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.PaidAmount;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -353,8 +330,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.PaidDate;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -373,8 +348,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.PaidTax;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -393,8 +366,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.PaymentDetails;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -413,28 +384,42 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.PurchaseOrderRef;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
-        /// 
+        /// is class
         /// </summary>	
-        public string  ShippingAddress 
+        public int  ShippingAddress 
         {
             set
             {
-                if (InvoiceView.ShippingAddress != value)
+                if (InvoiceView.ShippingAddressAddressId != value)
                 {
-                    InvoiceView.ShippingAddress = value;
-                    OnPropertyChanged("ShippingAddress");
+                    InvoiceView.ShippingAddressAddressId = value;
+                    OnPropertyChanged("ShippingAddressAddressId");
                 }
             }
             get
             {
-                return InvoiceView.ShippingAddress;
+                return InvoiceView.ShippingAddressAddressId;
             } 
          } 	    	
-	    	
-       	 
+        /// <summary>
+        /// 
+        /// </summary>	
+        public int Status 
+        {
+            set
+            {
+                if (InvoiceView.Status != value)
+                {
+                    InvoiceView.Status = value;
+                    OnPropertyChanged("Status");
+                }
+            }
+            get
+            {
+                return InvoiceView.Status;
+            } 
+         } 	    	
         /// <summary>
         /// 
         /// </summary>	
@@ -453,8 +438,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.SubTotal;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -473,8 +456,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.Tax;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -493,9 +474,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.TermsAndConditions ;
             } 
          } 	    	
-	    	
-	    	
-    	
     	/// <summary>
         /// 
         /// </summary>	
@@ -515,17 +493,12 @@ namespace Database.Mobile.ViewModels
                 return InvoiceView.CustomerCustomerId;
             } 
          } 	    	
-		
-	    	
-	    	
-
-      
 
         public InvoiceUpdate GetInvoiceUpdate()
         {
             var result = new InvoiceUpdate();
 
-	       result.BillngAddressAddressId = InvoiceView.BillngAddressAddressId;	 	
+	       result.BillngAddressAddressId = InvoiceView.BillngAddressAddressId;	
 			result.CreatedDate = InvoiceView.CreatedDate;
 			result.DueDate = InvoiceView.DueDate;
 			result.EmailTo = InvoiceView.EmailTo;
@@ -533,13 +506,15 @@ namespace Database.Mobile.ViewModels
 			result.InvoiceEmailed = InvoiceView.InvoiceEmailed;
 			result.InvoiceId = InvoiceView.InvoiceId;
 			result.InvoiceNo = InvoiceView.InvoiceNo;
+			result.Notes = InvoiceView.Notes;
 			result.OrderedBy = InvoiceView.OrderedBy;
 			result.PaidAmount = InvoiceView.PaidAmount;
 			result.PaidDate = InvoiceView.PaidDate;
 			result.PaidTax = InvoiceView.PaidTax;
 			result.PaymentDetails = InvoiceView.PaymentDetails;
 			result.PurchaseOrderRef = InvoiceView.PurchaseOrderRef;
-			result.ShippingAddress = InvoiceView.ShippingAddress;
+	       result.ShippingAddressAddressId = InvoiceView.ShippingAddressAddressId;	
+			result.Status = InvoiceView.Status;
 			result.SubTotal = InvoiceView.SubTotal;
 			result.Tax = InvoiceView.Tax;
 			result.TermsAndConditions  = InvoiceView.TermsAndConditions ;
@@ -549,7 +524,6 @@ namespace Database.Mobile.ViewModels
         public InvoiceAdd GetInvoiceAdd()
         {
             var result = new InvoiceAdd();
-
 	       result.BillngAddressAddressId = InvoiceView.BillngAddressAddressId;	 	
 			result.CreatedDate = InvoiceView.CreatedDate;
 			result.DueDate = InvoiceView.DueDate;
@@ -558,27 +532,26 @@ namespace Database.Mobile.ViewModels
 			result.InvoiceEmailed = InvoiceView.InvoiceEmailed;
 			result.InvoiceId = InvoiceView.InvoiceId;
 			result.InvoiceNo = InvoiceView.InvoiceNo;
+			result.Notes = InvoiceView.Notes;
 			result.OrderedBy = InvoiceView.OrderedBy;
 			result.PaidAmount = InvoiceView.PaidAmount;
 			result.PaidDate = InvoiceView.PaidDate;
 			result.PaidTax = InvoiceView.PaidTax;
 			result.PaymentDetails = InvoiceView.PaymentDetails;
 			result.PurchaseOrderRef = InvoiceView.PurchaseOrderRef;
-			result.ShippingAddress = InvoiceView.ShippingAddress;
+	       result.ShippingAddressAddressId = InvoiceView.ShippingAddressAddressId;	 	
+			result.Status = InvoiceView.Status;
 			result.SubTotal = InvoiceView.SubTotal;
 			result.Tax = InvoiceView.Tax;
 			result.TermsAndConditions  = InvoiceView.TermsAndConditions ;
-            result.CustomerCustomerId= InvoiceView.CustomerCustomerId; 
+         result.CustomerCustomerId= InvoiceView.CustomerCustomerId; 
             return result;
         }
 
-
-
-
         public static explicit operator InvoiceEditViewModel(InvoiceView item)
     	{
-       	    var result=new InvoiceEditViewModel();
-    	 
+       	    var result=new InvoiceEditViewModel();    	 
+	     //  result.BillngAddressAddressId = item.BillngAddressAddressId; 	
 			result.CreatedDate = item.CreatedDate;
 			result.DueDate = item.DueDate;
 			result.EmailTo = item.EmailTo;
@@ -586,22 +559,22 @@ namespace Database.Mobile.ViewModels
 			result.InvoiceEmailed = item.InvoiceEmailed;
 			result.InvoiceId = item.InvoiceId;
 			result.InvoiceNo = item.InvoiceNo;
+			result.Notes = item.Notes;
 			result.OrderedBy = item.OrderedBy;
 			result.PaidAmount = item.PaidAmount;
 			result.PaidDate = item.PaidDate;
 			result.PaidTax = item.PaidTax;
 			result.PaymentDetails = item.PaymentDetails;
 			result.PurchaseOrderRef = item.PurchaseOrderRef;
-			result.ShippingAddress = item.ShippingAddress;
+	     //  result.ShippingAddressAddressId = item.ShippingAddressAddressId; 	
+			result.Status = item.Status;
 			result.SubTotal = item.SubTotal;
 			result.Tax = item.Tax;
 			result.TermsAndConditions  = item.TermsAndConditions ;
-	    	
         	return result;
        }
-
-     
     }
+
 }
 
 

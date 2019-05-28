@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 
-
-namespace Silverdawn.Exceptions
+namespace SilverdawnSoftware.Exceptions
 {
     public interface ILogExceptions
     {

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-4CE5BE5608354D7EDE9FBE304BE87C00
+// ALLOWOVERWRITE-16855578EEBA37F962DEE1F1D3ED3649
 
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Silverdawn.Exceptions;
+using SilverdawnSoftware.Exceptions;
 using SilverdawnSoftware.Invoice.Database.Transactions.Model;
 using SilverdawnSoftware.Invoice.Database.Views.Model;
 using data = SilverdawnSoftware.Invoice.Database;
@@ -60,13 +60,23 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions
 	    	newInvoice.GrandTotal = add.GrandTotal;   	
 	    	newInvoice.InvoiceEmailed = add.InvoiceEmailed;   	
 	    	newInvoice.InvoiceNo = add.InvoiceNo;   	
+	    	newInvoice.Notes = add.Notes;   	
 	    	newInvoice.OrderedBy = add.OrderedBy;   	
 	    	newInvoice.PaidAmount = add.PaidAmount;   	
 	    	newInvoice.PaidDate = add.PaidDate;   	
 	    	newInvoice.PaidTax = add.PaidTax;   	
 	    	newInvoice.PaymentDetails = add.PaymentDetails;   	
 	    	newInvoice.PurchaseOrderRef = add.PurchaseOrderRef;   	
-	    	newInvoice.ShippingAddress = add.ShippingAddress;   	
+				
+				
+			newInvoice.ShippingAddressAddressId  = add.ShippingAddressAddressId;
+				
+			//	  if (db.Addresss.Any(w => w.AddressId == add.ShippingAddressAddressId))
+            //    {
+            //        newInvoice.ShippingAddress = db.Addresss.First(w => w.AddressId == add. ShippingAddressAddressId);
+            //    }    
+				
+				 				
 	    	newInvoice.SubTotal = add.SubTotal;   	
 	    	newInvoice.Tax = add.Tax;   	
 	    	newInvoice.TermsAndConditions  = add.TermsAndConditions ;   	
@@ -137,13 +147,22 @@ invoiceToUpdate.GrandTotal = update.GrandTotal;
 invoiceToUpdate.InvoiceEmailed = update.InvoiceEmailed;   	
 invoiceToUpdate.InvoiceId = update.InvoiceId;   	
 invoiceToUpdate.InvoiceNo = update.InvoiceNo;   	
+invoiceToUpdate.Notes = update.Notes;   	
 invoiceToUpdate.OrderedBy = update.OrderedBy;   	
 invoiceToUpdate.PaidAmount = update.PaidAmount;   	
 invoiceToUpdate.PaidDate = update.PaidDate;   	
 invoiceToUpdate.PaidTax = update.PaidTax;   	
 invoiceToUpdate.PaymentDetails = update.PaymentDetails;   	
 invoiceToUpdate.PurchaseOrderRef = update.PurchaseOrderRef;   	
-invoiceToUpdate.ShippingAddress = update.ShippingAddress;   	
+				
+				invoiceToUpdate.ShippingAddressAddressId= update.ShippingAddressAddressId;
+				
+		   //	if (db.Addresss.Any(w => w.AddressId == update.ShippingAddressAddressId))
+           //   {
+           //         invoiceToUpdate.ShippingAddress = db.Addresss.First(w => w.AddressId == update.ShippingAddressAddressId);
+           //   }    
+				
+				 				
 invoiceToUpdate.SubTotal = update.SubTotal;   	
 invoiceToUpdate.Tax = update.Tax;   	
 invoiceToUpdate.TermsAndConditions  = update.TermsAndConditions ;   	

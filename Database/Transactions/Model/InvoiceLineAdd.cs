@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-BDA743B74E2571477C00D48B0C7F2415
+// ALLOWOVERWRITE-E66D7B85D280DAFA8C7C97D8A416D1B7
 
 using System;
 using System.Collections.Generic;
@@ -63,12 +63,13 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
     	   	
     	
     	/// <summary>
-        /// 
+        /// Primary Key for Invoices
         /// </summary>	
        
     	public int InvoiceInvoiceId { get; set; } 
     }    	    	
 }
+
 
 
 

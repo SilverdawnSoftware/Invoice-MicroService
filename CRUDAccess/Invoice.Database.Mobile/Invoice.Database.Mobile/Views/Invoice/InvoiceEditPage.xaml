@@ -67,6 +67,13 @@
             
             
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Notes: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="notes" Text="{Binding Notes}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="OrderedBy: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="orderedBy" Text="{Binding OrderedBy}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
@@ -116,6 +123,13 @@
             
             
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Status: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="status" Text="{Binding Status}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                </StackLayout>
+               
+            
+            
+          		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="SubTotal: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="subTotal" Text="{Binding SubTotal}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
@@ -151,4 +165,4 @@
       
     </ContentPage.Content>
 </ContentPage>
-<!-- ALLOWOVERWRITE-B10A960790AE6530AEC9AA68C736DA0A -->
+<!-- ALLOWOVERWRITE-8C3F6D240AA104192A8FDAACE24C252F -->

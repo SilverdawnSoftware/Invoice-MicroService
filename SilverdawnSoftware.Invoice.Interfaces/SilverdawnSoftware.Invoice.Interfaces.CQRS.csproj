@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\GetAddressesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\GetCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\GetOutStandingInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\IGetAddressesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\IGetCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\IGetOutStandingInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\ISearchForCustomerByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\IGetAddressesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\IGetCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\IGetOutStandingInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\ISearchForCustomerByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\SearchForCustomerByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Address\GetAddress.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Address\IGetAddress.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Address\Models\IGetAddress.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\GetAddressesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\GetCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\GetOutStandingInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\IGetAddressesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\IGetCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\IGetOutStandingInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\Models\ISearchForCustomerByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Customer\SearchForCustomerByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\GetAllEntitys.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\GetEntity.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\IGetAllEntitys.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\IGetEntity.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\ISearchEntityByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\Models\IGetAllEntitys.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\Models\IGetEntity.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\Models\ISearchEntityByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Entity\SearchEntityByName.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\InvoiceLine\GetInvoiceLine.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\InvoiceLine\IGetInvoiceLine.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\InvoiceLine\Models\IGetInvoiceLine.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\GetAllInvoiceLinesForInvoice.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\GetAllInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\GetAllOverdueInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\GetInvoice.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\IGetAllInvoiceLinesForInvoice.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\IGetAllInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\IGetAllOverdueInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\IGetInvoice.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\Models\IGetAllInvoiceLinesForInvoice.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\Models\IGetAllInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\Models\IGetAllOverdueInvoicesForCustomer.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Requests\Invoice\Models\IGetInvoice.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Results\Models\IAddressView.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Results\Models\ICounter.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Results\Models\ICustomerView.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Results\Models\IEntityView.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Results\Models\IInvoiceLineView.cs" />
+    <Orleans_CodeGenInputs Remove="Querys\Results\Models\IInvoiceView.cs" />
+  </ItemGroup>
+
+</Project>

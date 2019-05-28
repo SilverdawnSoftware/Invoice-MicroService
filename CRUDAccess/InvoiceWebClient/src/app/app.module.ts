@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-D1734BF339516C2D88656421B72CB2DF
+// ALLOWOVERWRITE-5A4F8EEFC6284A264447385C9578633E
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -67,6 +67,10 @@ import {EntityIndex} from './modules/admin/Entity/Views/EntityIndex';
 import {EntityEdit} from './modules/admin/Entity/Views/EntityEdit';
 
 
+import {CounterIndex} from './modules/admin/Counter/Views/CounterIndex';
+import {CounterEdit} from './modules/admin/Counter/Views/CounterEdit';
+
+
 @NgModule({
   exports: [
     CdkTableModule,
@@ -115,6 +119,7 @@ export class AppMaterialModule {}
   ,AddressEdit,AddressIndex
   ,InvoiceLineEdit,InvoiceLineIndex
   ,EntityEdit,EntityIndex
+  ,CounterEdit,CounterIndex
   
   
   ],
@@ -123,3 +128,4 @@ export class AppMaterialModule {}
 export class AppModule {}
 
 //platformBrowserDynamic().bootstrapModule(AppModule);
+

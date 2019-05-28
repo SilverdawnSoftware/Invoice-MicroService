@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-FDD11982A02ADF7BFAA64330E4F7AFC7
+// ALLOWOVERWRITE-64D901ADC45AEBE6C8EF1B88019E89C2
 
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using Silverdawn.Exceptions;
+using SilverdawnSoftware.Exceptions;
 using Database.Transactions.Model;
 using Database.Views.Model;
 
