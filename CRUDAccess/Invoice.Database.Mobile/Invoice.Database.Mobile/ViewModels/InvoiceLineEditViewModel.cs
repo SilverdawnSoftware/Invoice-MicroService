@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-C623E401E5629DCE2B52FC67FE6A9D2D
+// ALLOWOVERWRITE-970B331EC6727278666DE9EE68590A04-C623E401E5629DCE2B52FC67FE6A9D2D
 
 using System;
 using System.ComponentModel;
@@ -10,30 +10,20 @@ using Database.Transactions.Model;
 using Database.Views;
 using Database.Views.Model;
 using Database.Mobile.Annotations;
-
 using Xamarin.Forms;
-
 namespace Database.Mobile.ViewModels
 {
-
     public class InvoiceLineEditViewModel : INotifyPropertyChanged
     {
-
-
         public InvoiceLineEditViewModel()
         {
-            SaveCommand=new Command( async () => await Save());
-            CancelCommand = new Command(async () => await Cancel());
-            
+           SaveCommand=new Command( async () => await Save());
+           CancelCommand = new Command(async () => await Cancel());
         }
-
-      
 
         public ICommand SaveCommand { get; private set; }
 
         public ICommand CancelCommand { get; private set; }
-
-
 
 
         public async Task Cancel()
@@ -43,15 +33,12 @@ namespace Database.Mobile.ViewModels
             else
                 InvoiceLineView=new InvoiceLineView();
         }
-
         public async Task Load(int invoiceLineId)
         {
             var uv=new InvoiceLineViews();
 
             this.InvoiceLineView = await uv.Get(invoiceLineId);
         }
-
-
 
         public async Task Save()
         {
@@ -67,14 +54,12 @@ namespace Database.Mobile.ViewModels
 	            {
 	                InvoiceLineView = await uv.InvoiceLineAdd(this.GetInvoiceLineAdd());
 	            }
-            }
+          }
             catch (Exception ex)
             {
             	 MessagingCenter.Send(this, "Save error");
-            }
-          
+            }          
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -83,7 +68,6 @@ namespace Database.Mobile.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
 
         private InvoiceLineView _invoiceLineView = new InvoiceLineView();
 
@@ -110,9 +94,6 @@ namespace Database.Mobile.ViewModels
                               
             }
         }
-
-		
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -131,8 +112,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.InvoiceLineId;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -151,8 +130,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.LineTotal;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -171,8 +148,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.Notes;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -191,8 +166,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.Product;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -211,8 +184,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.ProductCode;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -231,8 +202,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.Quantity;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -251,8 +220,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.SubTotal;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -271,8 +238,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.TaxExempt;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -291,8 +256,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.TaxTotal;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -311,9 +274,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.UnitCost;
             } 
          } 	    	
-	    	
-	    	
-    	
     	/// <summary>
         /// Primary Key for Invoices
         /// </summary>	
@@ -333,11 +293,6 @@ namespace Database.Mobile.ViewModels
                 return InvoiceLineView.InvoiceInvoiceId;
             } 
          } 	    	
-		
-	    	
-	    	
-
-      
 
         public InvoiceLineUpdate GetInvoiceLineUpdate()
         {
@@ -359,7 +314,6 @@ namespace Database.Mobile.ViewModels
         public InvoiceLineAdd GetInvoiceLineAdd()
         {
             var result = new InvoiceLineAdd();
-
 			result.InvoiceLineId = InvoiceLineView.InvoiceLineId;
 			result.LineTotal = InvoiceLineView.LineTotal;
 			result.Notes = InvoiceLineView.Notes;
@@ -370,17 +324,13 @@ namespace Database.Mobile.ViewModels
 			result.TaxExempt = InvoiceLineView.TaxExempt;
 			result.TaxTotal = InvoiceLineView.TaxTotal;
 			result.UnitCost = InvoiceLineView.UnitCost;
-            result.InvoiceInvoiceId= InvoiceLineView.InvoiceInvoiceId; 
+         result.InvoiceInvoiceId= InvoiceLineView.InvoiceInvoiceId; 
             return result;
         }
 
-
-
-
         public static explicit operator InvoiceLineEditViewModel(InvoiceLineView item)
     	{
-       	    var result=new InvoiceLineEditViewModel();
-    	 
+       	    var result=new InvoiceLineEditViewModel();    	 
 			result.InvoiceLineId = item.InvoiceLineId;
 			result.LineTotal = item.LineTotal;
 			result.Notes = item.Notes;
@@ -391,14 +341,11 @@ namespace Database.Mobile.ViewModels
 			result.TaxExempt = item.TaxExempt;
 			result.TaxTotal = item.TaxTotal;
 			result.UnitCost = item.UnitCost;
-	    	
         	return result;
        }
-
-     
     }
-}
 
+}
 
 
 

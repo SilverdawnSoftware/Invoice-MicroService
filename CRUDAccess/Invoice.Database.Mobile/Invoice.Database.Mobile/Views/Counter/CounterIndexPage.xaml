@@ -5,11 +5,11 @@
              x:Class="Database.Mobile.Views.Counter.CounterIndexPage" Title="Counter">
              
    <ContentPage.BindingContext>
-    <viewModels:CounterIndexViewModel/>
+    
 	</ContentPage.BindingContext>
   <StackLayout Orientation="Vertical" Margin="10">      
 	  <ListView ItemsSource="{Binding CounterViews}"
-	            ItemTapped="Handle_ItemTapped"
+	            
 	            CachingStrategy="RecycleElement"
 	            RowHeight="60">
 	            
@@ -27,10 +27,9 @@
 	        <ViewCell>
 	          <StackLayout Orientation="Vertical">
 	          	<Label Text="{Binding Name}" FontSize="Medium" />
-	          	<StackLayout Orientation="Horizontal">
-	                    <Label Text="{Binding Value}" FontSize="Small" />      
-
-	          	</StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Value}" FontSize="Small" />
+              </StackLayout>
 			  </StackLayout>
 			</ViewCell>
 	      </DataTemplate>
@@ -39,4 +38,5 @@
      <Button Margin="10" WidthRequest="100"  Text="Add Counter"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddCounterCommand}"></Button>
   </StackLayout>
 </ContentPage>
-<!-- ALLOWOVERWRITE -->
+
+

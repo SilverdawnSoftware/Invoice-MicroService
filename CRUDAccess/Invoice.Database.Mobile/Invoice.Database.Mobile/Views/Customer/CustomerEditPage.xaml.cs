@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-BDCAC4758B58647CF96EDF258D990010
+// ALLOWOVERWRITE-25D619D7A3B0A531C0F50527289B89C3-253BE1063811707D8410B8165B63154F
 
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Database.Mobile.ViewModels;
-using Database.Mobile.Views.Address;
 using Database.Mobile.Views.Invoice;
 
 using Xamarin.Forms;
@@ -21,20 +20,10 @@ namespace Database.Mobile.Views.Customer
 		{
 			InitializeComponent ();			
 			MessagingCenter.Subscribe<CustomerEditViewModel>(this, "Save error",model => DisplayAlert("Save error", "Unable to save changes.", "Close") );			 			 
-           	MessagingCenter.Subscribe<CustomerEditViewModel, AddressIndexViewModel>(this, "ShowAddresss",async  (sender, arg) => { await ShowAddresss(arg); });
            	MessagingCenter.Subscribe<CustomerEditViewModel, InvoiceIndexViewModel>(this, "ShowInvoices",async  (sender, arg) => { await ShowInvoices(arg); });
 		}
 		
 		
-           	
-        public async System.Threading.Tasks.Task ShowAddresss(AddressIndexViewModel addressIndexViewModel)
-	    {
-	        var page = new AddressIndexPage();
-	        await Navigation.PushAsync(page);
-	        NavigationPage.SetHasBackButton(page, true);
-	        page.BindingContext = addressIndexViewModel;
-        }           	
-           	
            	
         public async System.Threading.Tasks.Task ShowInvoices(InvoiceIndexViewModel invoiceIndexViewModel)
 	    {

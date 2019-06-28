@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-324D252B7D8F87FE15585BB34516F57A
+// ALLOWOVERWRITE-742353F49E46F7988A7B2925C75305C3-659F4FA68C4B91C1191DE759D74B6F2C
 
 using System;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer
                        result.Active=customer.Active;
                        result.CustomerExteranlRef=customer.CustomerExteranlRef;
                        result.CustomerId=customer.CustomerId;
-                       result.EmalAddress=customer.EmalAddress;
+                       result.EmalAddress=customer.EmailAddress;
                        result.EntityId=customer.Entity.EntityId;
                        result.IsCompany=customer.IsCompany;
                        result.Name=customer.Name;

@@ -13,16 +13,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Migrations\20190523140849_First.cs" />
-    <Compile Include="Migrations\20190523140849_First.designer.cs" />
-    <Compile Include="Migrations\20190527100919_counter.cs" />
-    <Compile Include="Migrations\20190527100919_counter.designer.cs" />
+    <Compile Include="Migrations\20190614150311_first.cs" />
+    <Compile Include="Migrations\20190614150311_first.designer.cs" />
+    <Compile Include="Migrations\20190617132917_taxtotal.cs" />
+    <Compile Include="Migrations\20190617132917_taxtotal.designer.cs" />
     <Compile Include="Migrations\InvoiceContextModelSnapshot.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
   </ItemGroup>
 
   <ItemGroup>

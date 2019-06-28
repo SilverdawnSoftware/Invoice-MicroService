@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-218AA71B9F401D12B638865A41E0D8AC
+// ALLOWOVERWRITE-E41FA970E2538CA277AB4CCD3EB9DE78-40143D61B1272AAE3284128B71806AD5
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -47,7 +47,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
                        result.PaymentDetails=invoice.PaymentDetails;
                        result.PurchaseOrderRef=invoice.PurchaseOrderRef;
                        result.SubTotal=invoice.SubTotal;
-                       result.Tax=invoice.Tax;
+                       result.Tax=invoice.TaxTotal;
                        result.TermsAndConditions =invoice.TermsAndConditions ;
                        return result;
                    }

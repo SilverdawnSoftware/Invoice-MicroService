@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-969D24725DAF97BA882212442FC84F32
+// ALLOWOVERWRITE-C084F416912EB2C6079DF73B8682DADD-9E366AF86321D2CA4AC72E672AB44CAC
 
 using System;
 using System.Collections.Generic;
@@ -26,10 +26,24 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity
 	                if (await db.Entitys.AnyAsync(w =>  w.EntityId == getEntity.EntityId))
 	                {
 	                   var entity = await db.Entitys.FirstAsync(w =>  w.EntityId == getEntity.EntityId);
+                       result.Address = new AddressView();
+                       result.Address.AddresLine2=entity.Address.AddresLine2;                       			
+                       result.Address.AddressExternalRef=entity.Address.AddressExternalRef;                       			
+                       result.Address.AddressLine1=entity.Address.AddressLine1;                       			
+                       result.Address.AddressLine3=entity.Address.AddressLine3;                       			
+                       result.Address.City=entity.Address.City;                       			
+                       result.Address.Country=entity.Address.Country;                       			
+                       result.Address.PostZipCode=entity.Address.PostZipCode;                       			
+                       result.Address.StateCounty=entity.Address.StateCounty;                       			
                        result.EntityExternalRef=entity.EntityExternalRef;
                        result.EntityId=entity.EntityId;
                        result.LogoURL=entity.LogoURL;
                        result.Name=entity.Name;
+                       result.SMTPEmailDisplayName=entity.SMTPEmailDisplayName;
+                       result.SMTPEmailFromAddress=entity.SMTPEmailFromAddress;
+                       result.SMTPHost=entity.SMTPHost;
+                       result.SMTPPassword=entity.SMTPPassword;
+                       result.SMTPUserName=entity.SMTPUserName;
 				       return result;
 	                }
                     else

@@ -1,10 +1,9 @@
-// ALLOWOVERWRITE-CF4111E2F0FE20ABAFAEDD953962C0A5
+// ALLOWOVERWRITE-F585110048A42E9642319A7F91469277-D3DE5310B4144DD14D6A15FDD0230880
 
 					import {InvoiceStatus} from "../../Enums/InvoiceStatus"
 
     export interface IInvoiceView {
-      billngAddressAddressId: number;
-      billngAddressPostZipCode: string;		    			
+      billingAddressPostZipCode: string;		    			
       createdDate: string;    	
       dueDate: string;    	
       emailTo: string;    	
@@ -19,11 +18,10 @@
       paidTax: number;    	
       paymentDetails: string;    	
       purchaseOrderRef: string;    	
-      shippingAddressAddressId: number;
       shippingAddressPostZipCode: string;		    			
       status: InvoiceStatus;    	
       subTotal: number;    	
-      tax: number;    	
+      taxTotal: number;    	
       termsAndConditions : string;    	
 
 					    customerCustomerId : number;   
@@ -31,8 +29,7 @@
     }
     
     export class InvoiceView implements IInvoiceView {
-      billngAddressAddressId: number;
-      billngAddressPostZipCode: string;		    			
+      billingAddressPostZipCode: string;		    			
       createdDate: string;    	
       dueDate: string;    	
       emailTo: string;    	
@@ -47,11 +44,10 @@
       paidTax: number;    	
       paymentDetails: string;    	
       purchaseOrderRef: string;    	
-      shippingAddressAddressId: number;
       shippingAddressPostZipCode: string;		    			
       status: InvoiceStatus;    	
       subTotal: number;    	
-      tax: number;    	
+      taxTotal: number;    	
       termsAndConditions : string;    	
 
 					    customerCustomerId : number ;   

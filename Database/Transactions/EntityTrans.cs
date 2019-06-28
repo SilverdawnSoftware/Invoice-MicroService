@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-17A8CA39B5CCD53E59F90E83366B3636
+// ALLOWOVERWRITE-C6F0D804F85C851E9A067E0B4522CE19-A2F77409928B3B2C811CA6374848521F
 
 using System;
 using System.Collections.Generic;
@@ -10,13 +10,11 @@ using SilverdawnSoftware.Exceptions;
 using SilverdawnSoftware.Invoice.Database.Transactions.Model;
 using SilverdawnSoftware.Invoice.Database.Views.Model;
 using data = SilverdawnSoftware.Invoice.Database;
-
 namespace SilverdawnSoftware.Invoice.Database.Transactions
 {
  public partial class EntityTransactions
  {
-     
- 
+      
  		// Add Transaction Code
  		public async Task<EntityView> Add(EntityAdd add)
         {
@@ -29,11 +27,10 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions
 	                return (EntityView)result;
 	            }
 	        }
-            catch (Exception e)
+          catch (Exception e)
             {
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
-                return null;
-              
+                return null;              
             } 
         } 	
  	
@@ -44,38 +41,24 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions
             {
             
             var newEntity=new data.Entity();
-				
-				
-			newEntity.AddressAddressId  = add.AddressAddressId;
-				
-			//	  if (db.Addresss.Any(w => w.AddressId == add.AddressAddressId))
-            //    {
-            //        newEntity.Address = db.Addresss.First(w => w.AddressId == add. AddressAddressId);
-            //    }    
-				
-				 				
-	    	newEntity.EntityExternalRef = add.EntityExternalRef;   	
-	    	newEntity.LogoURL = add.LogoURL;   	
-	    	newEntity.Name = add.Name;   	
-    	
-    		// Add references to parent Classes
-    	
-    	
-    		db.Entitys.Add(newEntity);
-    		
+			newEntity.Address  = add.Address;				  			
+		    	newEntity.EntityExternalRef = add.EntityExternalRef;   	
+		    	newEntity.LogoURL = add.LogoURL;   	
+		    	newEntity.Name = add.Name;   	
+		    	newEntity.SMTPEmailDisplayName = add.SMTPEmailDisplayName;   	
+		    	newEntity.SMTPEmailFromAddress = add.SMTPEmailFromAddress;   	
+		    	newEntity.SMTPHost = add.SMTPHost;   	
+		    	newEntity.SMTPPassword = add.SMTPPassword;   	
+		    	newEntity.SMTPUserName = add.SMTPUserName;   	
+    		db.Entitys.Add(newEntity);    		
     		return newEntity;
-            }
-            
+            }            
              catch (Exception e)
             {
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
-                return null;
-              
+                return null;              
             }
         }
-
-
-
 // Update Transaction Code
  		public async Task<EntityView> Update(EntityUpdate update)
         {	
@@ -87,89 +70,69 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions
 	                await db.SaveChangesAsync();
 	                return (EntityView)result;
 	            }
-            }
-            catch (Exception e)
+          }
+          catch (Exception e)
             {
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
-                return null;
-              
+                return null;              
             } 
         } 			
- 	
- 	
+ 	 	
  	 public async Task<data.Entity> Update(data.InvoiceContext db, EntityUpdate update)
         {
          try
-            {
+            {            
               var entityToUpdate = await db.Entitys.FirstOrDefaultAsync(w => w.EntityId == update.EntityId);
-
-               
-            	
-				
-				entityToUpdate.AddressAddressId= update.AddressAddressId;
-				
-		   //	if (db.Addresss.Any(w => w.AddressId == update.AddressAddressId))
-           //   {
-           //         entityToUpdate.Address = db.Addresss.First(w => w.AddressId == update.AddressAddressId);
-           //   }    
-				
-				 				
-entityToUpdate.EntityExternalRef = update.EntityExternalRef;   	
-entityToUpdate.EntityId = update.EntityId;   	
-entityToUpdate.LogoURL = update.LogoURL;   	
-entityToUpdate.Name = update.Name;   	
-            	
-    	
-    		
-    		
-    		return entityToUpdate;
-            }
             
+				entityToUpdate.Address = update.Address;
+	    	   entityToUpdate.EntityExternalRef = update.EntityExternalRef;   	
+	    	   entityToUpdate.EntityId = update.EntityId;   	
+	    	   entityToUpdate.LogoURL = update.LogoURL;   	
+	    	   entityToUpdate.Name = update.Name;   	
+	    	   entityToUpdate.SMTPEmailDisplayName = update.SMTPEmailDisplayName;   	
+	    	   entityToUpdate.SMTPEmailFromAddress = update.SMTPEmailFromAddress;   	
+	    	   entityToUpdate.SMTPHost = update.SMTPHost;   	
+	    	   entityToUpdate.SMTPPassword = update.SMTPPassword;   	
+	    	   entityToUpdate.SMTPUserName = update.SMTPUserName;   	
+    		return entityToUpdate;
+            }            
              catch (Exception e)
             {
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
-                return null;
-              
+                return null;              
             }
         }
-
-
-	// Delete Transaction Code
- 		public async System.Threading.Tasks.Task Delete(EntityDelete delete)
+    // Delete Transaction Code
+    public async System.Threading.Tasks.Task Delete(EntityDelete delete)
+    {
+        try
         {
-        	try
+            using (var db = new data.InvoiceContext())
             {
-	            using (var db = new data.InvoiceContext())
-	            {
 	                await Delete(db,delete);
 	                await db.SaveChangesAsync();	                
 	            }
-            }
+          }
             catch (Exception e)
             {
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
-               
-              
             } 
         } 	
- 	
- 	
+ 	 	
  	 public async System.Threading.Tasks.Task Delete(data.InvoiceContext db, EntityDelete delete)
-        {
+   {
          try
-            {
-            
+            {            
               var entityToDelete = await db.Entitys.FirstOrDefaultAsync(w => w.EntityId == delete.EntityId);
             
              	db.Entitys.Remove(entityToDelete);    		
-    		}
+    		  }
              catch (Exception e)
             {
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
             }
-        }
-        
+    }
 
-	}
- }
+ 	}
+}
  

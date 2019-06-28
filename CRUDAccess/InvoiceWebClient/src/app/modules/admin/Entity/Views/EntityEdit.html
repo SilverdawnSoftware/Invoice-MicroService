@@ -1,4 +1,4 @@
-<!-- ALLOWOVERWRITE-17AB6E3818C495D9775DEAFCE164513E -->
+<!-- ALLOWOVERWRITE-FF4112D74A6262FAF27FD990C3150A56 -->
 
 
  <form [formGroup]="entityForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
@@ -6,57 +6,84 @@
         	 <mat-tab label="Main">        	 
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-					
-					 <div class="form-group">
-					 		
-                            <label for="entityAddress" class="col-sm-2 control-label">Address</label>
-                            <div class="col-sm-10">
-
-                                <select id="entityAddress" class="form-control" ng-model="entityView.addressAddressId" ng-options="address.addressId as address.postZipCode for address in addresss" required>
-                                    <option value="">-- Choose Address --</option>
-                                </select>
-                            </div>
-                       	</div>
-                        
-
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="entityExternalRef" id="entityEntityExternalRef" type="text" placeholder="EntityExternalRef"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="entityExternalRef" id="entityEntityExternalRef" type="text" placeholder="EntityExternalRef"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="logoURL" id="entityLogoURL" type="text" placeholder="LogoURL"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="logoURL" id="entityLogoURL" type="text" placeholder="LogoURL"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="name" id="entityName" type="text" placeholder="Name"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="name" id="entityName" type="text" placeholder="Name"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
-        	 
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="sMTPEmailDisplayName" id="entitySMTPEmailDisplayName" type="text" placeholder="SMTPEmailDisplayName"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="sMTPEmailFromAddress" id="entitySMTPEmailFromAddress" type="text" placeholder="SMTPEmailFromAddress"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="sMTPHost" id="entitySMTPHost" type="text" placeholder="SMTPHost"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="sMTPPassword" id="entitySMTPPassword" type="text" placeholder="SMTPPassword"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="sMTPUserName" id="entitySMTPUserName" type="text" placeholder="SMTPUserName"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
 			 </mat-tab>
 
         	 
@@ -74,11 +101,12 @@
    						<ngx-datatable-column name="CustomerId" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="Name" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="PhoneNumber" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="EmalAddress" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="EmailAddress" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="Active" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="IsCompany" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="CustomerExteranlRef" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="TaxNo" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Address" width="300"></ngx-datatable-column> 
    			<ngx-datatable-column name="Edit" width="300" prop="customerId">
       <ng-template let-value="value" ngx-datatable-cell-template>
       <button mat-icon-button	routerLink="/admin/customer/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>

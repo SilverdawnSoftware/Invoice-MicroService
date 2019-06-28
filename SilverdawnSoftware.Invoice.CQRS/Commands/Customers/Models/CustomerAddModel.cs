@@ -1,10 +1,11 @@
-// ALLOWOVERWRITE-6AD7E822CC3BD56DE16EE65611133461
+// ALLOWOVERWRITE-ECD860763FFCF56EADBA0D876A5EBE68-BCD37D24DFE9CB88A8F68059AAEE011B
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using SilverdawnSoftware.Invoice.Interfaces.CQRS.Commands.Customer.Models;
+using SilverdawnSoftware.Invoice.Interfaces.CQRS.Querys.Results.Models;
 
 namespace SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models
 {
@@ -34,6 +35,8 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models
         [DataMember]	
         public int EntityId  { get; set; }
 		  	
+        [DataMember]	
+        public IAddressView Address { get; set; }						
     	 public CustomerAdd()
         {
             this.__CQRSModel = "SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.CustomerAdd";

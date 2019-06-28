@@ -1,42 +1,55 @@
-// ALLOWOVERWRITE-DDC65205607E1E549A71960EF9D30072
+// ALLOWOVERWRITE-07A8A0B1FE19975A5290CC7EF0AF3F46-B2440FA5066272C1D7C09B672FEA6D44
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
-
 namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
 {
     public class EntityUpdate
     {
-				
 				/// <summary>
                 /// 
-                /// </summary>	 
-				public int AddressAddressId  { get; set; } 				
-	    		
+                /// </summary>	  
+              public Address  Address   { get; set; }
 	    		/// <summary>
                 /// 
                 /// </summary>	 
 	    		public string EntityExternalRef  { get; set; } 
-	    		
 	    		/// <summary>
                 /// 
                 /// </summary>	 
 	    		public int EntityId  { get; set; } 
-	    		
 	    		/// <summary>
                 /// 
                 /// </summary>	 
 	    		public string LogoURL  { get; set; } 
-	    		
 	    		/// <summary>
                 /// 
                 /// </summary>	 
 	    		public string Name  { get; set; } 
-    	
-    }
+	    		/// <summary>
+                /// 
+                /// </summary>	 
+	    		public string SMTPEmailDisplayName  { get; set; } 
+	    		/// <summary>
+                /// 
+                /// </summary>	 
+	    		public string SMTPEmailFromAddress  { get; set; } 
+	    		/// <summary>
+                /// 
+                /// </summary>	 
+	    		public string SMTPHost  { get; set; } 
+	    		/// <summary>
+                /// 
+                /// </summary>	 
+	    		public string SMTPPassword  { get; set; } 
+	    		/// <summary>
+                /// 
+                /// </summary>	 
+	    		public string SMTPUserName  { get; set; } 
+    	}
 }
+
 
 

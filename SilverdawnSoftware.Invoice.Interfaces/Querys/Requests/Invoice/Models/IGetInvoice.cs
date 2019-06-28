@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-A572D033DFEA5A5BE033541CE4CC6926
+// ALLOWOVERWRITE-214E3B08239CA2340CD0560FFABDCE54-A572D033DFEA5A5BE033541CE4CC6926
 
 using System;
 using System.Collections.Generic;
@@ -9,8 +9,8 @@ namespace SilverdawnSoftware.Invoice.Interfaces.CQRS.Querys.Requests.Invoice.Mod
 {
     public partial interface IGetInvoice : ICQRSBase
     { 
-         int InvoiceNo  { get; set; }
-		  	
+		
+        int InvoiceNo  { get; set; }	
 	}
 }
 

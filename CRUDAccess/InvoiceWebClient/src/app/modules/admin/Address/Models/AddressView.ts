@@ -1,10 +1,9 @@
-// ALLOWOVERWRITE-1816013EDA9AAEFE76EDEFBEADDFE59D
+// ALLOWOVERWRITE-B524A19ABAB24F8A487C228159053842
 
 
     export interface IAddressView {
       addresLine2: string;    	
       addressExternalRef: string;    	
-      addressId: number;    	
       addressLine1: string;    	
       addressLine3: string;    	
       city: string;    	
@@ -12,14 +11,11 @@
       postZipCode: string;    	
       stateCounty: string;    	
 
-					    customerCustomerId : number;   
-					    customerName : string;   
     }
     
     export class AddressView implements IAddressView {
       addresLine2: string;    	
       addressExternalRef: string;    	
-      addressId: number;    	
       addressLine1: string;    	
       addressLine3: string;    	
       city: string;    	
@@ -27,8 +23,6 @@
       postZipCode: string;    	
       stateCounty: string;    	
 
-					    customerCustomerId : number ;   
-					    customerName : string;   
 
 
 	  constructor() {

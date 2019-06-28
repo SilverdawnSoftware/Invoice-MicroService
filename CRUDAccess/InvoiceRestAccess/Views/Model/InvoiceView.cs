@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-922CB2680F8507DF12646C8EC224531F
+// ALLOWOVERWRITE-1B8847CF5F7F960460A1AD5ACB450EEF-AD48B068BB9B3E077F96C870A6160FE8
 
 using System;
 using System.Collections.Generic;
@@ -13,15 +13,10 @@ namespace Database.Views.Model
     public class InvoiceView
     {
                        /// <summary>
-                       ///  
-                       /// </summary>	
-                       [DataMember(Name = "billngAddressAddressId")]
-                       public int BillngAddressAddressId { get; set; } 
-                       /// <summary>
                        /// 
                        /// </summary>
-                       [DataMember(Name = "billngAddressPostZipCode")]                         
-                       public string BillngAddressPostZipCode { get; set; }
+                       [DataMember(Name = "billingAddressPostZipCode")]                         
+                       public string BillingAddressPostZipCode { get; set; }
                        /// <summary>
                        /// 
                        /// </summary>
@@ -93,11 +88,6 @@ namespace Database.Views.Model
                        [DataMember(Name = "purchaseOrderRef")]            
                        public string PurchaseOrderRef { get; set; }	    	
                        /// <summary>
-                       ///  
-                       /// </summary>	
-                       [DataMember(Name = "shippingAddressAddressId")]
-                       public int ShippingAddressAddressId { get; set; } 
-                       /// <summary>
                        /// 
                        /// </summary>
                        [DataMember(Name = "shippingAddressPostZipCode")]                         
@@ -115,8 +105,8 @@ namespace Database.Views.Model
                        /// <summary>
                        /// 
                        /// </summary>
-                       [DataMember(Name = "tax")]            
-                       public decimal Tax { get; set; }	    	
+                       [DataMember(Name = "taxTotal")]            
+                       public decimal TaxTotal { get; set; }	    	
                        /// <summary>
                        /// 
                        /// </summary>

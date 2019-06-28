@@ -1,4 +1,4 @@
-<!-- ALLOWOVERWRITE-4BE70B3B37B1255805A441175756D379 -->
+<!-- ALLOWOVERWRITE-F546AC905B8C117BCE1B2D6EEC16BD6E -->
 
 
  <form [formGroup]="customerForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
@@ -6,118 +6,78 @@
         	 <mat-tab label="Main">        	 
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="active" id="customerActive" type="checkbox" placeholder="Active"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="active" id="customerActive" type="checkbox" placeholder="Active"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="customerExteranlRef" id="customerCustomerExteranlRef" type="text" placeholder="CustomerExteranlRef"  required/>
-						</mat-form-field>                       
-                        
-
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="customerExteranlRef" id="customerCustomerExteranlRef" type="text" placeholder="CustomerExteranlRef"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="emalAddress" id="customerEmalAddress" type="text" placeholder="EmalAddress"  required/>
-						</mat-form-field>                       
-                        
-
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="isCompany" id="customerIsCompany" type="checkbox" placeholder="IsCompany"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="emailAddress" id="customerEmailAddress" type="text" placeholder="EmailAddress"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="name" id="customerName" type="text" placeholder="Name"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="isCompany" id="customerIsCompany" type="checkbox" placeholder="IsCompany"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="phoneNumber" id="customerPhoneNumber" type="text" placeholder="PhoneNumber"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="name" id="customerName" type="text" placeholder="Name"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
         	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
         	 			<div fxFlex>	
-	    	            	    				
-                         <mat-form-field>                            
-                                <input matInput formControlName="taxNo" id="customerTaxNo" type="text" placeholder="TaxNo"  required/>
-						</mat-form-field>                       
-                        
-
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="phoneNumber" id="customerPhoneNumber" type="text" placeholder="PhoneNumber"  required/>
+									</mat-form-field>                       
+			                        
         	 			</div>
         	 		</div>
-        	 
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="taxNo" id="customerTaxNo" type="text" placeholder="TaxNo"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
 			 </mat-tab>
 
         	 
-    		
-    	<mat-tab label="Address"> 
-    				 <ngx-datatable
-            class='material'
-            [rows]='addressrows'
-            [columnMode]="'force'"
-            [headerHeight]="50"
-            [footerHeight]="50"
-            [rowHeight]="40"
-            [scrollbarV]="true"
-            (page)="onPage($event)">
-   						<ngx-datatable-column name="AddressId" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="AddressLine1" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="AddresLine2" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="City" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="PostZipCode" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="StateCounty" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="Country" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="AddressExternalRef" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="AddressLine3" width="300"></ngx-datatable-column> 
-   			<ngx-datatable-column name="Edit" width="300" prop="addressId">
-      <ng-template let-value="value" ngx-datatable-cell-template>
-      <button mat-icon-button	routerLink="/admin/address/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
-
-    </ng-template>
-    </ngx-datatable-column>
-    <ngx-datatable-column name="Delete" width="300" prop="addressId">
-      <ng-template let-value="value" ngx-datatable-cell-template>
-        <button mat-icon-button	(click)="deleteAddress(value)" color="warn"><mat-icon>delete</mat-icon></button>
-
-      </ng-template>
-    </ngx-datatable-column>			
-   			</ngx-datatable>
-    				 <a mat-raised-button color="primary" href="/admin/address/add?customerCustomerId={{customerView.customerId}}">Add</a>
-    		</mat-tab>	
     		
     	<mat-tab label="Invoice"> 
     				 <ngx-datatable
@@ -135,7 +95,7 @@
    						<ngx-datatable-column name="PaidDate" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="GrandTotal" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="SubTotal" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="Tax" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="TaxTotal" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="OrderedBy" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="PurchaseOrderRef" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="InvoiceNo" width="300"></ngx-datatable-column> 
@@ -143,7 +103,7 @@
    						<ngx-datatable-column name="PaidTax" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="InvoiceEmailed" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="EmailTo" width="300"></ngx-datatable-column> 
-   						<ngx-datatable-column name="BillngAddress" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="BillingAddress" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="ShippingAddress" width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="TermsAndConditions " width="300"></ngx-datatable-column> 
    						<ngx-datatable-column name="PaymentDetails" width="300"></ngx-datatable-column> 

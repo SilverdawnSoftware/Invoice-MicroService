@@ -28,14 +28,14 @@
 	          <StackLayout Orientation="Vertical">
 	          	<Label Text="{Binding Active}" FontSize="Medium" />
 	          	<StackLayout Orientation="Horizontal">
-	                    <Label Text="{Binding CustomerExteranlRef}" FontSize="Small" />      
-	                    <Label Text="{Binding CustomerId}" FontSize="Small" />      
-	                    <Label Text="{Binding EmalAddress}" FontSize="Small" />      
-	                    <Label Text="{Binding IsCompany}" FontSize="Small" />      
-	                    <Label Text="{Binding Name}" FontSize="Small" />      
-	                    <Label Text="{Binding PhoneNumber}" FontSize="Small" />      
-	                    <Label Text="{Binding TaxNo}" FontSize="Small" />      
-
+                    <Label Text="{Binding Address}" FontSize="Small" />
+                    <Label Text="{Binding CustomerExteranlRef}" FontSize="Small" />
+                    <Label Text="{Binding CustomerId}" FontSize="Small" />
+                    <Label Text="{Binding EmailAddress}" FontSize="Small" />
+                    <Label Text="{Binding IsCompany}" FontSize="Small" />
+                    <Label Text="{Binding Name}" FontSize="Small" />
+                    <Label Text="{Binding PhoneNumber}" FontSize="Small" />
+                    <Label Text="{Binding TaxNo}" FontSize="Small" />
 	          	</StackLayout>
 			  </StackLayout>
 			</ViewCell>
@@ -45,4 +45,5 @@
      <Button Margin="10" WidthRequest="100"  Text="Add Customer"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddCustomerCommand}"></Button>
   </StackLayout>
 </ContentPage>
-<!-- ALLOWOVERWRITE-A16F6A40C8ADBD6C1D5EA4F27609D8FE -->
+
+<!-- ALLOWOVERWRITE -->

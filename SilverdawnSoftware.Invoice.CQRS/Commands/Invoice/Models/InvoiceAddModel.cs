@@ -1,10 +1,11 @@
-// ALLOWOVERWRITE-4427663DECA7ACEBD3BF6D2097A811D7
+// ALLOWOVERWRITE-E660CC58AE91AC17FAE8F247DCC4FFA9-679FF52FF028900EC1F5584A7EF5F9BD
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using SilverdawnSoftware.Invoice.Interfaces.CQRS.Commands.Invoice.Models;
+using SilverdawnSoftware.Invoice.Interfaces.CQRS.Querys.Results.Models;
 
 namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
 {
@@ -36,19 +37,9 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
         public int CustomerId  { get; set; }
 		  	
         [DataMember]	
-        /// To avoid Many to Many Relationships, use primary key https://github.com/aspnet/EntityFrameworkCore/issues/1368
-        /// <summary>
-        /// 
-        /// </summary>	
-        //public virtual Address BillngAddress <text> { get; set; }  				
-          public int BillngAddressAddressId  { get; set; }		
+        public IAddressView BillingAddress { get; set; }						
         [DataMember]	
-        /// To avoid Many to Many Relationships, use primary key https://github.com/aspnet/EntityFrameworkCore/issues/1368
-        /// <summary>
-        /// 
-        /// </summary>	
-        //public virtual Address ShippingAddress <text> { get; set; }  				
-          public int ShippingAddressAddressId  { get; set; }		
+        public IAddressView ShippingAddress { get; set; }						
     	 public InvoiceAdd()
         {
             this.__CQRSModel = "SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceAdd";

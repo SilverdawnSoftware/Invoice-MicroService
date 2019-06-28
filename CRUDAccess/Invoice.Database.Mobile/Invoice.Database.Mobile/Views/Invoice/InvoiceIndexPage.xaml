@@ -26,28 +26,27 @@
 	      <DataTemplate>
 	        <ViewCell>
 	          <StackLayout Orientation="Vertical">
-	          	<Label Text="{Binding BillngAddress}" FontSize="Medium" />
+	          	<Label Text="{Binding BillingAddress}" FontSize="Medium" />
 	          	<StackLayout Orientation="Horizontal">
-	                    <Label Text="{Binding CreatedDate}" FontSize="Small" />      
-	                    <Label Text="{Binding DueDate}" FontSize="Small" />      
-	                    <Label Text="{Binding EmailTo}" FontSize="Small" />      
-	                    <Label Text="{Binding GrandTotal}" FontSize="Small" />      
-	                    <Label Text="{Binding InvoiceEmailed}" FontSize="Small" />      
-	                    <Label Text="{Binding InvoiceId}" FontSize="Small" />      
-	                    <Label Text="{Binding InvoiceNo}" FontSize="Small" />      
-	                    <Label Text="{Binding Notes}" FontSize="Small" />      
-	                    <Label Text="{Binding OrderedBy}" FontSize="Small" />      
-	                    <Label Text="{Binding PaidAmount}" FontSize="Small" />      
-	                    <Label Text="{Binding PaidDate}" FontSize="Small" />      
-	                    <Label Text="{Binding PaidTax}" FontSize="Small" />      
-	                    <Label Text="{Binding PaymentDetails}" FontSize="Small" />      
-	                    <Label Text="{Binding PurchaseOrderRef}" FontSize="Small" />      
-	                    <Label Text="{Binding ShippingAddress}" FontSize="Small" />      
-	                    <Label Text="{Binding Status}" FontSize="Small" />      
-	                    <Label Text="{Binding SubTotal}" FontSize="Small" />      
-	                    <Label Text="{Binding Tax}" FontSize="Small" />      
-	                    <Label Text="{Binding TermsAndConditions }" FontSize="Small" />      
-
+                    <Label Text="{Binding CreatedDate}" FontSize="Small" />
+                    <Label Text="{Binding DueDate}" FontSize="Small" />
+                    <Label Text="{Binding EmailTo}" FontSize="Small" />
+                    <Label Text="{Binding GrandTotal}" FontSize="Small" />
+                    <Label Text="{Binding InvoiceEmailed}" FontSize="Small" />
+                    <Label Text="{Binding InvoiceId}" FontSize="Small" />
+                    <Label Text="{Binding InvoiceNo}" FontSize="Small" />
+                    <Label Text="{Binding Notes}" FontSize="Small" />
+                    <Label Text="{Binding OrderedBy}" FontSize="Small" />
+                    <Label Text="{Binding PaidAmount}" FontSize="Small" />
+                    <Label Text="{Binding PaidDate}" FontSize="Small" />
+                    <Label Text="{Binding PaidTax}" FontSize="Small" />
+                    <Label Text="{Binding PaymentDetails}" FontSize="Small" />
+                    <Label Text="{Binding PurchaseOrderRef}" FontSize="Small" />
+                    <Label Text="{Binding ShippingAddress}" FontSize="Small" />
+                    <Label Text="{Binding Status}" FontSize="Small" />
+                    <Label Text="{Binding SubTotal}" FontSize="Small" />
+                    <Label Text="{Binding TaxTotal}" FontSize="Small" />
+                    <Label Text="{Binding TermsAndConditions }" FontSize="Small" />
 	          	</StackLayout>
 			  </StackLayout>
 			</ViewCell>
@@ -57,4 +56,5 @@
      <Button Margin="10" WidthRequest="100"  Text="Add Invoice"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddInvoiceCommand}"></Button>
   </StackLayout>
 </ContentPage>
-<!-- ALLOWOVERWRITE-C3021FC096D3155A18C16D3EF6441C8A -->
+
+<!-- ALLOWOVERWRITE -->

@@ -1,4 +1,4 @@
-<!-- ALLOWOVERWRITE-9211C51E13FDEF9744DE8B06E2EEBCB0 -->
+<!-- ALLOWOVERWRITE-E720AB2A43A89EA2CF047133A1C137BA -->
 
 <div class="app-datatable">
 <ngx-datatable
@@ -13,7 +13,6 @@
   (page)="onPage($event)" style="width: 100%; height: 100%; position: relative" >
   <ngx-datatable-column name="AddresLine2" width="300"></ngx-datatable-column> 
   <ngx-datatable-column name="AddressExternalRef" width="300"></ngx-datatable-column> 
-  <ngx-datatable-column name="AddressId" width="300"></ngx-datatable-column> 
   <ngx-datatable-column name="AddressLine1" width="300"></ngx-datatable-column> 
   <ngx-datatable-column name="AddressLine3" width="300"></ngx-datatable-column> 
   <ngx-datatable-column name="City" width="300"></ngx-datatable-column> 
@@ -21,13 +20,13 @@
   <ngx-datatable-column name="PostZipCode" width="300"></ngx-datatable-column> 
   <ngx-datatable-column name="StateCounty" width="300"></ngx-datatable-column> 
   
-  <ngx-datatable-column name="Edit" width="300" prop="addressId">
+  <ngx-datatable-column name="Edit" width="300" prop="">
       <ng-template let-value="value" ngx-datatable-cell-template>
       <button mat-icon-button	routerLink="/admin/address/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
 
     </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Delete" width="300" prop="addressId">
+    <ngx-datatable-column name="Delete" width="300" prop="">
       <ng-template let-value="value" ngx-datatable-cell-template>
         <button mat-icon-button	(click)="delete(value)" color="warn"><mat-icon>delete</mat-icon></button>
 

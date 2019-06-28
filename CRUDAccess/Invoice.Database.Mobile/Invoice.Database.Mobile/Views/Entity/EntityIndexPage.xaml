@@ -28,11 +28,15 @@
 	          <StackLayout Orientation="Vertical">
 	          	<Label Text="{Binding Address}" FontSize="Medium" />
 	          	<StackLayout Orientation="Horizontal">
-	                    <Label Text="{Binding EntityExternalRef}" FontSize="Small" />      
-	                    <Label Text="{Binding EntityId}" FontSize="Small" />      
-	                    <Label Text="{Binding LogoURL}" FontSize="Small" />      
-	                    <Label Text="{Binding Name}" FontSize="Small" />      
-
+                    <Label Text="{Binding EntityExternalRef}" FontSize="Small" />
+                    <Label Text="{Binding EntityId}" FontSize="Small" />
+                    <Label Text="{Binding LogoURL}" FontSize="Small" />
+                    <Label Text="{Binding Name}" FontSize="Small" />
+                    <Label Text="{Binding SMTPEmailDisplayName}" FontSize="Small" />
+                    <Label Text="{Binding SMTPEmailFromAddress}" FontSize="Small" />
+                    <Label Text="{Binding SMTPHost}" FontSize="Small" />
+                    <Label Text="{Binding SMTPPassword}" FontSize="Small" />
+                    <Label Text="{Binding SMTPUserName}" FontSize="Small" />
 	          	</StackLayout>
 			  </StackLayout>
 			</ViewCell>
@@ -42,4 +46,5 @@
      <Button Margin="10" WidthRequest="100"  Text="Add Entity"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddEntityCommand}"></Button>
   </StackLayout>
 </ContentPage>
-<!-- ALLOWOVERWRITE-0F7DBC6E34D9B9C8ED75D58655580912 -->
+
+<!-- ALLOWOVERWRITE -->

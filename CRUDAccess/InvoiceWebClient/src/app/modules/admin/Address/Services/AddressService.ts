@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-808C83DF9C9EF8E89D04C773741B5D31
+// ALLOWOVERWRITE-1B3499D92EA623E424DD1A34C0C729D7
 
 
 
@@ -26,48 +26,6 @@ export class AddressService {
       .pipe(
         catchError(this.handleError('getAddresss', [])));
   }  
-	 	
- 	get(id: number | string): Observable<AddressView> {
-		return this.http.get<AddressView>(this.baseURL + `/api/Address/${id}`)
-      		.pipe(
-         		catchError(this.handleError<AddressView>(`getaddressId=${id}`)
-         	)
-   		);
- 	}
- 	 
-	add(address: AddressView): Observable<AddressView > {
-    	return this.http.post<AddressView>(this.baseURL + '/api/Address', address)
-      		.pipe(
-    			catchError(this.handleError<AddressView>('addAddress')
-    		)	
-    	);
-  	}
- 	 
- 	 
- 	update(addressId: number,  address: AddressView): Observable<AddressView > {
-    	return this.http.put<AddressView >(this.baseURL + `/api/Entity/${addressId}`, address)
-      		.pipe(
-        		catchError(this.handleError<AddressView>('addAddress')
-        	)
-      	);
-  	}
- 	 
- 	 
- 	remove(addressId: number): Observable<AddressView > {
-     	return this.http.delete<AddressView >(this.baseURL + `/api/Address/${addressId}`)
-        	.pipe(
-          		catchError(this.handleError<AddressView>('addAddress')
-          	)
-        );
-  	} 	  	 
-  		  		
-		    	
-		    	getAddresssByCustomer(customerId: number): Observable<AddressView[]> {
-    return this.http.get<AddressView[]>(this.baseURL + `/api/Customer/${customerId}/Addresss`)
-     .pipe(
-        catchError(this.handleError('getAddresssByCustomer', [])));
-  }
-		    	
    
    	
 	/**

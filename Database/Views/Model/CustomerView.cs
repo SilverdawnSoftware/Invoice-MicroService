@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-86589B3175C7CD71019D4497F5EB814D
+// ALLOWOVERWRITE-52030237365802E4B0E96D625E3390A8-BD2C6B80C1D15907161C771505E2CDCC
 
 using System;
 using System.Collections.Generic;
@@ -17,6 +17,11 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
             /// 
             /// </summary>	
 	    	public bool  Active  { get; set; } 	    	
+			    		
+    		/// <summary>
+            /// 
+            /// </summary>	
+			public string AddressPostZipCode { get; set; }   
 	    	
 	    	
 	    	/// <summary>
@@ -34,7 +39,7 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 	    	/// <summary>
             /// 
             /// </summary>	
-	    	public string  EmalAddress  { get; set; } 	    	
+	    	public string  EmailAddress  { get; set; } 	    	
 	    	
 	    	
 	    	/// <summary>
@@ -72,9 +77,13 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 	    		var result=new CustomerView();
 	    	 
 		    	result.Active = item.Active;     
+				//if (item.Address != null) 
+				//{   	
+				//result.AddressPostZipCode= item.Address.PostZipCode;
+				//} 
 		    	result.CustomerExteranlRef = item.CustomerExteranlRef;     
 		    	result.CustomerId = item.CustomerId;     
-		    	result.EmalAddress = item.EmalAddress;     
+		    	result.EmailAddress = item.EmailAddress;     
 		    	result.IsCompany = item.IsCompany;     
 		    	result.Name = item.Name;     
 		    	result.PhoneNumber = item.PhoneNumber;     

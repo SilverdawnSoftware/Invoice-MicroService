@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-87ABA40E9AD39730292AA9A42EAC4AF0
+// ALLOWOVERWRITE-A507BE34F56E95F3A411E6374D337F33-7A5B31AC01EA1A7D949AC3253C763416
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +32,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Customer
                        var customer = db.Customers.First(w =>  w.CustomerId == customerUpdate.CustomerId);
                     customer.Active=customerUpdate.Active;  	
                     customer.CustomerExteranlRef=customerUpdate.CustomerExteranlRef;  	
-                    customer.EmalAddress=customerUpdate.EmalAddress;  	
+                    customer.EmailAddress=customerUpdate.EmalAddress;  	
                     customer.IsCompany=customerUpdate.IsCompany;  	
                     customer.Name=customerUpdate.Name;  	
                     customer.PhoneNumber=customerUpdate.PhoneNumber;  	
@@ -42,7 +42,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Customer
                        result.Active=customer.Active;
                        result.CustomerExteranlRef=customer.CustomerExteranlRef;
                        result.CustomerId=customer.CustomerId;
-                       result.EmalAddress=customer.EmalAddress;
+                       result.EmalAddress=customer.EmailAddress;
                        result.IsCompany=customer.IsCompany;
                        result.Name=customer.Name;
                        result.PhoneNumber=customer.PhoneNumber;

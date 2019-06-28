@@ -1,11 +1,12 @@
-// ALLOWOVERWRITE-26883550D02AD50239B3C5241A4DEA72
+// ALLOWOVERWRITE-4B4141E844815DF26FE4A9A113495D83-0C45F0ADC5CF5D02D47C8C5C878074FA
 
 
     export interface ICustomerView {
       active: boolean;    	
+      addressPostZipCode: string;		    			
       customerExteranlRef: string;    	
       customerId: number;    	
-      emalAddress: string;    	
+      emailAddress: string;    	
       isCompany: boolean;    	
       name: string;    	
       phoneNumber: string;    	
@@ -16,9 +17,10 @@
     
     export class CustomerView implements ICustomerView {
       active: boolean;    	
+      addressPostZipCode: string;		    			
       customerExteranlRef: string;    	
       customerId: number;    	
-      emalAddress: string;    	
+      emailAddress: string;    	
       isCompany: boolean;    	
       name: string;    	
       phoneNumber: string;    	

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-AFE0EEAF89868BD907A362EAB15409D3
+// ALLOWOVERWRITE-147B1A6AD76DABDAD43151927426A043-586400B8087284AEBAE93E5E667A2100
 
 using System;
 using System.Collections.Generic;
@@ -13,15 +13,9 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
     {
 			    		
     		/// <summary>
-            ///  
-            /// </summary>	
-			    		
-			public int BillngAddressAddressId { get; set; }   
-			    		
-    		/// <summary>
             /// 
             /// </summary>	
-			public string BillngAddressPostZipCode { get; set; }   
+			public string BillingAddressPostZipCode { get; set; }   
 	    	
 	    	
 	    	/// <summary>
@@ -108,12 +102,6 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 	    	public string  PurchaseOrderRef  { get; set; } 	    	
 			    		
     		/// <summary>
-            ///  
-            /// </summary>	
-			    		
-			public int ShippingAddressAddressId { get; set; }   
-			    		
-    		/// <summary>
             /// 
             /// </summary>	
 			public string ShippingAddressPostZipCode { get; set; }   
@@ -128,7 +116,7 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 	    	/// <summary>
             /// 
             /// </summary>	
-	    	public decimal  Tax  { get; set; } 	    	
+	    	public decimal  TaxTotal  { get; set; } 	    	
 	    	
 	    	
 	    	/// <summary>
@@ -152,14 +140,9 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 	    	{
 	    		var result=new InvoiceView();
 	    	 
-				//if (item.BillngAddress != null) 
+				//if (item.BillingAddress != null) 
 				//{   	
-				result.BillngAddressAddressId= item.BillngAddressAddressId;
-				//result.BillngAddressAddressId= item.BillngAddress.AddressId;
-				//} 
-				//if (item.BillngAddress != null) 
-				//{   	
-				//result.BillngAddressPostZipCode= item.BillngAddress.PostZipCode;
+				//result.BillingAddressPostZipCode= item.BillingAddress.PostZipCode;
 				//} 
 		    	result.CreatedDate = item.CreatedDate;     
 		    	result.DueDate = item.DueDate;     
@@ -177,15 +160,10 @@ namespace SilverdawnSoftware.Invoice.Database.Views.Model
 		    	result.PurchaseOrderRef = item.PurchaseOrderRef;     
 				//if (item.ShippingAddress != null) 
 				//{   	
-				result.ShippingAddressAddressId= item.ShippingAddressAddressId;
-				//result.ShippingAddressAddressId= item.ShippingAddress.AddressId;
-				//} 
-				//if (item.ShippingAddress != null) 
-				//{   	
 				//result.ShippingAddressPostZipCode= item.ShippingAddress.PostZipCode;
 				//} 
 		    	result.SubTotal = item.SubTotal;     
-		    	result.Tax = item.Tax;     
+		    	result.TaxTotal = item.TaxTotal;     
 		    	result.TermsAndConditions  = item.TermsAndConditions ;     
 	    	
 				if (item.Customer != null) 

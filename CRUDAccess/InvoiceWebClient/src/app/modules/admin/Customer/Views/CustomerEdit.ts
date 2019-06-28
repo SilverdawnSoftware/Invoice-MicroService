@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-2C5AF8C32971B6BE40C60C0BE7153299
+// ALLOWOVERWRITE-D900C54148C7B158123F8208B257E665-50FDADEC47A55277A00153604A1EFAA3
 
 import { Component,OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
@@ -10,18 +10,18 @@ import {CustomerView} from "../Models/CustomerView";
 import {CustomerService} from "../Services/CustomerService";
 
 // Add service imports
+import {AddressService} from "../../Address/Services/AddressService"	
     		
 //Add Target Assoications    
 
    					
-import {AddressService} from "../../Address/Services/AddressService"	
 import {InvoiceService} from "../../Invoice/Services/InvoiceService"	
     		
 // Add view Models Imports
 
+ import { IAddressView } from "../../Address/Models/AddressView";
 
 // Add  Target Assoications view Models
- import { IAddressView } from "../../Address/Models/AddressView";
  import { IInvoiceView } from "../../Invoice/Models/InvoiceView";
  
 
@@ -31,7 +31,6 @@ import {InvoiceService} from "../../Invoice/Services/InvoiceService"
   providers: [
     CustomerService 
 
-,AddressService
 ,InvoiceService
 ]
 })
@@ -45,11 +44,9 @@ import {InvoiceService} from "../../Invoice/Services/InvoiceService"
   customerView: ICustomerView;
   customerId: number=0;
   entityEntityId : number;   
-    addressrows: any; 
-  invoicerows: any; 
+    invoicerows: any; 
   
   constructor(private formBuilder: FormBuilder, private customerService: CustomerService, private route: ActivatedRoute, private router: Router, private location: Location
-,private addressService: AddressService
 ,private invoiceService: InvoiceService
   ) {
 
@@ -63,7 +60,7 @@ import {InvoiceService} from "../../Invoice/Services/InvoiceService"
     this.customerForm = this.formBuilder.group({
 	    				active: "", 
 	    				customerExteranlRef: "", 
-	    				emalAddress: "", 
+	    				emailAddress: "", 
 	    				isCompany: "", 
 	    				name: "", 
 	    				phoneNumber: "", 
@@ -75,7 +72,6 @@ import {InvoiceService} from "../../Invoice/Services/InvoiceService"
         this.customerId =params['id'];
           if (this.customerId>0) {
         	this.customerService.get(+params['id']).subscribe(customer => this.displayCustomer(customer));
-  			 this.addressService.getAddresssByCustomer(this.customerId).subscribe(value => this.addressrows=value); 
   			 this.invoiceService.getInvoicesByCustomer(this.customerId).subscribe(value => this.invoicerows=value); 
       		}
       	});
@@ -108,22 +104,6 @@ import {InvoiceService} from "../../Invoice/Services/InvoiceService"
 	this.customerView=customerView;	    
     }
     
-    
-    deleteAddress(addressId: number)
-  	{
-	    if (confirm('Are you sure you want to delete this?'))
-	    {
-	      this.addressService.remove(addressId).subscribe();
-	
-	      for(var i = this.addressrows.length - 1; i >= 0; i--) {
-	        if(this.addressrows[i].addressId === addressId) {
-	          this.addressrows.splice(i, 1);
-	          break;
-	        }
-	      }
-	    }
-  	}
-  	
     
     deleteInvoice(invoiceId: number)
   	{

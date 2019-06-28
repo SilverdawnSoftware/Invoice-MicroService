@@ -4,33 +4,25 @@
              xmlns:viewModels="clr-namespace:Database.Mobile.ViewModels"
              x:Class="Database.Mobile.Views.Counter.CounterEditPage" Title="Counter List">
     <ContentPage.BindingContext>
-        <viewModels:CounterEditViewModel/>
+       
     </ContentPage.BindingContext>
     <ContentPage.Content>
         
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Margin="10">
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="Name: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="name" Text="{Binding Name}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="Value: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="value" Text="{Binding Value}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-             
 
              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Button Text="Cancel" WidthRequest="120" Margin="10" Command="{Binding CancelCommand}" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White"></Button>
                     <Button Text="Save"  WidthRequest="120"  Margin="10" BackgroundColor="CornflowerBlue" TextColor="White" Command="{Binding SaveCommand}" HorizontalOptions="EndAndExpand" ></Button>
               </StackLayout>           
-         </StackLayout>
-      
+         </StackLayout>      
     </ContentPage.Content>
 </ContentPage>
-<!-- ALLOWOVERWRITE -->
+

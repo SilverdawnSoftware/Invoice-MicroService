@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-AD081114A0E81C4457C2ACAF34643891
+// ALLOWOVERWRITE-DF9CF562D3FBFA89B6783BA3F5965475
 
 using System;
 using System.Collections.Generic;
@@ -43,65 +43,7 @@ namespace Database.Views
     
     
     	
-    	public async Task<AddressView> Get(int addressId)
-    	{
-    		try
-            {
-	    		var client = new HttpClient();
-	
-	            var serializer = new DataContractJsonSerializer(typeof(AddressView),new DataContractJsonSerializerSettings()
-	            {
-	                DateTimeFormat = new DateTimeFormat("yyyy-MM-dd'T'HH:mm:ss")
-	            });
-	
-	            var stream = await client.GetStreamAsync($"http://localhost:44443/api/address/{addressId}");
-	
-	            var view = serializer.ReadObject(stream) as AddressView;
-	
-	            return view;
-            }
-            catch (Exception e)
-            {
-            	LogFactory.GetLogger().Log(LogLevel.Error,e);
-                return null;              
-            }    
     	
-    	}
-    	
-    	
-    	
-    	
-    	
-		
-		 /// <summary>
-        /// Find all Addresss for Customer
-        /// </summary>
-		
-		public async Task<List<AddressView>> GetAllForCustomer(int customerId)
-        {
-        	try
-            {
-	            var client = new HttpClient();
-	          
-	            var serializer = new DataContractJsonSerializer(typeof(List<AddressView>),new DataContractJsonSerializerSettings()
-	            {
-	                DateTimeFormat = new DateTimeFormat("yyyy-MM-dd'T'HH:mm:ss")
-	            });
-	
-	            var stream = await client.GetStreamAsync($"http://localhost:44443/api/customer/{customerId}/tasks");
-	
-	            var views = serializer.ReadObject(stream) as List<AddressView>;
-	            
-	            return views;
-            }
-            catch (Exception e)
-            {
-            	LogFactory.GetLogger().Log(LogLevel.Error,e);
-                return null;
-              
-            }    
-        }
-		    	
     	
     }
 }

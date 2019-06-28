@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-A93087BE96ACE71B795BF92148527A5F
+// ALLOWOVERWRITE-0209806F89CC255B35E9F4739E375B74
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -31,10 +31,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Counter
                    db.Counters.Add(counter);
                    counter.Name=counterAdd.Name;  	
                    counter.Value=counterAdd.Value;  	
+                   //UserCodeBlockStart-PreSave
+                   //UserCodeBlockEnd-PreSave
                    await db.SaveChangesAsync();
 
                    result.Name=counter.Name;
                    result.Value=counter.Value;
+                   //UserCodeBlockStart-PreResult
+                   //UserCodeBlockEnd-PreResult
                    return result;
                }
            }
@@ -49,3 +53,4 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Counter
 
 
 }
+

@@ -1,10 +1,11 @@
-// ALLOWOVERWRITE-6E06BE9D532FE198EBEBC5C40F947845
+// ALLOWOVERWRITE-7CEFEA583A5162C19AD463DDD105CEDF-A36828001E99DC119BDA45BE15C1B853
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using SilverdawnSoftware.Invoice.Interfaces.CQRS.Commands.Entity.Models;
+using SilverdawnSoftware.Invoice.Interfaces.CQRS.Querys.Results.Models;
 
 namespace SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models
 {
@@ -17,14 +18,24 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models
         public string EntityExternalRef  { get; set; }
 		  	
         [DataMember]	
-        /// To avoid Many to Many Relationships, use primary key https://github.com/aspnet/EntityFrameworkCore/issues/1368
-        /// <summary>
-        /// 
-        /// </summary>	
-        //public virtual Address Address <text> { get; set; }  				
-          public int AddressAddressId  { get; set; }		
+        public IAddressView Address { get; set; }						
         [DataMember]	
         public string LogoURL  { get; set; }
+		  	
+        [DataMember]	
+        public string SMTPEmailFromAddress  { get; set; }
+		  	
+        [DataMember]	
+        public string SMTPUserName  { get; set; }
+		  	
+        [DataMember]	
+        public string SMTPPassword  { get; set; }
+		  	
+        [DataMember]	
+        public string SMTPHost  { get; set; }
+		  	
+        [DataMember]	
+        public string SMTPEmailDisplayName  { get; set; }
 		  	
     	 public EntityAdd()
         {

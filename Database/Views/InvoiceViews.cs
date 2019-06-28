@@ -1,4 +1,3 @@
-// ALLOWOVERWRITE-B0090E2A32E23DA84D27701E97A1BAA3
 
 using System;
 using System.Collections.Generic;
@@ -8,13 +7,10 @@ using System.Threading.Tasks;
 using SilverdawnSoftware.Exceptions;
 using SilverdawnSoftware.Invoice.Database.Views.Model;
 
-
 namespace SilverdawnSoftware.Invoice.Database.Views
 {
     public partial class InvoiceViews
     {
-    
-    
     	public async Task<List<InvoiceView>> GetAll()
         {
         	try
@@ -31,12 +27,8 @@ namespace SilverdawnSoftware.Invoice.Database.Views
                 return null;             
             }            
         }
-    
-    
-    	
     	public async Task<InvoiceView> Get(int invoiceId)
-    	{
-    		
+    	{    		
     		try
             {
 	    		using (var db = new InvoiceContext())
@@ -54,31 +46,23 @@ namespace SilverdawnSoftware.Invoice.Database.Views
                 return null;              
             }     		
     	}
-    	
-    	
-		
 		public async Task<List<InvoiceView>> GetInvoicesForCustomer(int customerId)
     	{
     		try
-            {
-    	
+            {    	
 	    		using (var db = new InvoiceContext())
 	            {
 	            	var result= await db.Invoices.Where(w=>w.Customer.CustomerId ==customerId).ToListAsync();
-	            	return result.ConvertAll(user => (InvoiceView) user);
-	               
+	            	return result.ConvertAll(user => (InvoiceView) user);	               
 	            }
-	        }
+	          }
             catch (Exception e)
             {
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
-                return null;
-              
-            }    
-	            
+                return null;             
+            }    	            
     	}
-    	
-    	
     }
 }
+
 

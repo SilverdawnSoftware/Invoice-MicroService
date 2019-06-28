@@ -9,160 +9,97 @@
     <ContentPage.Content>
         
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Margin="10">
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Label Text="BillngAddress: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
-                    <Entry x:Name="billngAddress" Text="{Binding BillngAddress}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                    <Label Text="BillingAddress: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="billingAddress" Text="{Binding BillingAddress}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="CreatedDate: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="createdDate" Text="{Binding CreatedDate}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="DueDate: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="dueDate" Text="{Binding DueDate}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="EmailTo: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="emailTo" Text="{Binding EmailTo}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="GrandTotal: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="grandTotal" Text="{Binding GrandTotal}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="InvoiceEmailed: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="invoiceEmailed" Text="{Binding InvoiceEmailed}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="InvoiceId: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="invoiceId" Text="{Binding InvoiceId}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="InvoiceNo: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="invoiceNo" Text="{Binding InvoiceNo}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="Notes: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="notes" Text="{Binding Notes}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="OrderedBy: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="orderedBy" Text="{Binding OrderedBy}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="PaidAmount: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="paidAmount" Text="{Binding PaidAmount}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="PaidDate: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="paidDate" Text="{Binding PaidDate}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="PaidTax: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="paidTax" Text="{Binding PaidTax}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="PaymentDetails: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="paymentDetails" Text="{Binding PaymentDetails}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="PurchaseOrderRef: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="purchaseOrderRef" Text="{Binding PurchaseOrderRef}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="ShippingAddress: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="shippingAddress" Text="{Binding ShippingAddress}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="Status: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="status" Text="{Binding Status}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="SubTotal: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="subTotal" Text="{Binding SubTotal}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Label Text="Tax: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
-                    <Entry x:Name="tax" Text="{Binding Tax}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
+                    <Label Text="TaxTotal: " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
+                    <Entry x:Name="taxTotal" Text="{Binding TaxTotal}" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-            
           		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="TermsAndConditions : " HorizontalOptions="Start" TextColor="DarkGray" Margin="0,10,10,0"  WidthRequest="100"/>
                     <Entry x:Name="termsAndConditions " Text="{Binding TermsAndConditions }" BackgroundColor="White" HorizontalOptions="FillAndExpand" ></Entry>
                 </StackLayout>
-               
-            
-             
-		
 			 <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
                     <Button Text="View Tasks" Margin="0,10,0,0"  WidthRequest="120"  Command="{Binding ViewInvoiceLinesCommand}" BackgroundColor="White" TextColor="CornflowerBlue" ></Button>
                     <Label HorizontalOptions="EndAndExpand" Text=">" Margin="10,20,0,0"></Label>
                 </StackLayout>
 
-
              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Button Text="Cancel" WidthRequest="120" Margin="10" Command="{Binding CancelCommand}" HorizontalOptions="Start" BackgroundColor="Red" TextColor="White"></Button>
                     <Button Text="Save"  WidthRequest="120"  Margin="10" BackgroundColor="CornflowerBlue" TextColor="White" Command="{Binding SaveCommand}" HorizontalOptions="EndAndExpand" ></Button>
               </StackLayout>           
-         </StackLayout>
-      
+         </StackLayout>      
     </ContentPage.Content>
 </ContentPage>
-<!-- ALLOWOVERWRITE-8C3F6D240AA104192A8FDAACE24C252F -->
+
+<!-- ALLOWOVERWRITE -->

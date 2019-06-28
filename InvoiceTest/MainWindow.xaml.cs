@@ -39,7 +39,7 @@ namespace InvoiceTest
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var toAdd = new InvoiceCreate() { TermsAndConditions = Guid.NewGuid().ToString() };
+            var toAdd = new InvoiceAdd() { TermsAndConditions = Guid.NewGuid().ToString() };
 
             var http = new EasyHttp.Http.HttpClient();
 
@@ -85,9 +85,9 @@ namespace InvoiceTest
                 client.Connect(CreateRetryFilter()).Wait();
 
 
-                var toAdd = new InvoiceCreate() { TermsAndConditions = Guid.NewGuid().ToString() };
-                var grain = client.GetGrain<IInvoiceCreateCommand>(0);
-                var result = await grain.InvoiceCreate(toAdd);
+                var toAdd = new InvoiceAdd() { TermsAndConditions = Guid.NewGuid().ToString() };
+                var grain = client.GetGrain<IInvoiceAddCommand>(0);
+                var result = await grain.InvoiceAdd(toAdd);
                 MessageBox.Show(result.__CQRSStatusCode.ToString());
             }
             catch (Exception ex)

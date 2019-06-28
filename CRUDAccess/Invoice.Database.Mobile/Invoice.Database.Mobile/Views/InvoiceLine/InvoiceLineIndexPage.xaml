@@ -28,16 +28,15 @@
 	          <StackLayout Orientation="Vertical">
 	          	<Label Text="{Binding InvoiceLineId}" FontSize="Medium" />
 	          	<StackLayout Orientation="Horizontal">
-	                    <Label Text="{Binding LineTotal}" FontSize="Small" />      
-	                    <Label Text="{Binding Notes}" FontSize="Small" />      
-	                    <Label Text="{Binding Product}" FontSize="Small" />      
-	                    <Label Text="{Binding ProductCode}" FontSize="Small" />      
-	                    <Label Text="{Binding Quantity}" FontSize="Small" />      
-	                    <Label Text="{Binding SubTotal}" FontSize="Small" />      
-	                    <Label Text="{Binding TaxExempt}" FontSize="Small" />      
-	                    <Label Text="{Binding TaxTotal}" FontSize="Small" />      
-	                    <Label Text="{Binding UnitCost}" FontSize="Small" />      
-
+                    <Label Text="{Binding LineTotal}" FontSize="Small" />
+                    <Label Text="{Binding Notes}" FontSize="Small" />
+                    <Label Text="{Binding Product}" FontSize="Small" />
+                    <Label Text="{Binding ProductCode}" FontSize="Small" />
+                    <Label Text="{Binding Quantity}" FontSize="Small" />
+                    <Label Text="{Binding SubTotal}" FontSize="Small" />
+                    <Label Text="{Binding TaxExempt}" FontSize="Small" />
+                    <Label Text="{Binding TaxTotal}" FontSize="Small" />
+                    <Label Text="{Binding UnitCost}" FontSize="Small" />
 	          	</StackLayout>
 			  </StackLayout>
 			</ViewCell>
@@ -47,4 +46,5 @@
      <Button Margin="10" WidthRequest="100"  Text="Add InvoiceLine"  BackgroundColor="CornflowerBlue" TextColor="White"  Command="{Binding AddInvoiceLineCommand}"></Button>
   </StackLayout>
 </ContentPage>
-<!-- ALLOWOVERWRITE-801057F1E3B8FD79B48869FD8837FC27 -->
+
+<!-- ALLOWOVERWRITE -->

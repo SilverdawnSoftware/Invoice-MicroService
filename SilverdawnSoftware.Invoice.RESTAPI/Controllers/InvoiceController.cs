@@ -33,12 +33,12 @@ namespace SilverdawnSoftware.Invoice.RESTAPI.Controllers
         /// </summary>   	
     	[Route("api/Invoice")]
     	[HttpPost]
-        public async Task<ActionResult<IInvoiceView>> Add([FromBody]InvoiceCreate invoiceCreate)
+        public async Task<ActionResult<IInvoiceView>> Add([FromBody]InvoiceAdd invoiceCreate)
         {
             try
             {
-                var grain = _orleansService.Client.GetGrain<IInvoiceCreateCommand>(0);
-                var result=await  grain.InvoiceCreate(invoiceCreate);
+                var grain = _orleansService.Client.GetGrain<IInvoiceAddCommand>(0);
+                var result=await  grain.InvoiceAdd(invoiceCreate);
                 if (result.__CQRSSuccessful)
                    return new ActionResult<IInvoiceView>(result);
                 else

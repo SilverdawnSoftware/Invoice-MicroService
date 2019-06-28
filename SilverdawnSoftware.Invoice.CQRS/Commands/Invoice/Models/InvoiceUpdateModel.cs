@@ -1,10 +1,11 @@
-// ALLOWOVERWRITE-07E5B6EDCEB3445F297AD2B2DB6BA2A8
+// ALLOWOVERWRITE-C7A8F96F7C5A720B287FB66B4E74857C-EB4441DCD49D8BE8B1AADE884ED6D6F3
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using SilverdawnSoftware.Invoice.Interfaces.CQRS.Commands.Invoice.Models;
+using SilverdawnSoftware.Invoice.Interfaces.CQRS.Querys.Results.Models;
 
 namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
 {
@@ -30,7 +31,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
         public decimal SubTotal  { get; set; }
 		  	
         [DataMember]	
-        public decimal Tax  { get; set; }
+        public decimal TaxTotal  { get; set; }
 		  	
         [DataMember]	
         public string OrderedBy  { get; set; }
@@ -54,11 +55,9 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
         public string EmailTo  { get; set; }
 		  	
         [DataMember]	
-        public int BillngAddress  { get; set; }
-		  	
+        public IAddressView BillngAddress { get; set; }						
         [DataMember]	
-        public int ShippingAddress  { get; set; }
-		  	
+        public IAddressView ShippingAddress { get; set; }						
         [DataMember]	
         public string TermsAndConditions   { get; set; }
 		  	

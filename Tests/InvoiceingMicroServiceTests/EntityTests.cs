@@ -5,6 +5,7 @@ using SilverdawnSoftware.Invoice.CQRS.Commands.Entity;
 using SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models;
 using SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity;
 using SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models;
+using SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models;
 using Xunit;
 
 namespace InvoiceingMicroServiceTests
@@ -20,11 +21,20 @@ namespace InvoiceingMicroServiceTests
 
             var result = add.EntityAdd(new EntityAdd()
             {
-                Name = name
+                Name = name,
+                Address = new AddressView()
+                {
+                    AddressLine1 = "4490  Patterson Street",
+                    City = "Houston",
+                    StateCounty = "State",
+                    PostZipCode = "77063"
+                }
             }).Result;
 
             result.Name.Should().Be(name);
-            result.AddressAddressId.Should().Be(0);
+
+            result.Address.City.Should().Be("Houston");
+
             result.EntityId.Should().BeGreaterThan(0);
         }
 
@@ -37,11 +47,18 @@ namespace InvoiceingMicroServiceTests
 
             var result = add.EntityAdd(new EntityAdd()
             {
-                Name = name
+                Name = name,
+                Address = new AddressView()
+                {
+                    AddressLine1 = "4490  Patterson Street",
+                    City = "Houston",
+                    StateCounty = "State",
+                    PostZipCode = "77063"
+                }
             }).Result;
 
             result.Name.Should().Be(name);
-            result.AddressAddressId.Should().Be(0);
+            
             result.EntityId.Should().BeGreaterThan(0);
 
             var find = new GetEntityRequest();
@@ -53,7 +70,7 @@ namespace InvoiceingMicroServiceTests
 
 
             result2.Name.Should().Be(name);
-            result2.AddressAddressId.Should().Be(0);
+            result2.Address.City.Should().Be("Houston");
             result2.EntityId.Should().Be(result.EntityId);
 
         }
@@ -71,7 +88,7 @@ namespace InvoiceingMicroServiceTests
             }).Result;
 
             result.Name.Should().Be(name);
-            result.AddressAddressId.Should().Be(0);
+          
             result.EntityId.Should().BeGreaterThan(0);
 
             var find = new SearchEntityByNameRequest();
@@ -82,9 +99,9 @@ namespace InvoiceingMicroServiceTests
             }).Result;
 
             result2.Count.Should().Be(1);
-
+            
             result2.First().Name.Should().Be(name);
-            result2.First().AddressAddressId.Should().Be(0);
+          
             result2.First().EntityId.Should().Be(result.EntityId);
 
         }

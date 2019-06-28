@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-6AE42CD993F4500B441695D922FF9D68
+// ALLOWOVERWRITE-CFC447A308C4AC9C65F4BCFA9AF78FFE-737A32636705DBD782827796B047E8F2
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -33,12 +33,22 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Entity
                     entity.EntityExternalRef=entityUpdate.EntityExternalRef;  	
                     entity.LogoURL=entityUpdate.LogoURL;  	
                     entity.Name=entityUpdate.Name;  	
+                    entity.SMTPEmailDisplayName=entityUpdate.SMTPEmailDisplayName;  	
+                    entity.SMTPEmailFromAddress=entityUpdate.SMTPEmailFromAddress;  	
+                    entity.SMTPHost=entityUpdate.SMTPHost;  	
+                    entity.SMTPPassword=entityUpdate.SMTPPassword;  	
+                    entity.SMTPUserName=entityUpdate.SMTPUserName;  	
                        await db.SaveChangesAsync();
 
                        result.EntityExternalRef=entity.EntityExternalRef;
                        result.EntityId=entity.EntityId;
                        result.LogoURL=entity.LogoURL;
                        result.Name=entity.Name;
+                       result.SMTPEmailDisplayName=entity.SMTPEmailDisplayName;
+                       result.SMTPEmailFromAddress=entity.SMTPEmailFromAddress;
+                       result.SMTPHost=entity.SMTPHost;
+                       result.SMTPPassword=entity.SMTPPassword;
+                       result.SMTPUserName=entity.SMTPUserName;
                        return result;
                    }
                }

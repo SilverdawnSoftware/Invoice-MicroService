@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-53FD6872AA7A9AE33B01E150F21EA4C2
+// ALLOWOVERWRITE-6EE66E01E6316BF83A6EFDE299C81634-DE4D71B3CD4F1C721E9C5C864C445E45
 
 using System;
 using System.Collections.Generic;
@@ -25,7 +25,16 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice
 	            {
 	                if (await db.Invoices.AnyAsync(w =>  w.Customer.CustomerId == getAllOverdueInvoicesForCustomer.CustomerId &&  w.DueDate > getAllOverdueInvoicesForCustomer.DueDate &&  w.PaidAmount < getAllOverdueInvoicesForCustomer.PaidAmount))
 	                {
-	                    var invoice = await db.Invoices.FirstAsync(w =>  w.Customer.CustomerId == getAllOverdueInvoicesForCustomer.CustomerId &&  w.DueDate > getAllOverdueInvoicesForCustomer.DueDate &&  w.PaidAmount < getAllOverdueInvoicesForCustomer.PaidAmount);
+	                   var invoice = await db.Invoices.FirstAsync(w =>  w.Customer.CustomerId == getAllOverdueInvoicesForCustomer.CustomerId &&  w.DueDate > getAllOverdueInvoicesForCustomer.DueDate &&  w.PaidAmount < getAllOverdueInvoicesForCustomer.PaidAmount);
+                       result.BillingAddress = new AddressView();
+                       result.BillingAddress.AddresLine2=invoice.BillingAddress.AddresLine2;                       			
+                       result.BillingAddress.AddressExternalRef=invoice.BillingAddress.AddressExternalRef;                       			
+                       result.BillingAddress.AddressLine1=invoice.BillingAddress.AddressLine1;                       			
+                       result.BillingAddress.AddressLine3=invoice.BillingAddress.AddressLine3;                       			
+                       result.BillingAddress.City=invoice.BillingAddress.City;                       			
+                       result.BillingAddress.Country=invoice.BillingAddress.Country;                       			
+                       result.BillingAddress.PostZipCode=invoice.BillingAddress.PostZipCode;                       			
+                       result.BillingAddress.StateCounty=invoice.BillingAddress.StateCounty;                       			
                        result.CreatedDate=invoice.CreatedDate;
                        result.DueDate=invoice.DueDate;
                        result.EmailTo=invoice.EmailTo;
@@ -39,10 +48,19 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice
                        result.PaidTax=invoice.PaidTax;
                        result.PaymentDetails=invoice.PaymentDetails;
                        result.PurchaseOrderRef=invoice.PurchaseOrderRef;
+                       result.ShippingAddress = new AddressView();
+                       result.ShippingAddress.AddresLine2=invoice.ShippingAddress.AddresLine2;                       			
+                       result.ShippingAddress.AddressExternalRef=invoice.ShippingAddress.AddressExternalRef;                       			
+                       result.ShippingAddress.AddressLine1=invoice.ShippingAddress.AddressLine1;                       			
+                       result.ShippingAddress.AddressLine3=invoice.ShippingAddress.AddressLine3;                       			
+                       result.ShippingAddress.City=invoice.ShippingAddress.City;                       			
+                       result.ShippingAddress.Country=invoice.ShippingAddress.Country;                       			
+                       result.ShippingAddress.PostZipCode=invoice.ShippingAddress.PostZipCode;                       			
+                       result.ShippingAddress.StateCounty=invoice.ShippingAddress.StateCounty;                       			
                        result.SubTotal=invoice.SubTotal;
-                       result.Tax=invoice.Tax;
+                       result.Tax=invoice.TaxTotal;
                        result.TermsAndConditions =invoice.TermsAndConditions ;
-				      return result;
+				       return result;
 	                }
                     else
                     {

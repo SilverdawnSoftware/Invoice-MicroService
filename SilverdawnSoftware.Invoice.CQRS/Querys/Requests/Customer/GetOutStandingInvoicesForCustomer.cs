@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-34C7591D911FDEA31E084404D7BFEB23
+// ALLOWOVERWRITE-276613F4E8A6174373D1BE22244DAB65-1A5A7BDCFB5E973EF49389F72079623E
 
 using System;
 using System.Collections.Generic;
@@ -27,6 +27,15 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer
 		             	foreach(var invoice in invoices)
 				     	{
 				      		var toAdd=new InvoiceView();
+                            toAdd.BillingAddress = new AddressView();
+                            toAdd.BillingAddress.AddresLine2=invoice.BillingAddress.AddresLine2;                       			
+                            toAdd.BillingAddress.AddressExternalRef=invoice.BillingAddress.AddressExternalRef;                       			
+                            toAdd.BillingAddress.AddressLine1=invoice.BillingAddress.AddressLine1;                       			
+                            toAdd.BillingAddress.AddressLine3=invoice.BillingAddress.AddressLine3;                       			
+                            toAdd.BillingAddress.City=invoice.BillingAddress.City;                       			
+                            toAdd.BillingAddress.Country=invoice.BillingAddress.Country;                       			
+                            toAdd.BillingAddress.PostZipCode=invoice.BillingAddress.PostZipCode;                       			
+                            toAdd.BillingAddress.StateCounty=invoice.BillingAddress.StateCounty;                       			
                             toAdd.CreatedDate=invoice.CreatedDate;
                             toAdd.DueDate=invoice.DueDate;
                             toAdd.EmailTo=invoice.EmailTo;
@@ -40,8 +49,17 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer
                             toAdd.PaidTax=invoice.PaidTax;
                             toAdd.PaymentDetails=invoice.PaymentDetails;
                             toAdd.PurchaseOrderRef=invoice.PurchaseOrderRef;
+                            toAdd.ShippingAddress = new AddressView();
+                            toAdd.ShippingAddress.AddresLine2=invoice.ShippingAddress.AddresLine2;                       			
+                            toAdd.ShippingAddress.AddressExternalRef=invoice.ShippingAddress.AddressExternalRef;                       			
+                            toAdd.ShippingAddress.AddressLine1=invoice.ShippingAddress.AddressLine1;                       			
+                            toAdd.ShippingAddress.AddressLine3=invoice.ShippingAddress.AddressLine3;                       			
+                            toAdd.ShippingAddress.City=invoice.ShippingAddress.City;                       			
+                            toAdd.ShippingAddress.Country=invoice.ShippingAddress.Country;                       			
+                            toAdd.ShippingAddress.PostZipCode=invoice.ShippingAddress.PostZipCode;                       			
+                            toAdd.ShippingAddress.StateCounty=invoice.ShippingAddress.StateCounty;                       			
                             toAdd.SubTotal=invoice.SubTotal;
-                            toAdd.Tax=invoice.Tax;
+                            toAdd.Tax=invoice.TaxTotal;
                             toAdd.TermsAndConditions =invoice.TermsAndConditions ;
                             result.Add(toAdd);
 						}

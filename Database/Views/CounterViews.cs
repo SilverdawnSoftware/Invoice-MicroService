@@ -1,4 +1,3 @@
-// ALLOWOVERWRITE-7241DCF37C1D4106EF8D0354CCE33C05
 
 using System;
 using System.Collections.Generic;
@@ -8,13 +7,10 @@ using System.Threading.Tasks;
 using SilverdawnSoftware.Exceptions;
 using SilverdawnSoftware.Invoice.Database.Views.Model;
 
-
 namespace SilverdawnSoftware.Invoice.Database.Views
 {
     public partial class CounterViews
     {
-    
-    
     	public async Task<List<CounterView>> GetAll()
         {
         	try
@@ -31,12 +27,8 @@ namespace SilverdawnSoftware.Invoice.Database.Views
                 return null;             
             }            
         }
-    
-    
-    	
     	public async Task<CounterView> Get(string name)
-    	{
-    		
+    	{    		
     		try
             {
 	    		using (var db = new InvoiceContext())
@@ -54,9 +46,7 @@ namespace SilverdawnSoftware.Invoice.Database.Views
                 return null;              
             }     		
     	}
-    	
-    	
-    	
     }
 }
+
 

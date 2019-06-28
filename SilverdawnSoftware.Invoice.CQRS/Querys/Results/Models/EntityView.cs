@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-63D6B0F1F37798D0EC0587C24BE5FF13
+// ALLOWOVERWRITE-37C626D1DB322B18C0ABAA0CF3B7FE1D-E160875351EF1138889DBC28F39346D4
 
 using System;
 using System.Collections.Generic;
@@ -10,25 +10,37 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models
 {
     public partial class EntityView : CQRSBase,IEntityView
     { 
+
         [DataMember]
         public int EntityId  { get; set; }
-		  	
+
         [DataMember]
         public string Name  { get; set; }
-		  	
+
         [DataMember]
         public string EntityExternalRef  { get; set; }
-		  	
+
         [DataMember]
-        /// To avoid Many to Many Relationships, use primary key https://github.com/aspnet/EntityFrameworkCore/issues/1368
-        /// <summary>
-        /// 
-        /// </summary>	
-        //public virtual Address Address <text> { get; set; }  				
-        public int AddressAddressId  { get; set; }		
+        public IAddressView Address { get; set; } =new AddressView();						
+
         [DataMember]
         public string LogoURL  { get; set; }
-		  	
+
+        [DataMember]
+        public string SMTPEmailFromAddress  { get; set; }
+
+        [DataMember]
+        public string SMTPUserName  { get; set; }
+
+        [DataMember]
+        public string SMTPPassword  { get; set; }
+
+        [DataMember]
+        public string SMTPHost  { get; set; }
+
+        [DataMember]
+        public string SMTPEmailDisplayName  { get; set; }
+    	
     	 public EntityView()
         {
             this.__CQRSModel = "SilverdawnSoftware.Invoice.CQRS.Querys.Results.EntityView";

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-7C19F26240EA141C92D25BE3660924D6
+// ALLOWOVERWRITE-89DF03E0E2EA04DAB3A95421B0D51123-DE0B986555663E8FCA9323EF280B2592
 
 using System;
 using System.ComponentModel;
@@ -10,49 +10,23 @@ using Database.Transactions.Model;
 using Database.Views;
 using Database.Views.Model;
 using Database.Mobile.Annotations;
-
 using Xamarin.Forms;
-
 namespace Database.Mobile.ViewModels
 {
-
     public class CustomerEditViewModel : INotifyPropertyChanged
     {
-
-
         public CustomerEditViewModel()
         {
-            SaveCommand=new Command( async () => await Save());
-            CancelCommand = new Command(async () => await Cancel());
-           	
-           	ViewAddresssCommand = new Command(async () => await ViewAddresss());
-           	
-           	
-           	ViewInvoicesCommand = new Command(async () => await ViewInvoices());
-           	
-            
+           SaveCommand=new Command( async () => await Save());
+           CancelCommand = new Command(async () => await Cancel());
+           ViewInvoicesCommand = new Command(async () => await ViewInvoices());
         }
-
-      
 
         public ICommand SaveCommand { get; private set; }
 
         public ICommand CancelCommand { get; private set; }
 
 
-           	
-           	
-        public ICommand ViewAddresssCommand { get; private set; }
-         
-        public async Task ViewAddresss()
-        {           
-                var addresss = new AddressIndexViewModel();
-                await addresss.GetAddresssForCustomer(CustomerId);
-                MessagingCenter.Send<CustomerEditViewModel, AddressIndexViewModel>(this, "ShowAddresss", addresss);
-        }
-           	
-           	
-           	
         public ICommand ViewInvoicesCommand { get; private set; }
          
         public async Task ViewInvoices()
@@ -61,8 +35,6 @@ namespace Database.Mobile.ViewModels
                 await invoices.GetInvoicesForCustomer(CustomerId);
                 MessagingCenter.Send<CustomerEditViewModel, InvoiceIndexViewModel>(this, "ShowInvoices", invoices);
         }
-           	
-
 
         public async Task Cancel()
         {
@@ -71,15 +43,12 @@ namespace Database.Mobile.ViewModels
             else
                 CustomerView=new CustomerView();
         }
-
         public async Task Load(int customerId)
         {
             var uv=new CustomerViews();
 
             this.CustomerView = await uv.Get(customerId);
         }
-
-
 
         public async Task Save()
         {
@@ -95,14 +64,12 @@ namespace Database.Mobile.ViewModels
 	            {
 	                CustomerView = await uv.CustomerAdd(this.GetCustomerAdd());
 	            }
-            }
+          }
             catch (Exception ex)
             {
             	 MessagingCenter.Send(this, "Save error");
-            }
-          
+            }          
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -111,7 +78,6 @@ namespace Database.Mobile.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
 
         private CustomerView _customerView = new CustomerView();
 
@@ -126,9 +92,10 @@ namespace Database.Mobile.ViewModels
             {
                 this._customerView = value;
                 OnPropertyChanged("Active");
+                OnPropertyChanged("Address");
                 OnPropertyChanged("CustomerExteranlRef");
                 OnPropertyChanged("CustomerId");
-                OnPropertyChanged("EmalAddress");
+                OnPropertyChanged("EmailAddress");
                 OnPropertyChanged("IsCompany");
                 OnPropertyChanged("Name");
                 OnPropertyChanged("PhoneNumber");
@@ -136,9 +103,6 @@ namespace Database.Mobile.ViewModels
                               
             }
         }
-
-		
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -157,8 +121,6 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.Active;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -177,8 +139,6 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.CustomerExteranlRef;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -197,28 +157,24 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.CustomerId;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
-        public string  EmalAddress 
+        public string  EmailAddress 
         {
             set
             {
-                if (CustomerView.EmalAddress != value)
+                if (CustomerView.EmailAddress != value)
                 {
-                    CustomerView.EmalAddress = value;
-                    OnPropertyChanged("EmalAddress");
+                    CustomerView.EmailAddress = value;
+                    OnPropertyChanged("EmailAddress");
                 }
             }
             get
             {
-                return CustomerView.EmalAddress;
+                return CustomerView.EmailAddress;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -237,8 +193,6 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.IsCompany;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -257,8 +211,6 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.Name;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -277,8 +229,6 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.PhoneNumber;
             } 
          } 	    	
-	    	
-       	 
         /// <summary>
         /// 
         /// </summary>	
@@ -297,9 +247,6 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.TaxNo;
             } 
          } 	    	
-	    	
-	    	
-    	
     	/// <summary>
         /// 
         /// </summary>	
@@ -319,11 +266,6 @@ namespace Database.Mobile.ViewModels
                 return CustomerView.EntityEntityId;
             } 
          } 	    	
-		
-	    	
-	    	
-
-      
 
         public CustomerUpdate GetCustomerUpdate()
         {
@@ -332,7 +274,7 @@ namespace Database.Mobile.ViewModels
 			result.Active = CustomerView.Active;
 			result.CustomerExteranlRef = CustomerView.CustomerExteranlRef;
 			result.CustomerId = CustomerView.CustomerId;
-			result.EmalAddress = CustomerView.EmalAddress;
+			result.EmailAddress = CustomerView.EmailAddress;
 			result.IsCompany = CustomerView.IsCompany;
 			result.Name = CustomerView.Name;
 			result.PhoneNumber = CustomerView.PhoneNumber;
@@ -343,42 +285,35 @@ namespace Database.Mobile.ViewModels
         public CustomerAdd GetCustomerAdd()
         {
             var result = new CustomerAdd();
-
 			result.Active = CustomerView.Active;
 			result.CustomerExteranlRef = CustomerView.CustomerExteranlRef;
 			result.CustomerId = CustomerView.CustomerId;
-			result.EmalAddress = CustomerView.EmalAddress;
+			result.EmailAddress = CustomerView.EmailAddress;
 			result.IsCompany = CustomerView.IsCompany;
 			result.Name = CustomerView.Name;
 			result.PhoneNumber = CustomerView.PhoneNumber;
 			result.TaxNo = CustomerView.TaxNo;
-            result.EntityEntityId= CustomerView.EntityEntityId; 
+         result.EntityEntityId= CustomerView.EntityEntityId; 
             return result;
         }
 
-
-
-
         public static explicit operator CustomerEditViewModel(CustomerView item)
     	{
-       	    var result=new CustomerEditViewModel();
-    	 
+       	    var result=new CustomerEditViewModel();    	 
 			result.Active = item.Active;
+	     //  result.Address = item.Address; 	
 			result.CustomerExteranlRef = item.CustomerExteranlRef;
 			result.CustomerId = item.CustomerId;
-			result.EmalAddress = item.EmalAddress;
+			result.EmailAddress = item.EmailAddress;
 			result.IsCompany = item.IsCompany;
 			result.Name = item.Name;
 			result.PhoneNumber = item.PhoneNumber;
 			result.TaxNo = item.TaxNo;
-	    	
         	return result;
        }
-
-     
     }
-}
 
+}
 
 
 

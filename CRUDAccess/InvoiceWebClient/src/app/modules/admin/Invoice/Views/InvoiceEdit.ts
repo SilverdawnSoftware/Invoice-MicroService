@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-EED98F3D4BA49B581E0C41226C5DB00E
+// ALLOWOVERWRITE-82CB6474AD5952B1FD5E0ABBA3423B9A-CDEC8B0688E348499D8B7D01D4FA90C5
 
 import { Component,OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
@@ -73,7 +73,7 @@ import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"
 	    				purchaseOrderRef: "", 
 	    				status: , 
 	    				subTotal: 0, 
-	    				tax: 0, 
+	    				taxTotal: 0, 
 	    				termsAndConditions : "", 
       
     });

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-AE746BCE1BE43F67A985E79572EA8D8B
+// ALLOWOVERWRITE-E0855966ABBECF7F06F2A6826F7D9D64
 
 import {Component, OnInit} from '@angular/core';
 import {AddressService} from '../Services/AddressService';
@@ -26,14 +26,14 @@ export class AddressIndex implements OnInit{
     this.addressService.getAll().subscribe(value => this.rows=value);
   }
 
-  delete(addressId: number)
+  delete(: number)
   {
     if (confirm('Are you sure you want to delete this?'))
     {
-      this.addressService.remove(addressId).subscribe();
+      this.addressService.remove().subscribe();
 
       for(var i = this.rows.length - 1; i >= 0; i--) {
-        if(this.rows[i].addressId === addressId) {
+        if(this.rows[i]. === ) {
           this.rows.splice(i, 1);
           break;
         }

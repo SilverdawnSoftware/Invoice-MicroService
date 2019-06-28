@@ -1,4 +1,3 @@
-// ALLOWOVERWRITE-E8E507B4EB27FD5699E4873A4A28FB35
 
 using System;
 using System.Collections.Generic;
@@ -8,13 +7,10 @@ using System.Threading.Tasks;
 using SilverdawnSoftware.Exceptions;
 using SilverdawnSoftware.Invoice.Database.Views.Model;
 
-
 namespace SilverdawnSoftware.Invoice.Database.Views
 {
     public partial class EntityViews
     {
-    
-    
     	public async Task<List<EntityView>> GetAll()
         {
         	try
@@ -31,12 +27,8 @@ namespace SilverdawnSoftware.Invoice.Database.Views
                 return null;             
             }            
         }
-    
-    
-    	
     	public async Task<EntityView> Get(int entityId)
-    	{
-    		
+    	{    		
     		try
             {
 	    		using (var db = new InvoiceContext())
@@ -54,9 +46,7 @@ namespace SilverdawnSoftware.Invoice.Database.Views
                 return null;              
             }     		
     	}
-    	
-    	
-    	
     }
 }
+
 

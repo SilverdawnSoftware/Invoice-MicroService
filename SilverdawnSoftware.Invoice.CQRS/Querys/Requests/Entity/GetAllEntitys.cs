@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-1A544060333C21187183839AF6C11B1F
+// ALLOWOVERWRITE-ACAFCBD919D41D09C3ED2B6ED4187817-80E09083984C3006EED3598FA1EA0506
 
 using System;
 using System.Collections.Generic;
@@ -27,10 +27,24 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity
 		             	foreach(var entity in entitys)
 				     	{
 				      		var toAdd=new EntityView();
+                            toAdd.Address = new AddressView();
+                            toAdd.Address.AddresLine2=entity.Address.AddresLine2;                       			
+                            toAdd.Address.AddressExternalRef=entity.Address.AddressExternalRef;                       			
+                            toAdd.Address.AddressLine1=entity.Address.AddressLine1;                       			
+                            toAdd.Address.AddressLine3=entity.Address.AddressLine3;                       			
+                            toAdd.Address.City=entity.Address.City;                       			
+                            toAdd.Address.Country=entity.Address.Country;                       			
+                            toAdd.Address.PostZipCode=entity.Address.PostZipCode;                       			
+                            toAdd.Address.StateCounty=entity.Address.StateCounty;                       			
                             toAdd.EntityExternalRef=entity.EntityExternalRef;
                             toAdd.EntityId=entity.EntityId;
                             toAdd.LogoURL=entity.LogoURL;
                             toAdd.Name=entity.Name;
+                            toAdd.SMTPEmailDisplayName=entity.SMTPEmailDisplayName;
+                            toAdd.SMTPEmailFromAddress=entity.SMTPEmailFromAddress;
+                            toAdd.SMTPHost=entity.SMTPHost;
+                            toAdd.SMTPPassword=entity.SMTPPassword;
+                            toAdd.SMTPUserName=entity.SMTPUserName;
                             result.Add(toAdd);
 						}
 	            }

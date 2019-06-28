@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-894F114A5ED07427F150C9B919ED309E
+// ALLOWOVERWRITE-2F1F272ED573030E9928A4D28FB2B597-BA458DE1174D4A73EF4D6AC57FB3CDC9
 
 using System;
 using System.ComponentModel;
@@ -96,27 +96,14 @@ namespace Database.Mobile.ViewModels
                 OnPropertyChanged("EntityId");
                 OnPropertyChanged("LogoURL");
                 OnPropertyChanged("Name");
+                OnPropertyChanged("SMTPEmailDisplayName");
+                OnPropertyChanged("SMTPEmailFromAddress");
+                OnPropertyChanged("SMTPHost");
+                OnPropertyChanged("SMTPPassword");
+                OnPropertyChanged("SMTPUserName");
                               
             }
         }
-        /// <summary>
-        /// is class
-        /// </summary>	
-        public int  Address 
-        {
-            set
-            {
-                if (EntityView.AddressAddressId != value)
-                {
-                    EntityView.AddressAddressId = value;
-                    OnPropertyChanged("AddressAddressId");
-                }
-            }
-            get
-            {
-                return EntityView.AddressAddressId;
-            } 
-         } 	    	
         /// <summary>
         /// 
         /// </summary>	
@@ -189,38 +176,141 @@ namespace Database.Mobile.ViewModels
                 return EntityView.Name;
             } 
          } 	    	
+        /// <summary>
+        /// 
+        /// </summary>	
+        public string  SMTPEmailDisplayName 
+        {
+            set
+            {
+                if (EntityView.SMTPEmailDisplayName != value)
+                {
+                    EntityView.SMTPEmailDisplayName = value;
+                    OnPropertyChanged("SMTPEmailDisplayName");
+                }
+            }
+            get
+            {
+                return EntityView.SMTPEmailDisplayName;
+            } 
+         } 	    	
+        /// <summary>
+        /// 
+        /// </summary>	
+        public string  SMTPEmailFromAddress 
+        {
+            set
+            {
+                if (EntityView.SMTPEmailFromAddress != value)
+                {
+                    EntityView.SMTPEmailFromAddress = value;
+                    OnPropertyChanged("SMTPEmailFromAddress");
+                }
+            }
+            get
+            {
+                return EntityView.SMTPEmailFromAddress;
+            } 
+         } 	    	
+        /// <summary>
+        /// 
+        /// </summary>	
+        public string  SMTPHost 
+        {
+            set
+            {
+                if (EntityView.SMTPHost != value)
+                {
+                    EntityView.SMTPHost = value;
+                    OnPropertyChanged("SMTPHost");
+                }
+            }
+            get
+            {
+                return EntityView.SMTPHost;
+            } 
+         } 	    	
+        /// <summary>
+        /// 
+        /// </summary>	
+        public string  SMTPPassword 
+        {
+            set
+            {
+                if (EntityView.SMTPPassword != value)
+                {
+                    EntityView.SMTPPassword = value;
+                    OnPropertyChanged("SMTPPassword");
+                }
+            }
+            get
+            {
+                return EntityView.SMTPPassword;
+            } 
+         } 	    	
+        /// <summary>
+        /// 
+        /// </summary>	
+        public string  SMTPUserName 
+        {
+            set
+            {
+                if (EntityView.SMTPUserName != value)
+                {
+                    EntityView.SMTPUserName = value;
+                    OnPropertyChanged("SMTPUserName");
+                }
+            }
+            get
+            {
+                return EntityView.SMTPUserName;
+            } 
+         } 	    	
 
         public EntityUpdate GetEntityUpdate()
         {
             var result = new EntityUpdate();
 
-	       result.AddressAddressId = EntityView.AddressAddressId;	
 			result.EntityExternalRef = EntityView.EntityExternalRef;
 			result.EntityId = EntityView.EntityId;
 			result.LogoURL = EntityView.LogoURL;
 			result.Name = EntityView.Name;
+			result.SMTPEmailDisplayName = EntityView.SMTPEmailDisplayName;
+			result.SMTPEmailFromAddress = EntityView.SMTPEmailFromAddress;
+			result.SMTPHost = EntityView.SMTPHost;
+			result.SMTPPassword = EntityView.SMTPPassword;
+			result.SMTPUserName = EntityView.SMTPUserName;
             return result;
         }
 
         public EntityAdd GetEntityAdd()
         {
             var result = new EntityAdd();
-	       result.AddressAddressId = EntityView.AddressAddressId;	 	
 			result.EntityExternalRef = EntityView.EntityExternalRef;
 			result.EntityId = EntityView.EntityId;
 			result.LogoURL = EntityView.LogoURL;
 			result.Name = EntityView.Name;
+			result.SMTPEmailDisplayName = EntityView.SMTPEmailDisplayName;
+			result.SMTPEmailFromAddress = EntityView.SMTPEmailFromAddress;
+			result.SMTPHost = EntityView.SMTPHost;
+			result.SMTPPassword = EntityView.SMTPPassword;
+			result.SMTPUserName = EntityView.SMTPUserName;
             return result;
         }
 
         public static explicit operator EntityEditViewModel(EntityView item)
     	{
        	    var result=new EntityEditViewModel();    	 
-	     //  result.AddressAddressId = item.AddressAddressId; 	
+	     //  result.Address = item.Address; 	
 			result.EntityExternalRef = item.EntityExternalRef;
 			result.EntityId = item.EntityId;
 			result.LogoURL = item.LogoURL;
 			result.Name = item.Name;
+			result.SMTPEmailDisplayName = item.SMTPEmailDisplayName;
+			result.SMTPEmailFromAddress = item.SMTPEmailFromAddress;
+			result.SMTPHost = item.SMTPHost;
+			result.SMTPPassword = item.SMTPPassword;
+			result.SMTPUserName = item.SMTPUserName;
         	return result;
        }
     }

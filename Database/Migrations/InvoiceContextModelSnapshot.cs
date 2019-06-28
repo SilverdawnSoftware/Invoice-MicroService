@@ -19,37 +19,6 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Address", b =>
-                {
-                    b.Property<int>("AddressId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("AddresLine2");
-
-                    b.Property<string>("AddressExternalRef");
-
-                    b.Property<string>("AddressLine1");
-
-                    b.Property<string>("AddressLine3");
-
-                    b.Property<string>("City");
-
-                    b.Property<string>("Country");
-
-                    b.Property<int?>("CustomerId");
-
-                    b.Property<string>("PostZipCode");
-
-                    b.Property<string>("StateCounty");
-
-                    b.HasKey("AddressId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Addresss");
-                });
-
             modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Counter", b =>
                 {
                     b.Property<string>("Name")
@@ -72,7 +41,7 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
 
                     b.Property<string>("CustomerExteranlRef");
 
-                    b.Property<string>("EmalAddress");
+                    b.Property<string>("EmailAddress");
 
                     b.Property<int?>("EntityId");
 
@@ -97,13 +66,21 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AddressAddressId");
-
                     b.Property<string>("EntityExternalRef");
 
                     b.Property<string>("LogoURL");
 
                     b.Property<string>("Name");
+
+                    b.Property<string>("SMTPEmailDisplayName");
+
+                    b.Property<string>("SMTPEmailFromAddress");
+
+                    b.Property<string>("SMTPHost");
+
+                    b.Property<string>("SMTPPassword");
+
+                    b.Property<string>("SMTPUserName");
 
                     b.HasKey("EntityId");
 
@@ -115,8 +92,6 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
                     b.Property<int>("InvoiceId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BillngAddressAddressId");
 
                     b.Property<DateTime>("CreatedDate");
 
@@ -146,13 +121,11 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
 
                     b.Property<string>("PurchaseOrderRef");
 
-                    b.Property<int>("ShippingAddressAddressId");
-
                     b.Property<int>("Status");
 
                     b.Property<decimal>("SubTotal");
 
-                    b.Property<decimal>("Tax");
+                    b.Property<decimal>("TaxTotal");
 
                     b.Property<string>("TermsAndConditions");
 
@@ -196,18 +169,78 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
                     b.ToTable("InvoiceLines");
                 });
 
-            modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Address", b =>
-                {
-                    b.HasOne("SilverdawnSoftware.Invoice.Database.Customer", "Customer")
-                        .WithMany("Addresss")
-                        .HasForeignKey("CustomerId");
-                });
-
             modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Customer", b =>
                 {
                     b.HasOne("SilverdawnSoftware.Invoice.Database.Entity", "Entity")
                         .WithMany("Customers")
                         .HasForeignKey("EntityId");
+
+                    b.OwnsOne("SilverdawnSoftware.Invoice.Database.Address", "Address", b1 =>
+                        {
+                            b1.Property<int>("CustomerId")
+                                .ValueGeneratedOnAdd()
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("AddresLine2");
+
+                            b1.Property<string>("AddressExternalRef");
+
+                            b1.Property<string>("AddressLine1");
+
+                            b1.Property<string>("AddressLine3");
+
+                            b1.Property<string>("City");
+
+                            b1.Property<string>("Country");
+
+                            b1.Property<string>("PostZipCode");
+
+                            b1.Property<string>("StateCounty");
+
+                            b1.HasKey("CustomerId");
+
+                            b1.ToTable("Customers");
+
+                            b1.HasOne("SilverdawnSoftware.Invoice.Database.Customer")
+                                .WithOne("Address")
+                                .HasForeignKey("SilverdawnSoftware.Invoice.Database.Address", "CustomerId")
+                                .OnDelete(DeleteBehavior.Cascade);
+                        });
+                });
+
+            modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Entity", b =>
+                {
+                    b.OwnsOne("SilverdawnSoftware.Invoice.Database.Address", "Address", b1 =>
+                        {
+                            b1.Property<int>("EntityId")
+                                .ValueGeneratedOnAdd()
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("AddresLine2");
+
+                            b1.Property<string>("AddressExternalRef");
+
+                            b1.Property<string>("AddressLine1");
+
+                            b1.Property<string>("AddressLine3");
+
+                            b1.Property<string>("City");
+
+                            b1.Property<string>("Country");
+
+                            b1.Property<string>("PostZipCode");
+
+                            b1.Property<string>("StateCounty");
+
+                            b1.HasKey("EntityId");
+
+                            b1.ToTable("Entitys");
+
+                            b1.HasOne("SilverdawnSoftware.Invoice.Database.Entity")
+                                .WithOne("Address")
+                                .HasForeignKey("SilverdawnSoftware.Invoice.Database.Address", "EntityId")
+                                .OnDelete(DeleteBehavior.Cascade);
+                        });
                 });
 
             modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.Invoice", b =>
@@ -215,6 +248,70 @@ namespace SilverdawnSoftware.Invoice.Database.Migrations
                     b.HasOne("SilverdawnSoftware.Invoice.Database.Customer", "Customer")
                         .WithMany("Invoices")
                         .HasForeignKey("CustomerId");
+
+                    b.OwnsOne("SilverdawnSoftware.Invoice.Database.Address", "BillingAddress", b1 =>
+                        {
+                            b1.Property<int>("InvoiceId")
+                                .ValueGeneratedOnAdd()
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("AddresLine2");
+
+                            b1.Property<string>("AddressExternalRef");
+
+                            b1.Property<string>("AddressLine1");
+
+                            b1.Property<string>("AddressLine3");
+
+                            b1.Property<string>("City");
+
+                            b1.Property<string>("Country");
+
+                            b1.Property<string>("PostZipCode");
+
+                            b1.Property<string>("StateCounty");
+
+                            b1.HasKey("InvoiceId");
+
+                            b1.ToTable("Invoices");
+
+                            b1.HasOne("SilverdawnSoftware.Invoice.Database.Invoice")
+                                .WithOne("BillingAddress")
+                                .HasForeignKey("SilverdawnSoftware.Invoice.Database.Address", "InvoiceId")
+                                .OnDelete(DeleteBehavior.Cascade);
+                        });
+
+                    b.OwnsOne("SilverdawnSoftware.Invoice.Database.Address", "ShippingAddress", b1 =>
+                        {
+                            b1.Property<int>("InvoiceId")
+                                .ValueGeneratedOnAdd()
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("AddresLine2");
+
+                            b1.Property<string>("AddressExternalRef");
+
+                            b1.Property<string>("AddressLine1");
+
+                            b1.Property<string>("AddressLine3");
+
+                            b1.Property<string>("City");
+
+                            b1.Property<string>("Country");
+
+                            b1.Property<string>("PostZipCode");
+
+                            b1.Property<string>("StateCounty");
+
+                            b1.HasKey("InvoiceId");
+
+                            b1.ToTable("Invoices");
+
+                            b1.HasOne("SilverdawnSoftware.Invoice.Database.Invoice")
+                                .WithOne("ShippingAddress")
+                                .HasForeignKey("SilverdawnSoftware.Invoice.Database.Address", "InvoiceId")
+                                .OnDelete(DeleteBehavior.Cascade);
+                        });
                 });
 
             modelBuilder.Entity("SilverdawnSoftware.Invoice.Database.InvoiceLine", b =>

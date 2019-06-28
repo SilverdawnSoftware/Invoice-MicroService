@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-E24D3207B1FC7FA800579ADE82C58D41
+// ALLOWOVERWRITE-0788E9AA43317321BDA3C539CCFAC877
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -36,19 +36,56 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
                    var customer=db.Customers.First(w=>w.CustomerId == invoiceAdd.CustomerId);				
                    if (customer.Invoices == null) customer.Invoices = new List<Database.Invoice>();
                    customer.Invoices.Add(invoice);
+                   if (invoiceAdd.BillingAddress == null)
+                   {
+                       invoice.BillingAddress = new Address();
+                   }
+                   else
+                   {
+                       invoice.BillingAddress=new Address()
+                       {	
+                           AddresLine2=invoiceAdd.BillingAddress.AddresLine2,                       			
+                           AddressExternalRef=invoiceAdd.BillingAddress.AddressExternalRef,                       			
+                           AddressLine1=invoiceAdd.BillingAddress.AddressLine1,                       			
+                           AddressLine3=invoiceAdd.BillingAddress.AddressLine3,                       			
+                           City=invoiceAdd.BillingAddress.City,                       			
+                           Country=invoiceAdd.BillingAddress.Country,                       			
+                           PostZipCode=invoiceAdd.BillingAddress.PostZipCode,                       			
+                           StateCounty=invoiceAdd.BillingAddress.StateCounty,                       			
+                       };
+                   }
                    invoice.CreatedDate=invoiceAdd.CreatedDate;  	
                    invoice.DueDate=invoiceAdd.DueDate;  	
                    invoice.EmailTo=invoiceAdd.EmailTo;  	
                    invoice.OrderedBy=invoiceAdd.OrderedBy;  	
                    invoice.PaymentDetails=invoiceAdd.PaymentDetails;  	
                    invoice.PurchaseOrderRef=invoiceAdd.PurchaseOrderRef;  	
+                   if (invoiceAdd.ShippingAddress == null)
+                   {
+                       invoice.ShippingAddress = new Address();
+                   }
+                   else
+                   {
+                       invoice.ShippingAddress=new Address()
+                       {	
+                           AddresLine2=invoiceAdd.ShippingAddress.AddresLine2,                       			
+                           AddressExternalRef=invoiceAdd.ShippingAddress.AddressExternalRef,                       			
+                           AddressLine1=invoiceAdd.ShippingAddress.AddressLine1,                       			
+                           AddressLine3=invoiceAdd.ShippingAddress.AddressLine3,                       			
+                           City=invoiceAdd.ShippingAddress.City,                       			
+                           Country=invoiceAdd.ShippingAddress.Country,                       			
+                           PostZipCode=invoiceAdd.ShippingAddress.PostZipCode,                       			
+                           StateCounty=invoiceAdd.ShippingAddress.StateCounty,                       			
+                       };
+                   }
                    invoice.TermsAndConditions =invoiceAdd.TermsAndConditions ;
-
-                    //UserCodeBlockStart-1
+                    
+                   //UserCodeBlockStart-1
                     var next = new CounterNextCommand();
                     var nextResult = await next.CounterNext(new CounterNext() { Name = "Invoice" });
                     invoice.InvoiceNo = nextResult.Value;
                     //UserCodeBlockEnd-1
+
                     await db.SaveChangesAsync();
 
                    result.CreatedDate=invoice.CreatedDate;
@@ -65,7 +102,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
                    result.PaymentDetails=invoice.PaymentDetails;
                    result.PurchaseOrderRef=invoice.PurchaseOrderRef;
                    result.SubTotal=invoice.SubTotal;
-                   result.Tax=invoice.Tax;
+                   result.Tax=invoice.TaxTotal;
                    result.TermsAndConditions =invoice.TermsAndConditions ;
                    return result;
                }

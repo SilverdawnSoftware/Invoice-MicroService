@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-48C06177DC0F11780A018748C2C37520
+// ALLOWOVERWRITE-8E90ED941736A9DD984C7B134057A120-68BAD5C02CDE635FEF4E760A92F5E680
 
 using System;
 using System.ComponentModel;
@@ -91,7 +91,7 @@ namespace Database.Mobile.ViewModels
             set
             {
                 this._invoiceView = value;
-                OnPropertyChanged("BillngAddress");
+                OnPropertyChanged("BillingAddress");
                 OnPropertyChanged("CreatedDate");
                 OnPropertyChanged("DueDate");
                 OnPropertyChanged("EmailTo");
@@ -109,29 +109,11 @@ namespace Database.Mobile.ViewModels
                 OnPropertyChanged("ShippingAddress");
                 OnPropertyChanged("Status");
                 OnPropertyChanged("SubTotal");
-                OnPropertyChanged("Tax");
+                OnPropertyChanged("TaxTotal");
                 OnPropertyChanged("TermsAndConditions ");
                               
             }
         }
-        /// <summary>
-        /// is class
-        /// </summary>	
-        public int  BillngAddress 
-        {
-            set
-            {
-                if (InvoiceView.BillngAddressAddressId != value)
-                {
-                    InvoiceView.BillngAddressAddressId = value;
-                    OnPropertyChanged("BillngAddressAddressId");
-                }
-            }
-            get
-            {
-                return InvoiceView.BillngAddressAddressId;
-            } 
-         } 	    	
         /// <summary>
         /// 
         /// </summary>	
@@ -385,24 +367,6 @@ namespace Database.Mobile.ViewModels
             } 
          } 	    	
         /// <summary>
-        /// is class
-        /// </summary>	
-        public int  ShippingAddress 
-        {
-            set
-            {
-                if (InvoiceView.ShippingAddressAddressId != value)
-                {
-                    InvoiceView.ShippingAddressAddressId = value;
-                    OnPropertyChanged("ShippingAddressAddressId");
-                }
-            }
-            get
-            {
-                return InvoiceView.ShippingAddressAddressId;
-            } 
-         } 	    	
-        /// <summary>
         /// 
         /// </summary>	
         public int Status 
@@ -441,19 +405,19 @@ namespace Database.Mobile.ViewModels
         /// <summary>
         /// 
         /// </summary>	
-        public decimal  Tax 
+        public decimal  TaxTotal 
         {
             set
             {
-                if (InvoiceView.Tax != value)
+                if (InvoiceView.TaxTotal != value)
                 {
-                    InvoiceView.Tax = value;
-                    OnPropertyChanged("Tax");
+                    InvoiceView.TaxTotal = value;
+                    OnPropertyChanged("TaxTotal");
                 }
             }
             get
             {
-                return InvoiceView.Tax;
+                return InvoiceView.TaxTotal;
             } 
          } 	    	
         /// <summary>
@@ -498,7 +462,6 @@ namespace Database.Mobile.ViewModels
         {
             var result = new InvoiceUpdate();
 
-	       result.BillngAddressAddressId = InvoiceView.BillngAddressAddressId;	
 			result.CreatedDate = InvoiceView.CreatedDate;
 			result.DueDate = InvoiceView.DueDate;
 			result.EmailTo = InvoiceView.EmailTo;
@@ -513,10 +476,9 @@ namespace Database.Mobile.ViewModels
 			result.PaidTax = InvoiceView.PaidTax;
 			result.PaymentDetails = InvoiceView.PaymentDetails;
 			result.PurchaseOrderRef = InvoiceView.PurchaseOrderRef;
-	       result.ShippingAddressAddressId = InvoiceView.ShippingAddressAddressId;	
 			result.Status = InvoiceView.Status;
 			result.SubTotal = InvoiceView.SubTotal;
-			result.Tax = InvoiceView.Tax;
+			result.TaxTotal = InvoiceView.TaxTotal;
 			result.TermsAndConditions  = InvoiceView.TermsAndConditions ;
             return result;
         }
@@ -524,7 +486,6 @@ namespace Database.Mobile.ViewModels
         public InvoiceAdd GetInvoiceAdd()
         {
             var result = new InvoiceAdd();
-	       result.BillngAddressAddressId = InvoiceView.BillngAddressAddressId;	 	
 			result.CreatedDate = InvoiceView.CreatedDate;
 			result.DueDate = InvoiceView.DueDate;
 			result.EmailTo = InvoiceView.EmailTo;
@@ -539,10 +500,9 @@ namespace Database.Mobile.ViewModels
 			result.PaidTax = InvoiceView.PaidTax;
 			result.PaymentDetails = InvoiceView.PaymentDetails;
 			result.PurchaseOrderRef = InvoiceView.PurchaseOrderRef;
-	       result.ShippingAddressAddressId = InvoiceView.ShippingAddressAddressId;	 	
 			result.Status = InvoiceView.Status;
 			result.SubTotal = InvoiceView.SubTotal;
-			result.Tax = InvoiceView.Tax;
+			result.TaxTotal = InvoiceView.TaxTotal;
 			result.TermsAndConditions  = InvoiceView.TermsAndConditions ;
          result.CustomerCustomerId= InvoiceView.CustomerCustomerId; 
             return result;
@@ -551,7 +511,7 @@ namespace Database.Mobile.ViewModels
         public static explicit operator InvoiceEditViewModel(InvoiceView item)
     	{
        	    var result=new InvoiceEditViewModel();    	 
-	     //  result.BillngAddressAddressId = item.BillngAddressAddressId; 	
+	     //  result.BillingAddress = item.BillingAddress; 	
 			result.CreatedDate = item.CreatedDate;
 			result.DueDate = item.DueDate;
 			result.EmailTo = item.EmailTo;
@@ -566,10 +526,10 @@ namespace Database.Mobile.ViewModels
 			result.PaidTax = item.PaidTax;
 			result.PaymentDetails = item.PaymentDetails;
 			result.PurchaseOrderRef = item.PurchaseOrderRef;
-	     //  result.ShippingAddressAddressId = item.ShippingAddressAddressId; 	
+	     //  result.ShippingAddress = item.ShippingAddress; 	
 			result.Status = item.Status;
 			result.SubTotal = item.SubTotal;
-			result.Tax = item.Tax;
+			result.TaxTotal = item.TaxTotal;
 			result.TermsAndConditions  = item.TermsAndConditions ;
         	return result;
        }

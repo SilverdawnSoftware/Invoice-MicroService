@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-365D80DEA240A17FA90D89A5D737199E
+// ALLOWOVERWRITE-19D4DDE047FA4D925A86B9BAF18B0D31-704E17DB32B1E445FE3B4C9DD9F58A41
 
 using System;
 using System.Collections.Generic;
@@ -9,11 +9,11 @@ namespace Database.Transactions.Model
 	[DataContract]
     public class InvoiceAdd
     {
-				/// <summary>
-                  /// 
-                  /// </summary>
-               [DataMember(Name = "billngAddressAddressId")]                   
-				public int BillngAddressAddressId  { get; set; } 				
+              /// <summary>
+              ///  
+              /// </summary>
+              //[DataMember(Name = "billingAddress")]                 
+             // public Address Address { get; set; } 	
 	    		 /// <summary>
                   /// 
                   /// </summary>
@@ -84,11 +84,11 @@ namespace Database.Transactions.Model
                   /// </summary>
 				[DataMember(Name = "purchaseOrderRef")]                
 	    		public string PurchaseOrderRef  { get; set; } 
-				/// <summary>
-                  /// 
-                  /// </summary>
-               [DataMember(Name = "shippingAddressAddressId")]                   
-				public int ShippingAddressAddressId  { get; set; } 				
+              /// <summary>
+              ///  
+              /// </summary>
+              //[DataMember(Name = "shippingAddress")]                 
+             // public Address Address { get; set; } 	
 	    		 /// <summary>
                   /// 
                   /// </summary>
@@ -102,8 +102,8 @@ namespace Database.Transactions.Model
 	    		 /// <summary>
                   /// 
                   /// </summary>
-				[DataMember(Name = "tax")]                
-	    		public decimal Tax  { get; set; } 
+				[DataMember(Name = "taxTotal")]                
+	    		public decimal TaxTotal  { get; set; } 
 	    		 /// <summary>
                   /// 
                   /// </summary>

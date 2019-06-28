@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-FB2F936E80826AE4746B6D97F71030FE
+// ALLOWOVERWRITE-DC3D45D3A9729A5A34D8E4284CD65E6A
 
 import { Component,OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
@@ -38,7 +38,6 @@ import {AddressService} from "../Services/AddressService";
   addressForm: FormGroup;
   addressView: IAddressView;
   addressId: number=0;
-  customerCustomerId : number;   
     
   constructor(private formBuilder: FormBuilder, private addressService: AddressService, private route: ActivatedRoute, private router: Router, private location: Location
   ) {
@@ -63,17 +62,12 @@ import {AddressService} from "../Services/AddressService";
     });
          
        this.route.params.subscribe(params => {
-        this.addressId =params['id'];
-          if (this.addressId>0) {
+        this. =params['id'];
+          if (this.>0) {
         	this.addressService.get(+params['id']).subscribe(address => this.displayAddress(address));
       		}
       	});
       	
-    
-    	 this.route.queryParams.subscribe( params=>{
-         this.customerCustomerId=params['customerCustomerId'];
-       });
-    
       	
       	
 		
@@ -81,14 +75,13 @@ import {AddressService} from "../Services/AddressService";
 
   update() {
           const addressModel = this.addressForm.value;
-          if (this.addressId>0)
+          if (this.>0)
           {
-            this.addressService.update(this.addressId,addressModel).subscribe(value => this.displayAddress(value));
+            this.addressService.update(this.,addressModel).subscribe(value => this.displayAddress(value));
           }
           else
           {
-      		  addressModel.customerCustomerId=this.customerCustomerId;
-              this.addressService.add(addressModel).subscribe(value => this.router.navigateByUrl("/admin/address/edit/"+value.addressId));
+              this.addressService.add(addressModel).subscribe(value => this.router.navigateByUrl("/admin/address/edit/"+value.));
           }
       }
 
