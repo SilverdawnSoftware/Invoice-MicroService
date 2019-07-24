@@ -1,4 +1,4 @@
-<!-- ALLOWOVERWRITE-8B88A9E1D6BC70165C248602025815B6 -->
+<!-- ALLOWOVERWRITE-DEFD40A8DCFA52CD8AF7124A412EBB4F -->
 
 
  <form [formGroup]="invoiceForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
@@ -207,6 +207,36 @@
     </ngx-datatable-column>			
    			</ngx-datatable>
     				 <a mat-raised-button color="primary" href="/admin/invoiceLine/add?invoiceInvoiceId={{invoiceView.invoiceId}}">Add</a>
+    		</mat-tab>	
+    		
+    	<mat-tab label="PaymentHistory"> 
+    				 <ngx-datatable
+            class='material'
+            [rows]='paymentHistoryrows'
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="40"
+            [scrollbarV]="true"
+            (page)="onPage($event)">
+   						<ngx-datatable-column name="PaymentHistoryId" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="PaymentDate" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Amount" width="300"></ngx-datatable-column> 
+   						<ngx-datatable-column name="Reference" width="300"></ngx-datatable-column> 
+   			<ngx-datatable-column name="Edit" width="300" prop="paymentHistoryId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+      <button mat-icon-button	routerLink="/admin/paymentHistory/edit/{{value}}" color="primary"><mat-icon>edit</mat-icon></button>
+
+    </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Delete" width="300" prop="paymentHistoryId">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button mat-icon-button	(click)="deletePaymentHistory(value)" color="warn"><mat-icon>delete</mat-icon></button>
+
+      </ng-template>
+    </ngx-datatable-column>			
+   			</ngx-datatable>
+    				 <a mat-raised-button color="primary" href="/admin/paymentHistory/add?invoiceInvoiceId={{invoiceView.invoiceId}}">Add</a>
     		</mat-tab>	
     	
         	 

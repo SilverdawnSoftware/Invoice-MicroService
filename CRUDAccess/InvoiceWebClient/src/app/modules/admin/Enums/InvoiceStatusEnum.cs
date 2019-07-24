@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-8AA84C4FCC36FF14147C416C18746DAB-1369CFFB7F464CD29FBF08E464A96979
+// ALLOWOVERWRITE-B1F1D2F9EEEC1F901397011892919C1F
 
 export enum InvoiceStatus
     {
@@ -12,5 +12,6 @@ PartialPayment= 3
     		,
 Cancelled = 4
     		,
+Finalized    		,
     	
     }

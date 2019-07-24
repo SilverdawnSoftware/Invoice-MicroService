@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-270C223B56509368C36C7C23466F480E-668B544EA2E1604B3D7EE77FD7CD0FA4
+// ALLOWOVERWRITE-668B544EA2E1604B3D7EE77FD7CD0FA4
 
 using System;
 using System.Collections.Generic;
@@ -57,7 +57,6 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
         public string SMTPUserName  { get; set; } 
     }    	    	
 }
-
 
 
 

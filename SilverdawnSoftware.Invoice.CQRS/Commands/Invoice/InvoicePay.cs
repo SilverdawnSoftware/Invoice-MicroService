@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-F38B7434AC1CF63B68852ECE142A2F3B-130F47E756326E124CFFBCBE13545100
+// ALLOWOVERWRITE
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
   	public partial class InvoicePayCommand : Orleans.Grain , IInvoicePayCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
       public async Task<IInvoiceView> InvoicePay(IInvoicePay invoicePay)
       {
 			try
@@ -41,12 +48,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
                        result.InvoiceEmailed=invoice.InvoiceEmailed;
                        result.InvoiceId=invoice.InvoiceId;
                        result.InvoiceNo=invoice.InvoiceNo;
+                       result.Notes=invoice.Notes;
                        result.OrderedBy=invoice.OrderedBy;
                        result.PaidAmount=invoice.PaidAmount;
                        result.PaidDate=invoice.PaidDate;
                        result.PaidTax=invoice.PaidTax;
                        result.PaymentDetails=invoice.PaymentDetails;
                        result.PurchaseOrderRef=invoice.PurchaseOrderRef;
+                       result.Status=(int)invoice.Status;
                        result.SubTotal=invoice.SubTotal;
                        result.Tax=invoice.TaxTotal;
                        result.TermsAndConditions =invoice.TermsAndConditions ;

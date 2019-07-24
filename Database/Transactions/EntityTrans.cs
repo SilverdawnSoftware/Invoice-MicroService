@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-C6F0D804F85C851E9A067E0B4522CE19-A2F77409928B3B2C811CA6374848521F
+// ALLOWOVERWRITE-A2F77409928B3B2C811CA6374848521F
 
 using System;
 using System.Collections.Generic;
@@ -132,7 +132,9 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions
             	LogFactory.GetLogger().Log(LogLevel.Error,e);
             }
     }
-
- 	}
+  }
 }
+
+
+
  

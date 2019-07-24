@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-293DF023033944CAE45F1464E1D865F3-C17431FA73894A627C72C3963D9B4BEA
+// ALLOWOVERWRITE-BCD9BB3A5900C475B476E8328000322C
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +17,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
   	public partial class InvoiceDeleteCommand : Orleans.Grain , IInvoiceDeleteCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
       public async Task<ICQRSBase> InvoiceDelete(IInvoiceDelete invoiceDelete)
       {
           var result=new CQRSBase();

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-E8AFE337BE5D31D844430A538E026F44-03ABF70CE813CC0DEA999E5B15A2CB26
+// ALLOWOVERWRITE-1A4917092FB74F21329E4717009B0765
 
 using System;
 using System.Collections.Generic;
@@ -11,33 +11,43 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models
 	[DataContract]
     public partial class InvoiceLineAdd : CQRSBase, IInvoiceLineAdd
     { 
+        /// <summary>  </summary>				
         [DataMember]	
         public double Quantity  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public decimal UnitCost  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public decimal SubTotal  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public decimal TaxTotal  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public decimal LineTotal  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string Product  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public bool TaxExempt  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string ProductCode  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string Notes  { get; set; }
 		  	
+        /// <summary> Primary Key for Invoices </summary>				
         [DataMember]	
         public int InvoiceId  { get; set; }
 		  	

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-8C8AEAA19E0BE83803A26663726E459F-6C56C8E923C244DC5F9E8BD09D800309
+// ALLOWOVERWRITE
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
   	public partial class InvoiceCancelCommand : Orleans.Grain , IInvoiceCancelCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
       public async Task<IInvoiceView> InvoiceCancel(IInvoiceCancel invoiceCancel)
       {
 			try
@@ -31,7 +38,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
                    {
                        var invoice = db.Invoices.First(w =>  w.InvoiceId == invoiceCancel.InvoiceId);
                     invoice.Notes=invoiceCancel.Reason;  	
-						invoice.Status=InvoiceStatus.Cancelled;
+						invoice.Status= Database.InvoiceStatus.Cancelled;
                        await db.SaveChangesAsync();
 
                        result.CreatedDate=invoice.CreatedDate;
@@ -41,12 +48,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
                        result.InvoiceEmailed=invoice.InvoiceEmailed;
                        result.InvoiceId=invoice.InvoiceId;
                        result.InvoiceNo=invoice.InvoiceNo;
+                       result.Notes=invoice.Notes;
                        result.OrderedBy=invoice.OrderedBy;
                        result.PaidAmount=invoice.PaidAmount;
                        result.PaidDate=invoice.PaidDate;
                        result.PaidTax=invoice.PaidTax;
                        result.PaymentDetails=invoice.PaymentDetails;
                        result.PurchaseOrderRef=invoice.PurchaseOrderRef;
+                       result.Status=(int)invoice.Status;
                        result.SubTotal=invoice.SubTotal;
                        result.Tax=invoice.TaxTotal;
                        result.TermsAndConditions =invoice.TermsAndConditions ;

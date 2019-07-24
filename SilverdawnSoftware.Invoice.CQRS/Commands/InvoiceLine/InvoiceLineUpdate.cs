@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-96415392C4F76F191F80F1CE7AA057AC-4F9F773ECE708B524B4ECC93E59D7F5D
+// ALLOWOVERWRITE-0AC1DE8C443658DFDBB24BEC9A319B90
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine
   	public partial class InvoiceLineUpdateCommand : Orleans.Grain , IInvoiceLineUpdateCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
       public async Task<IInvoiceLineView> InvoiceLineUpdate(IInvoiceLineUpdate invoiceLineUpdate)
       {
 			try

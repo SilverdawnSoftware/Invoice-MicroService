@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-DDEBB8EE8454AC442E81E67DE49083DC-5A4F8EEFC6284A264447385C9578633E
+// ALLOWOVERWRITE-4F3011A727FC8346B75ECEDFE02CE682
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -71,6 +71,10 @@ import {CounterIndex} from './modules/admin/Counter/Views/CounterIndex';
 import {CounterEdit} from './modules/admin/Counter/Views/CounterEdit';
 
 
+import {PaymentHistoryIndex} from './modules/admin/PaymentHistory/Views/PaymentHistoryIndex';
+import {PaymentHistoryEdit} from './modules/admin/PaymentHistory/Views/PaymentHistoryEdit';
+
+
 @NgModule({
   exports: [
     CdkTableModule,
@@ -120,6 +124,7 @@ export class AppMaterialModule {}
   ,InvoiceLineEdit,InvoiceLineIndex
   ,EntityEdit,EntityIndex
   ,CounterEdit,CounterIndex
+  ,PaymentHistoryEdit,PaymentHistoryIndex
   
   
   ],

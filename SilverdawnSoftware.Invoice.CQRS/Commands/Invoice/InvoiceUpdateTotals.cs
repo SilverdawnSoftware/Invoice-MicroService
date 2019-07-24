@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-7CBD3FAA8D078AA96D6E8D2B7B9F916C-47237147E110227D7E1751556F5CE134
+// ALLOWOVERWRITE-8BA29600A55C634A67F3CB6663F162DE
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +16,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
   	public partial class InvoiceUpdateTotalsCommand : Orleans.Grain , IInvoiceUpdateTotalsCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
 	}
 
 

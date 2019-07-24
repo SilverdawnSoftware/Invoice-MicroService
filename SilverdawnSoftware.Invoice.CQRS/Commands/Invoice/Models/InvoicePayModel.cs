@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-C5A8171DE905C11818E2884A5A949771-C27A372019CBB9707CDA0F6A9529DD1D
+// ALLOWOVERWRITE-FC31A2AC551931DB853209F5A0404F5B
 
 using System;
 using System.Collections.Generic;
@@ -11,12 +11,15 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
 	[DataContract]
     public partial class InvoicePay : CQRSBase, IInvoicePay
     { 
+        /// <summary> Primary Key for Invoices </summary>				
         [DataMember]	
         public int InvoiceId  { get; set; }
 		  	
+        /// <summary> How much of the invoice that has been paid </summary>				
         [DataMember]	
         public double PaidAmount  { get; set; }
 		  	
+        /// <summary> How much of the invoice tax that has been paid. </summary>				
         [DataMember]	
         public double PaidTax  { get; set; }
 		  	

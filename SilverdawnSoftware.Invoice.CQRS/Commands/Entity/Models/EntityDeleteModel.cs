@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-ACB24463C83F58797365BFFF4880D1F8-2FE1A11AFE0FB508C81C274B74EFEC0A
+// ALLOWOVERWRITE-3960D7E1B44FA4F2EAA0FDCB155AF052
 
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models
 {
     public partial class EntityDelete : CQRSBase, IEntityDelete
     { 
+        /// <summary>  </summary>				
         [DataMember]	
         public int EntityId  { get; set; }
 		  	

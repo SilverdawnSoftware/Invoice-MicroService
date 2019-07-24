@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-019EA712FFB93E156B35E248EA9D79CD-23B441A8F038488474E6155DF72D985C
+// ALLOWOVERWRITE-9F498122EE205D174B254752A638726A
 
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models
 {
     public partial class CustomerDelete : CQRSBase, ICustomerDelete
     { 
+        /// <summary>  </summary>				
         [DataMember]	
         public int CustomerId  { get; set; }
 		  	

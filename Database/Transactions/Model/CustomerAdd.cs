@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-142D8D949800BD19148C935A9DC289AD-1E191171693C823C57C3991DE7051138
+// ALLOWOVERWRITE-1E191171693C823C57C3991DE7051138
 
 using System;
 using System.Collections.Generic;
@@ -56,7 +56,6 @@ namespace SilverdawnSoftware.Invoice.Database.Transactions.Model
         public int EntityEntityId { get; set; } 
     }    	    	
 }
-
 
 
 

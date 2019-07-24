@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-68A73B11793ABA9710F566FAB97C7A4D-D6DAF79BC4D7064FEF739D44D7914874
+// ALLOWOVERWRITE-D13EE6C26B2AB7FB32C4BFD38747A395
 
 using System;
 using System.Collections.Generic;
@@ -64,6 +64,12 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models
 
         [DataMember]
         public string PaymentDetails  { get; set; }
+
+        [DataMember]
+        public int Status  { get; set; }
+
+        [DataMember]
+        public string Notes  { get; set; }
     	
     	 public InvoiceView()
         {

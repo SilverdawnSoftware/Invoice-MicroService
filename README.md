@@ -2,9 +2,21 @@
 
 An Invoice MicroService using Asp.net core, EF Core, Angular(for web clients) and Xamarin Forms(for mobiles). 
 
-The goal for this project is to create all the code required to store, retrieve, create and view Invoices via Model First Design and Code Automation. 
+The following features have been implemented:
+* Invoice (Add-Delete-Update)
+* Invoice Lines
+* Invoice Email Template engine
+* Email Invoices
+* Store Invoices for multiple locations
+* REST API
+* Invoice Management Screens (Mobile and Web) Coming soon.
+* CRUD Data screens (Mobile and Web)
+* CRUD REST API (if lower level access is required)
+  
+  
 
-At the moment there is only a CRUD interface for this application. More API calls will be added in the near future so check back for updates.
+
+The goal for this project is to create all the code for an Invoicing via Model First Design and Code Automation. 
 
 This application is designed using SilverModel, but SilverModel is not required to use this code.
 
@@ -25,7 +37,6 @@ Firstly let us look at a diagram of the Invoice MicroService Architecture and al
 Now I will explain the different layers in the application and how the code generators work together.
 <h3>Database Layer</h3>
 In the Invoice MicroService, the project "Invoice.Database" holds all the database code. This code uses the "Entity Framework Core" code generator and generates the code for the Microsoft Entity Framework Core.
-
 All the classes that EF needs to define and use the database are in this project.
 <h3>Update and View Models</h3>
 This layer holds all the view models and the models for adding, updating and delete the database entities.

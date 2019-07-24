@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-CFC447A308C4AC9C65F4BCFA9AF78FFE-737A32636705DBD782827796B047E8F2
+// ALLOWOVERWRITE-C28B4249F18A943B82AD69F55A868A0E
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Entity
   	public partial class EntityUpdateCommand : Orleans.Grain , IEntityUpdateCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
       public async Task<IEntityView> EntityUpdate(IEntityUpdate entityUpdate)
       {
 			try

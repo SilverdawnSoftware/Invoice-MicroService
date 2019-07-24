@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-82CB6474AD5952B1FD5E0ABBA3423B9A-CDEC8B0688E348499D8B7D01D4FA90C5
+// ALLOWOVERWRITE-ABA1B174B1C73F1F176A0D88D9FDEC5B
 
 import { Component,OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
@@ -16,6 +16,7 @@ import {AddressService} from "../../Address/Services/AddressService"
 
    					
 import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"	
+import {PaymentHistoryService} from "../../PaymentHistory/Services/PaymentHistoryService"	
     		
 // Add view Models Imports
 
@@ -23,6 +24,7 @@ import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"
 
 // Add  Target Assoications view Models
  import { IInvoiceLineView } from "../../InvoiceLine/Models/InvoiceLineView";
+ import { IPaymentHistoryView } from "../../PaymentHistory/Models/PaymentHistoryView";
  
 
 @Component({
@@ -32,6 +34,7 @@ import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"
     InvoiceService 
 
 ,InvoiceLineService
+,PaymentHistoryService
 ]
 })
 
@@ -45,9 +48,11 @@ import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"
   invoiceId: number=0;
   customerCustomerId : number;   
     invoiceLinerows: any; 
+  paymentHistoryrows: any; 
   
   constructor(private formBuilder: FormBuilder, private invoiceService: InvoiceService, private route: ActivatedRoute, private router: Router, private location: Location
 ,private invoiceLineService: InvoiceLineService
+,private paymentHistoryService: PaymentHistoryService
   ) {
 
     this.invoiceView=new InvoiceView();
@@ -83,6 +88,7 @@ import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"
           if (this.invoiceId>0) {
         	this.invoiceService.get(+params['id']).subscribe(invoice => this.displayInvoice(invoice));
   			 this.invoiceLineService.getInvoiceLinesByInvoice(this.invoiceId).subscribe(value => this.invoiceLinerows=value); 
+  			 this.paymentHistoryService.getPaymentHistorysByInvoice(this.invoiceId).subscribe(value => this.paymentHistoryrows=value); 
       		}
       	});
       	
@@ -127,6 +133,22 @@ import {InvoiceLineService} from "../../InvoiceLine/Services/InvoiceLineService"
 	      for(var i = this.invoiceLinerows.length - 1; i >= 0; i--) {
 	        if(this.invoiceLinerows[i].invoiceLineId === invoiceLineId) {
 	          this.invoiceLinerows.splice(i, 1);
+	          break;
+	        }
+	      }
+	    }
+  	}
+  	
+    
+    deletePaymentHistory(paymentHistoryId: number)
+  	{
+	    if (confirm('Are you sure you want to delete this?'))
+	    {
+	      this.paymentHistoryService.remove(paymentHistoryId).subscribe();
+	
+	      for(var i = this.paymentHistoryrows.length - 1; i >= 0; i--) {
+	        if(this.paymentHistoryrows[i].paymentHistoryId === paymentHistoryId) {
+	          this.paymentHistoryrows.splice(i, 1);
 	          break;
 	        }
 	      }

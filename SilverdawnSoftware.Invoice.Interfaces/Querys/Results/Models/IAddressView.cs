@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-DD2D48382918057B4F2C157D2974B88A-D0A56D05673CBEBE06D8572113CAE644
+// ALLOWOVERWRITE-D0A56D05673CBEBE06D8572113CAE644
 
 using System;
 using System.Collections.Generic;
@@ -9,22 +9,22 @@ namespace SilverdawnSoftware.Invoice.Interfaces.CQRS.Querys.Results.Models
 {
     public partial interface IAddressView : ICQRSBase
     { 
-		
-        string AddressLine1  { get; set; }	
-		
-        string AddresLine2  { get; set; }	
-		
-        string City  { get; set; }	
-		
-        string PostZipCode  { get; set; }	
-		
-        string StateCounty  { get; set; }	
-		
-        string Country  { get; set; }	
-		
-        string AddressExternalRef  { get; set; }	
-		
-        string AddressLine3  { get; set; }	
+         string AddressLine1  { get; set; }
+		  	
+         string AddresLine2  { get; set; }
+		  	
+         string City  { get; set; }
+		  	
+         string PostZipCode  { get; set; }
+		  	
+         string StateCounty  { get; set; }
+		  	
+         string Country  { get; set; }
+		  	
+         string AddressExternalRef  { get; set; }
+		  	
+         string AddressLine3  { get; set; }
+		  	
 	}
 }
 

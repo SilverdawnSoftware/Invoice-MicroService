@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-6A8EC44A55AB5236A026013469772B90-30F122257FD35F11AE05607E784A265B
+// ALLOWOVERWRITE-E664ABAC278CFBB0DAA86645F74CD7FE
 
 using System;
 using System.Collections.Generic;
@@ -11,32 +11,42 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models
 {
     public partial class EntityUpdate : CQRSBase, IEntityUpdate
     { 
+        /// <summary>  </summary>				
         [DataMember]	
         public int EntityId  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string Name  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string EntityExternalRef  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public IAddressView Address { get; set; }						
+        /// <summary>  </summary>				
         [DataMember]	
         public string LogoURL  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string SMTPEmailFromAddress  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string SMTPUserName  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string SMTPPassword  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string SMTPHost  { get; set; }
 		  	
+        /// <summary>  </summary>				
         [DataMember]	
         public string SMTPEmailDisplayName  { get; set; }
 		  	

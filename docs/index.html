@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Invoice MicroService </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Invoice MicroService ">
+    <meta name="generator" content="docfx 2.43.3.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="invoice-microservice">Invoice MicroService</h1>
+
+<p>An Invoice MicroService using Asp.net core, EF Core, Angular(for web clients) and Xamarin Forms(for mobiles).</p>
+<p>The following features have been implemented:</p>
+<ul>
+<li>Invoice (Add-Delete-Update)</li>
+<li>Invoice Lines</li>
+<li>Invoice Email Template engine</li>
+<li>Email Invoices</li>
+<li>Store Invoices for multiple locations</li>
+<li>REST API</li>
+<li>Invoice Management Screens (Mobile and Web) Coming soon.</li>
+<li>CRUD Data screens (Mobile and Web)</li>
+<li>CRUD REST API (if lower level access is required)</li>
+</ul>
+<p>The goal for this project is to create all the code for an Invoicing via Model First Design and Code Automation.</p>
+<p>This application is designed using SilverModel, but SilverModel is not required to use this code.</p>
+<p>To learn more about code generation download <a href="https://www.silverdawn.com/download-silvermodel/">SilverModel</a> and open the Model(Invoicing-MicroService.gen) to update the model and generate the code.</p>
+<h1>Introduction to the Invoice MicroService</h1>
+<p>This is a quick introduction to the Invoice MicroService.</p>
+<p>Going forward we will also use this application to demonstrate more advanced techniques and other technologies of SilverModel.</p>
+<h1>Invoice MicroService Architecture</h1>
+In this section, I will explain the architecture used to create the Invoice MicroService. As much as possible the application has been written with open source technologies such as Microsoft's. Net Core Framework.
+<p>Firstly let us look at a diagram of the Invoice MicroService Architecture and all the software layers within it.</p>
+<p id="crsExPx"><img class="alignnone size-full wp-image-1017 " src="https://www.silverdawnsoftware.com/wp-content/uploads/2017/09/img_59ba61b1797ec.png" alt=""></p>
+<h2>Application Layers</h2>
+Now I will explain the different layers in the application and how the code generators work together.
+<h3>Database Layer</h3>
+In the Invoice MicroService, the project "Invoice.Database" holds all the database code. This code uses the "Entity Framework Core" code generator and generates the code for the Microsoft Entity Framework Core.
+All the classes that EF needs to define and use the database are in this project.
+<h3>Update and View Models</h3>
+This layer holds all the view models and the models for adding, updating and delete the database entities.
+<p>Also, the code that updates the database and creates the views is in this layer also.</p>
+<p>The code for the Views is in the &quot;Views&quot; folder.</p>
+<p>The code for the adding, updating and delete is in the &quot;Transactions&quot; folder.</p>
+<p>The code for this is generated by the &quot;Entity Framework Core&quot; code generator�and the code is in the &quot;Invoice MicroService&quot; project</p>
+<p>In the�future, it will be possible to swap these layers out to access different types of database e.g. MongoDB</p>
+<h3>REST API</h3>
+To allow external applications e.g Mobile apps to access the data we need a REST web service. The Rest API uses the "Update and View Models" layer to access the database.
+<p>The code for this is generated by the &quot;WebAPI Core&quot; code generator�and the code is in the &quot;InvoiceRestAPI&quot; project</p>
+<h3>REST Access API</h3>
+This layer manages the communications between the Mobile App and the REST API.
+<p>It also has all the view models and transaction models defined as well.</p>
+<p>The code for this is generated by the &quot;REST Access&quot; code generator�and the code is in the &quot;InvoiceRESTAccess&quot; project</p>
+<h3>Android/iPhone Layer</h3>
+This is where all the Xamarin Forms are created that interact with the REST Access API.
+<p>All the XAML Forms and View Models for the Mobile Applications are stored in this layer.</p>
+<p>The code for this is generated by the &quot;Xamarin Forms&quot; code generator and the code is in the &quot;InvoiceMobile&quot; project.</p>
+<h3>Angular REST Access Services and Models</h3>
+For the Angular Forms to communicate with the REST API, they first need all the Models and Services they can use to be defined.
+<p>This layer provides all the infrastructure for the above that the Angular forms require.�The code for this is generated by the &quot;AngularJS4Material&quot; code generator and the code is in the &quot;InvoiceWebClient&quot; project.</p>
+<h3>Angular HTML Client</h3>
+The final piece of the puzzle is the HTML forms for the Angular Application.
+<p>This layer is where all the HTML and Typescript code is held to run the application.</p>
+<p>The code for this is generated by the &quot;AngularJS4Material&quot; code generator and the code is in the &quot;InvoiceWebClient&quot; project.</p>
+<h1>Questions</h1>
+If you have any questions about the application or how the code generators are working please contact us on our <a href="http://support.siverdawnsoftware.com/">support website</a>�and we will be happy to help.
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SilverdawnSoftware/Invoice-MicroService/blob/master/Documentation/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

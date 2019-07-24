@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-9DE85D548B71B60EFEF99F4E6E679974-519028742EA37BA6E4F8F27069DB8B1D
+// ALLOWOVERWRITE-2DA721C45ECA290394380B308A296219
 
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Database.Mobile.ViewModels;
 using Database.Mobile.Views.InvoiceLine;
+using Database.Mobile.Views.PaymentHistory;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,6 +22,7 @@ namespace Database.Mobile.Views.Invoice
 			InitializeComponent ();			
 			MessagingCenter.Subscribe<InvoiceEditViewModel>(this, "Save error",model => DisplayAlert("Save error", "Unable to save changes.", "Close") );			 			 
            	MessagingCenter.Subscribe<InvoiceEditViewModel, InvoiceLineIndexViewModel>(this, "ShowInvoiceLines",async  (sender, arg) => { await ShowInvoiceLines(arg); });
+           	MessagingCenter.Subscribe<InvoiceEditViewModel, PaymentHistoryIndexViewModel>(this, "ShowPaymentHistorys",async  (sender, arg) => { await ShowPaymentHistorys(arg); });
 		}
 		
 		
@@ -31,6 +33,15 @@ namespace Database.Mobile.Views.Invoice
 	        await Navigation.PushAsync(page);
 	        NavigationPage.SetHasBackButton(page, true);
 	        page.BindingContext = invoiceLineIndexViewModel;
+        }           	
+           	
+           	
+        public async System.Threading.Tasks.Task ShowPaymentHistorys(PaymentHistoryIndexViewModel paymentHistoryIndexViewModel)
+	    {
+	        var page = new PaymentHistoryIndexPage();
+	        await Navigation.PushAsync(page);
+	        NavigationPage.SetHasBackButton(page, true);
+	        page.BindingContext = paymentHistoryIndexViewModel;
         }           	
            	
 		

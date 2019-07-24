@@ -18,7 +18,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="2.3.0" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\Database\Silverdawnsoftware.Invoice.Database.csproj" />
     <ProjectReference Include="..\SilverdawnSoftware.Invoice.Interfaces\SilverdawnSoftware.Invoice.Interfaces.CQRS.csproj" />

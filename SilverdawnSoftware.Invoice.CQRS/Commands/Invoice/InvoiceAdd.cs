@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-0788E9AA43317321BDA3C539CCFAC877
+// ALLOWOVERWRITE-10080238FDEB95C35F7395B28B18598A
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +21,17 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
   	public partial class InvoiceAddCommand : Orleans.Grain , IInvoiceAddCommand
     {
 
-		
+
+        /// <summary> Add a new invoice to the database </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///<div class="Section0"><p style="text-align:left;page-break-inside:auto;page-break-after:auto;page-break-before:avoid;margin-top:0pt;margin-bottom:0pt;margin-left:0pt;text-indent:0pt;margin-right:0pt;"><span lang="en-US" style="color:#000000;font-family:Times New Roman;font-size:12pt;text-transform:none;font-weight:normal;font-style:normal;font-variant:normal;">When creating a new invoice first call this command to create an invoice in the system.</span></p>
+///<p style="text-align:left;page-break-inside:auto;page-break-after:auto;page-break-before:avoid;line-height:normal;margin-top:0pt;margin-bottom:0pt;margin-left:0pt;text-indent:0pt;margin-right:0pt;"><span style="color:#000000;font-family:Times New Roman;font-size:12pt;text-transform:none;font-weight:normal;font-style:normal;font-variant:normal;">&#xa0;</span></p>
+///<p style="text-align:left;page-break-inside:auto;page-break-after:auto;page-break-before:avoid;margin-top:0pt;margin-bottom:0pt;margin-left:0pt;text-indent:0pt;margin-right:0pt;"><span lang="en-US" style="color:#000000;font-family:Times New Roman;font-size:12pt;text-transform:none;font-weight:normal;font-style:normal;font-variant:normal;">Then once the invoice has been created, Invoices Lines can be added to it</span></p>
+///</div>
+
+        /// </remarks>
       public async Task<IInvoiceView> InvoiceAdd(IInvoiceAdd invoiceAdd)
       {
 			try
@@ -36,57 +46,20 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
                    var customer=db.Customers.First(w=>w.CustomerId == invoiceAdd.CustomerId);				
                    if (customer.Invoices == null) customer.Invoices = new List<Database.Invoice>();
                    customer.Invoices.Add(invoice);
-                   if (invoiceAdd.BillingAddress == null)
-                   {
-                       invoice.BillingAddress = new Address();
-                   }
-                   else
-                   {
-                       invoice.BillingAddress=new Address()
-                       {	
-                           AddresLine2=invoiceAdd.BillingAddress.AddresLine2,                       			
-                           AddressExternalRef=invoiceAdd.BillingAddress.AddressExternalRef,                       			
-                           AddressLine1=invoiceAdd.BillingAddress.AddressLine1,                       			
-                           AddressLine3=invoiceAdd.BillingAddress.AddressLine3,                       			
-                           City=invoiceAdd.BillingAddress.City,                       			
-                           Country=invoiceAdd.BillingAddress.Country,                       			
-                           PostZipCode=invoiceAdd.BillingAddress.PostZipCode,                       			
-                           StateCounty=invoiceAdd.BillingAddress.StateCounty,                       			
-                       };
-                   }
                    invoice.CreatedDate=invoiceAdd.CreatedDate;  	
                    invoice.DueDate=invoiceAdd.DueDate;  	
                    invoice.EmailTo=invoiceAdd.EmailTo;  	
                    invoice.OrderedBy=invoiceAdd.OrderedBy;  	
                    invoice.PaymentDetails=invoiceAdd.PaymentDetails;  	
                    invoice.PurchaseOrderRef=invoiceAdd.PurchaseOrderRef;  	
-                   if (invoiceAdd.ShippingAddress == null)
-                   {
-                       invoice.ShippingAddress = new Address();
-                   }
-                   else
-                   {
-                       invoice.ShippingAddress=new Address()
-                       {	
-                           AddresLine2=invoiceAdd.ShippingAddress.AddresLine2,                       			
-                           AddressExternalRef=invoiceAdd.ShippingAddress.AddressExternalRef,                       			
-                           AddressLine1=invoiceAdd.ShippingAddress.AddressLine1,                       			
-                           AddressLine3=invoiceAdd.ShippingAddress.AddressLine3,                       			
-                           City=invoiceAdd.ShippingAddress.City,                       			
-                           Country=invoiceAdd.ShippingAddress.Country,                       			
-                           PostZipCode=invoiceAdd.ShippingAddress.PostZipCode,                       			
-                           StateCounty=invoiceAdd.ShippingAddress.StateCounty,                       			
-                       };
-                   }
-                   invoice.TermsAndConditions =invoiceAdd.TermsAndConditions ;
-                    
-                   //UserCodeBlockStart-1
+                   invoice.TermsAndConditions =invoiceAdd.TermsAndConditions ;  	
+                   //UserCodeBlockStart-PreSave
                     var next = new CounterNextCommand();
                     var nextResult = await next.CounterNext(new CounterNext() { Name = "Invoice" });
                     invoice.InvoiceNo = nextResult.Value;
-                    //UserCodeBlockEnd-1
+                   //UserCodeBlockEnd-PreSave
 
-                    await db.SaveChangesAsync();
+                   await db.SaveChangesAsync();
 
                    result.CreatedDate=invoice.CreatedDate;
                    result.DueDate=invoice.DueDate;
@@ -118,3 +91,4 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice
 
 
 }
+

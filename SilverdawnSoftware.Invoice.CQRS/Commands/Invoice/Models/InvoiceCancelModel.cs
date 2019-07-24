@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-EF12ACF99653F3200C517A43F5FFA359-78A639D3C5ED1301048D1623A325339F
+// ALLOWOVERWRITE-94BD889669012018E72ADC855B0003CB
 
 using System;
 using System.Collections.Generic;
@@ -11,9 +11,11 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
 	[DataContract]
     public partial class InvoiceCancel : CQRSBase, IInvoiceCancel
     { 
+        /// <summary> Primary Key for Invoices </summary>				
         [DataMember]	
         public int InvoiceId  { get; set; }
 		  	
+        /// <summary> Any extra information to be applied to the invoice. </summary>				
         [DataMember]	
         public string Reason  { get; set; }
 		  	

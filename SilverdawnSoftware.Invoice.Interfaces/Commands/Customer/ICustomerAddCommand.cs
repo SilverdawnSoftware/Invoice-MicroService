@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-BCB7579379A8380E56FCFA273FBFA9D5-664151CD66E5E8977E3119B26975504D
+// ALLOWOVERWRITE-664151CD66E5E8977E3119B26975504D
 using System.Threading.Tasks;
 using SilverdawnSoftware.Invoice.Interfaces.CQRS.Querys.Results.Models;
 using SilverdawnSoftware.Invoice.Interfaces.CQRS.Commands.Customer.Models;

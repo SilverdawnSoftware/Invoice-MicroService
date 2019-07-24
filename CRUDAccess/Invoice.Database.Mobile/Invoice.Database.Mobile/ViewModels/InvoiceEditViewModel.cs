@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-8E90ED941736A9DD984C7B134057A120-68BAD5C02CDE635FEF4E760A92F5E680
+// ALLOWOVERWRITE-3A9E65E475B9A242F6039B9619EA194D
 
 using System;
 using System.ComponentModel;
@@ -20,6 +20,7 @@ namespace Database.Mobile.ViewModels
            SaveCommand=new Command( async () => await Save());
            CancelCommand = new Command(async () => await Cancel());
            ViewInvoiceLinesCommand = new Command(async () => await ViewInvoiceLines());
+           ViewPaymentHistorysCommand = new Command(async () => await ViewPaymentHistorys());
         }
 
         public ICommand SaveCommand { get; private set; }
@@ -34,6 +35,15 @@ namespace Database.Mobile.ViewModels
                 var invoiceLines = new InvoiceLineIndexViewModel();
                 await invoiceLines.GetInvoiceLinesForInvoice(InvoiceId);
                 MessagingCenter.Send<InvoiceEditViewModel, InvoiceLineIndexViewModel>(this, "ShowInvoiceLines", invoiceLines);
+        }
+
+        public ICommand ViewPaymentHistorysCommand { get; private set; }
+         
+        public async Task ViewPaymentHistorys()
+        {           
+                var paymentHistorys = new PaymentHistoryIndexViewModel();
+                await paymentHistorys.GetPaymentHistorysForInvoice(InvoiceId);
+                MessagingCenter.Send<InvoiceEditViewModel, PaymentHistoryIndexViewModel>(this, "ShowPaymentHistorys", paymentHistorys);
         }
 
         public async Task Cancel()

@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-A507BE34F56E95F3A411E6374D337F33-7A5B31AC01EA1A7D949AC3253C763416
+// ALLOWOVERWRITE-FC3B423E6382678A5A8228B4638C0581
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Customer
   	public partial class CustomerUpdateCommand : Orleans.Grain , ICustomerUpdateCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
       public async Task<ICustomerView> CustomerUpdate(ICustomerUpdate customerUpdate)
       {
 			try

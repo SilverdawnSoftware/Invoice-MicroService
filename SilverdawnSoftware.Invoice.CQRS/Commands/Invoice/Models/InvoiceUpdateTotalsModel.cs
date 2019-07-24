@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-926EAD2A79A63E0C9DFF0F7080727CE5-69C7EE46F3817C3AEA864BC45876ECFE
+// ALLOWOVERWRITE-DD7DCFF74CE6C27FF674670AD8B02221
 
 using System;
 using System.Collections.Generic;
@@ -10,15 +10,19 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models
 {
     public partial class InvoiceUpdateTotals : CQRSBase, IInvoiceUpdateTotals
     { 
+        /// <summary> Primary Key for Invoices </summary>				
         [DataMember]	
         public int InvoiceId  { get; set; }
 		  	
+        /// <summary> This is the total of all the invoice lines less tax </summary>				
         [DataMember]	
         public decimal SubTotal  { get; set; }
 		  	
+        /// <summary> This is the total of the tax for invoice line </summary>				
         [DataMember]	
         public decimal TaxTotal  { get; set; }
 		  	
+        /// <summary> This is the total of all the invoice lines + tax  </summary>				
         [DataMember]	
         public decimal GrandTotal  { get; set; }
 		  	

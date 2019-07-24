@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-9082394AD2DA2AB2DD12186921590C87-35EBF86D14CC35915F6038957E83DF8D
+// ALLOWOVERWRITE-35EBF86D14CC35915F6038957E83DF8D
 
 using System;
 using System.Collections.Generic;
@@ -8,9 +8,8 @@ namespace SilverdawnSoftware.Invoice.Interfaces.CQRS.Commands.Customer.Models
 {
     public partial interface ICustomerDelete : ICQRSBase
     { 
-
-         int CustomerId  { get; set; } 	
+         int CustomerId  { get; set; }
+		  	
 	}
 }
-
 

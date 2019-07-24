@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-0E50EAAF68BD8084D93881FB4DC6C3E4-92CE960DCE8A8FC84D361EAB11BE7B03
+// ALLOWOVERWRITE-48649879D47E45751055E6C1D7A399DF
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,14 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Counter
   	public partial class CounterUpdateCommand : Orleans.Grain , ICounterUpdateCommand
     {
 
-		
+
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
       public async Task<ICounterView> CounterUpdate(ICounterUpdate counterUpdate)
       {
 			try

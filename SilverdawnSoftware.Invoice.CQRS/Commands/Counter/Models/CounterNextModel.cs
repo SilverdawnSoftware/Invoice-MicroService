@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-A04019C94A677FEFECEA15161E7D5771-9F5F3013762105A252B2A8356E282A6D
+// ALLOWOVERWRITE-0F8EE2DD66220549025FA956BE94E892
 
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models
 {
     public partial class CounterNext : CQRSBase, ICounterNext
     { 
+        /// <summary>  </summary>				
         [DataMember]	
         public string Name  { get; set; }
 		  	

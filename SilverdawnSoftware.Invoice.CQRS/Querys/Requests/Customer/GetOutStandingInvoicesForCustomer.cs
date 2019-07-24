@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-276613F4E8A6174373D1BE22244DAB65-1A5A7BDCFB5E973EF49389F72079623E
+// ALLOWOVERWRITE
 
 using System;
 using System.Collections.Generic;
@@ -43,6 +43,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer
                             toAdd.InvoiceEmailed=invoice.InvoiceEmailed;
                             toAdd.InvoiceId=invoice.InvoiceId;
                             toAdd.InvoiceNo=invoice.InvoiceNo;
+                            toAdd.Notes=invoice.Notes;
                             toAdd.OrderedBy=invoice.OrderedBy;
                             toAdd.PaidAmount=invoice.PaidAmount;
                             toAdd.PaidDate=invoice.PaidDate;
@@ -58,6 +59,7 @@ namespace SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer
                             toAdd.ShippingAddress.Country=invoice.ShippingAddress.Country;                       			
                             toAdd.ShippingAddress.PostZipCode=invoice.ShippingAddress.PostZipCode;                       			
                             toAdd.ShippingAddress.StateCounty=invoice.ShippingAddress.StateCounty;                       			
+                            toAdd.Status=(int)invoice.Status;
                             toAdd.SubTotal=invoice.SubTotal;
                             toAdd.Tax=invoice.TaxTotal;
                             toAdd.TermsAndConditions =invoice.TermsAndConditions ;

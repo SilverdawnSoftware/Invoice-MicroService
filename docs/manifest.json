@@ -1,0 +1,1974 @@
+{
+  "homepages": [],
+  "source_base_path": "M:/Development/SilverModel Samples/Invoicing/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.CQRSBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.CQRSBase.html",
+          "hash": "JklkONrZ1x54GFKFZAW0cw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.CounterAddCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.CounterAddCommand.html",
+          "hash": "hqh8aJR2V9JZqfxNx0u2IQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.CounterNextCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.CounterNextCommand.html",
+          "hash": "dbFnLn4eGyvqwCq+hgpDiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.CounterUpdateCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.CounterUpdateCommand.html",
+          "hash": "fgGC+o97Umkq3kxddhEStA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.CounterAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.CounterAdd.html",
+          "hash": "gr99C7AMM/Nlmh+kO6ijFQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.CounterNext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.CounterNext.html",
+          "hash": "p4gbm3Q30i1DSjXizygvSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.CounterUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.CounterUpdate.html",
+          "hash": "O94cDxkT+sMgH1N/0+ickg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.Models.html",
+          "hash": "7dbtXy8ubMpwo6iHvt8/Ng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Counter.html",
+          "hash": "SBk1RvxMMZdJX/RU2P/sgw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.CustomerAddCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.CustomerAddCommand.html",
+          "hash": "5hfsqAJFq+7yzQB2E4pKSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.CustomerDeleteCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.CustomerDeleteCommand.html",
+          "hash": "LQwGJ0P+OwvwkpLQLy6/DQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.CustomerUpdateCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.CustomerUpdateCommand.html",
+          "hash": "7Vn1FncugPPTsh4D+ml/TQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.CustomerAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.CustomerAdd.html",
+          "hash": "Jmz1XjfD5kqEsI8WK6+KDg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.CustomerDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.CustomerDelete.html",
+          "hash": "S18zQKg+dwItOUv4hXec0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.CustomerUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.CustomerUpdate.html",
+          "hash": "JnT8WYQQikjiWT7Us/s8oQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.Models.html",
+          "hash": "qXifnn7W5gptLALmcJswMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Customer.html",
+          "hash": "i6qjTFASC9LCmVcm4qlovg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.EntityAddCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.EntityAddCommand.html",
+          "hash": "vdT29+QCblrHdr/28MsTgw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.EntityDeleteCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.EntityDeleteCommand.html",
+          "hash": "+csx7jrmSu1KXUR7pMmbqA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.EntityUpdateCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.EntityUpdateCommand.html",
+          "hash": "UjfdidrJc4okSZEQSZE4Yw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.EntityAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.EntityAdd.html",
+          "hash": "vxCXkjFIx77S7s3XGWfWIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.EntityDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.EntityDelete.html",
+          "hash": "8+CbYg2/OyWq5fkenzX29w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.EntityUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.EntityUpdate.html",
+          "hash": "3OwaTvEEqWVzS5K1UZbldA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.Models.html",
+          "hash": "2MnoB6/KFE/3LAfPmRDccA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Entity.html",
+          "hash": "o9jiotBb5hTEDhw2zBHHHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceAddCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceAddCommand.html",
+          "hash": "t9/50RDodVyl6TBzkW5aog=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceCancelCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceCancelCommand.html",
+          "hash": "sb8xl8+KFPcNPBbwMbFVgw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceChangeStatusCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceChangeStatusCommand.html",
+          "hash": "d9fMZeueWT45NWUmE5ubvg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceDeleteCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceDeleteCommand.html",
+          "hash": "b1F8ohfCU0Z1klXT1B5giA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceEmailCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceEmailCommand.html",
+          "hash": "AL2sk3eo3VyRqdlxVHrm4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoicePayCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoicePayCommand.html",
+          "hash": "2y+2ci09BUc2lqwFKnrAxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceUpdateCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceUpdateCommand.html",
+          "hash": "xqPnZo4xgDU3hzW9djrv0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceUpdateNotesCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceUpdateNotesCommand.html",
+          "hash": "urpiW2vlKPrfT+hJznQ0Hw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceUpdateTotalsCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.InvoiceUpdateTotalsCommand.html",
+          "hash": "fse/PS6eDvb/EWQ9vBf8OQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceAdd.html",
+          "hash": "6xFlsGUYVabwksJwRdsEtA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceCancel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceCancel.html",
+          "hash": "a5ncSm2RNfEh4bZ3O9qVhQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceChangeStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceChangeStatus.html",
+          "hash": "Idp0Eg3lQigAzAF+tzoG+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceDelete.html",
+          "hash": "YMmyTknnM+mtnhR97qo60Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceEmail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceEmail.html",
+          "hash": "477mOkXw0mEhB3wQagdxRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoicePay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoicePay.html",
+          "hash": "/QVZse8oUcColqFQRPaPLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceUpdate.html",
+          "hash": "hMHHaazjUWbiIYj+7zDLQg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceUpdateNotes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceUpdateNotes.html",
+          "hash": "2hnDeg7lQrCZrEA9wFAVYw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceUpdateTotals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.InvoiceUpdateTotals.html",
+          "hash": "KD2buTv+jalsoYlvx0stfg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Models.html",
+          "hash": "NDtdYGR5Ul77WyLUgU/J4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Templates.InvoiceEmailModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Templates.InvoiceEmailModel.html",
+          "hash": "+fjfb503NtSkciWJUF6Lww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Templates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.Templates.html",
+          "hash": "gDhET0XgN1BvAqjPWoovhw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.Invoice.html",
+          "hash": "8UO/77fMxVkLys+rnH2Xyw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.InvoiceLineAddCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.InvoiceLineAddCommand.html",
+          "hash": "PHjPGb7sxmAI0FlCMJeKzA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.InvoiceLineCreateCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.InvoiceLineCreateCommand.html",
+          "hash": "izrpjM4NDOpv2KXZdRLrgA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.InvoiceLineUpdateCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.InvoiceLineUpdateCommand.html",
+          "hash": "DAlBHScXeB0datiy/EWU5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.InvoiceLineAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.InvoiceLineAdd.html",
+          "hash": "56jzlp2Lpx2jTboNlrhkdg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.InvoiceLineCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.InvoiceLineCreate.html",
+          "hash": "osIOrjzsqsweBU5iKUizwg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.InvoiceLineUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.InvoiceLineUpdate.html",
+          "hash": "X+QsIE3CnY+ElT5QBF8evA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.Models.html",
+          "hash": "teMojp/L3Pb0nGkOspIqdQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Commands.InvoiceLine.html",
+          "hash": "OkgHUw1tPxzZRPuZCtD4GA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.GetCounterRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.GetCounterRequest.html",
+          "hash": "/JJAX1D33Xkh5N+6GRUy3A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.Models.GetCounter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.Models.GetCounter.html",
+          "hash": "9aYfCrxh4DLZ/6zixdCN3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.Models.html",
+          "hash": "CFSC7DxlIoTlGlly5nrmCQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Counter.html",
+          "hash": "fWfUpGCHCPj87FQNSwi20A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.GetCustomerRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.GetCustomerRequest.html",
+          "hash": "pRZfHbXkA4lO/JnLhbzMBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.GetOutStandingInvoicesForCustomerRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.GetOutStandingInvoicesForCustomerRequest.html",
+          "hash": "m9/MdHzwMhEHd30A6T+q0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.GetAddressesForCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.GetAddressesForCustomer.html",
+          "hash": "CBy/dPCB5iBB94dxt4jFpA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.GetCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.GetCustomer.html",
+          "hash": "/rHJD02M00xVWCuGslFvbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.GetOutStandingInvoicesForCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.GetOutStandingInvoicesForCustomer.html",
+          "hash": "Fq0vB4G4fgMwwTg0d0uRvw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.SearchForCustomerByName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.SearchForCustomerByName.html",
+          "hash": "OcMHYFV3TnfeTTlfFZ9iOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.Models.html",
+          "hash": "ROb4RgTTegXMFq1hZgpRbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.SearchForCustomerByNameRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.SearchForCustomerByNameRequest.html",
+          "hash": "n8kYVc9cw9qYuatasPRuuA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Customer.html",
+          "hash": "DG8VM20r/9R8/Xog9+t9MQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.GetAllEntitysRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.GetAllEntitysRequest.html",
+          "hash": "zNPWhodUlXXaJOWdJi+RAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.GetEntityRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.GetEntityRequest.html",
+          "hash": "HUYKO8wuvhp5Wh1PQe2k/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.GetAllEntitys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.GetAllEntitys.html",
+          "hash": "Tfj0CtLjhaVHdCvWoCVBkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.GetEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.GetEntity.html",
+          "hash": "X67amaNbYT1Nz/SK3DqJ2w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.SearchEntityByName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.SearchEntityByName.html",
+          "hash": "fk5OrlfGKTfBm29uGyn1mg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.Models.html",
+          "hash": "WuWMiii9Yzbmpzjl2brrCg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.SearchEntityByNameRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.SearchEntityByNameRequest.html",
+          "hash": "mRPsYDyArElBv4E2RTNtEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Entity.html",
+          "hash": "bJP+wl4E6dtMBaNnWTnn9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetAllInvoiceLinesForInvoiceRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetAllInvoiceLinesForInvoiceRequest.html",
+          "hash": "fRVXedCxlw97dlnzxweRbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetAllInvoicesForCustomerRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetAllInvoicesForCustomerRequest.html",
+          "hash": "7S0f4U6dP1RpNC8QYfhRPw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetAllOverdueInvoicesForCustomerRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetAllOverdueInvoicesForCustomerRequest.html",
+          "hash": "d/fUIm2gLs5igFvgLdTuOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetInvoiceRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.GetInvoiceRequest.html",
+          "hash": "EQWj/gmdVx4ECm/+S0RYaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetAllInvoiceLinesForInvoice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetAllInvoiceLinesForInvoice.html",
+          "hash": "IpAV24AdEwvj4qTIrcHFIg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetAllInvoicesForCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetAllInvoicesForCustomer.html",
+          "hash": "nuBmO5jylEFDXGEkNDlCUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetAllOverdueInvoicesForCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetAllOverdueInvoicesForCustomer.html",
+          "hash": "WsgXJrNF9UcbE6xls1CqMw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetInvoice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.GetInvoice.html",
+          "hash": "fGCaWocJ9qlwo+1GeX94sg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.Models.html",
+          "hash": "LWd236+wFwfhPIb5Fxp4jA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.Invoice.html",
+          "hash": "27ed3BiViCDaerz+fFVjHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.GetInvoiceLineRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.GetInvoiceLineRequest.html",
+          "hash": "o6uHb9KX1qHmFAB+B/oR9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.Models.GetInvoiceLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.Models.GetInvoiceLine.html",
+          "hash": "wahgxZ7d2M8hPdvifTvqZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.Models.html",
+          "hash": "6+xVvN+OqlFgP+NZhK4GWA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Requests.InvoiceLine.html",
+          "hash": "9ZTT9sZ5mg3czEZy7UXs9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.AddressView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.AddressView.html",
+          "hash": "/91lYuauPvRTSFUP7Egw9w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.CounterView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.CounterView.html",
+          "hash": "g1m8kuN5dQOgJEg2Px1+fg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.CustomerView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.CustomerView.html",
+          "hash": "FWADun7/ynAGSS86DfwlMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.EntityView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.EntityView.html",
+          "hash": "epeuaxhciiGQTODoMXZJ3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.InvoiceLineView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.InvoiceLineView.html",
+          "hash": "wiC7G+oTMrNrGU5MYLdcwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.InvoiceStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.InvoiceStatus.html",
+          "hash": "bbskc8R1woHHZn5d2tQFZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.InvoiceView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.InvoiceView.html",
+          "hash": "nOURLtlbMgWruwgNzYaFpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.Querys.Results.Models.html",
+          "hash": "7bFWyCbLRVNTl5Lw93cbRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.CQRS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.CQRS.html",
+          "hash": "9/XvJwgyl78+/K+FwPv9lA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Address.html",
+          "hash": "OoZk9owpZWrwlXAyOUmVEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Counter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Counter.html",
+          "hash": "rhjdtQzfC164TYIcf560qQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Customer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Customer.html",
+          "hash": "fYA7lOZDZ4KaxI1n5/3CHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Entity.html",
+          "hash": "kpzNoouCb6dvFFefiw913Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Invoice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Invoice.html",
+          "hash": "OS4g6/5X5aEvAXxjZT4yHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.InvoiceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.InvoiceContext.html",
+          "hash": "BigGebjx1UPy/D+2bu2Mdg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.InvoiceLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.InvoiceLine.html",
+          "hash": "qu3Rz9ofCWqKpWIgirXjLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.InvoiceStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.InvoiceStatus.html",
+          "hash": "nDgyDTRcxhtLHh8VafJrew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Migrations.first.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Migrations.first.html",
+          "hash": "3mLTHVyJlbn1I+OAHnxq4g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Migrations.taxtotal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Migrations.taxtotal.html",
+          "hash": "ZEWkuxY1e11mK2L/kLwcOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Migrations.html",
+          "hash": "DBDt9cYtuU5swUYIbdE2Iw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.PaymentHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.PaymentHistory.html",
+          "hash": "jbvLNIhC2BBx2pkwXUPAqg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.CounterTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.CounterTransactions.html",
+          "hash": "7Nxdsm5EePH06hEgyZu9Eg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.CustomerTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.CustomerTransactions.html",
+          "hash": "4b35fplTH3qiqrunjBkKug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.EntityTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.EntityTransactions.html",
+          "hash": "91/rxoQob4+KfuMMF906Rw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.InvoiceLineTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.InvoiceLineTransactions.html",
+          "hash": "s0Xp9JYlBE6be661VGL1kQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.InvoiceTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.InvoiceTransactions.html",
+          "hash": "KMMM6OFZ5iThWLZqCF2iNw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CounterAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CounterAdd.html",
+          "hash": "z2+hcj/MtimamxRl/aNA1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CounterDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CounterDelete.html",
+          "hash": "cLm7x7TX0dsynKzgAgpP/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CounterUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CounterUpdate.html",
+          "hash": "8A8R4SwJIfslrjYVlcGGjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CustomerAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CustomerAdd.html",
+          "hash": "iqRyktl5pxof7BfV3dLicA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CustomerDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CustomerDelete.html",
+          "hash": "JR/G15nmOWSLGTZKz/8S3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CustomerUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.CustomerUpdate.html",
+          "hash": "mhzvvfovQmrnegJCt6AOdw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.EntityAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.EntityAdd.html",
+          "hash": "iL40ynUblAKajT5Kp2SCcA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.EntityDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.EntityDelete.html",
+          "hash": "ynR+cfm4jxbyCKzP9mE40A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.EntityUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.EntityUpdate.html",
+          "hash": "DdwZVbb2kcHXKobiGa4PRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceAdd.html",
+          "hash": "sEFhVrmeS5gBOxNWXJaAZQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceDelete.html",
+          "hash": "C8p9J4bV+CXhJb+4VEYt9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceLineAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceLineAdd.html",
+          "hash": "Q7rNtA7wFsxKXTPrDW6jrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceLineDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceLineDelete.html",
+          "hash": "PSs5mS8YtAoGQ3ukdjU0iQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceLineUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceLineUpdate.html",
+          "hash": "rjWg1NrQ941Xpdas0Az3+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.InvoiceUpdate.html",
+          "hash": "cqEXRnqeClfCa482ccfqmA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.PaymentHistoryAdd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.PaymentHistoryAdd.html",
+          "hash": "HgdJYBHi48iWzY9woWuHNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.PaymentHistoryDelete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.PaymentHistoryDelete.html",
+          "hash": "7fzWsWHe8xFDWVWzknypdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.PaymentHistoryUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.PaymentHistoryUpdate.html",
+          "hash": "Oh34xGvX1W9HfS82naxThA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.Model.html",
+          "hash": "qIaDemcxCe8RsTg2eUnn0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.PaymentHistoryTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.PaymentHistoryTransactions.html",
+          "hash": "zftisei8eXHEpDI9yPjbeQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Transactions.html",
+          "hash": "F4+VHW3+HfjTYhAtwNUxgg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.UnitType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.UnitType.html",
+          "hash": "U33NyzDbLBpRljhhtGkksQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.CounterViews.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.CounterViews.html",
+          "hash": "IB2jHfcTwAuV8PsWew2F6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.CustomerViews.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.CustomerViews.html",
+          "hash": "2WYEvrxPlXiBuiryY0aykw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.EntityViews.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.EntityViews.html",
+          "hash": "jCMe2E1sxnMUyNVgnigALQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.InvoiceLineViews.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.InvoiceLineViews.html",
+          "hash": "s5T9BY7FkAjh8H+d3fDTcg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.InvoiceViews.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.InvoiceViews.html",
+          "hash": "Wg1C9fCD58O+61eIcqladw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.AddressView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.AddressView.html",
+          "hash": "+k8bZBapB3qi/LWGy6kc9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.CounterView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.CounterView.html",
+          "hash": "DWqcYUvvDJ2cA6sk5JeVtw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.CustomerView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.CustomerView.html",
+          "hash": "ZIlql7Q6FWK9y/6MVjU/9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.EntityView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.EntityView.html",
+          "hash": "Z/yg3O/Y3XTVGzVgK4G4qw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.InvoiceLineView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.InvoiceLineView.html",
+          "hash": "WMYdqwR4O7aMKX+iPgqbdQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.InvoiceView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.InvoiceView.html",
+          "hash": "c2/pmg7xxwZaGsSJWhCatA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.PaymentHistoryView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.PaymentHistoryView.html",
+          "hash": "56/w3gMDoKEH14if9X7O/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.Model.html",
+          "hash": "Ivhpq33wAsKRpooIj25spA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.PaymentHistoryViews.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.PaymentHistoryViews.html",
+          "hash": "WkZVVqB1qt2Oe4uuw+Ox7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.Views.html",
+          "hash": "IyY38DyM8wLyTec/qTgHEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SilverdawnSoftware.Invoice.Database.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SilverdawnSoftware.Invoice.Database.html",
+          "hash": "Z37t4HhI762y79F9jNqzmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "qU+hxsgKnaPja/eZs7QoIg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "7az5mnLH/9z87UW8JGDrfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "GlNun658ZTTQ+h9RC4fQpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "RCyXTFuPkY6SiblZ1KrpjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 154,
+          "skipped_file_count": 154
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

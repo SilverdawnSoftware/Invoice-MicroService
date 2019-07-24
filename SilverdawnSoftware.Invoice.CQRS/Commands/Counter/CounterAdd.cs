@@ -1,4 +1,4 @@
-// ALLOWOVERWRITE-0209806F89CC255B35E9F4739E375B74
+// ALLOWOVERWRITE
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -16,41 +16,48 @@ using SilverdawnSoftware.Invoice.Database;
 
 namespace SilverdawnSoftware.Invoice.CQRS.Commands.Counter
 {
-  	public partial class CounterAddCommand : Orleans.Grain , ICounterAddCommand
+    public partial class CounterAddCommand : Orleans.Grain, ICounterAddCommand
     {
 
-		
-      public async Task<ICounterView> CounterAdd(ICounterAdd counterAdd)
-      {
-			try
-          {
-              var result=new CounterView();
-              using (var db=new InvoiceContext())
-              {
-                   var counter = new Database.Counter();
-                   db.Counters.Add(counter);
-                   counter.Name=counterAdd.Name;  	
-                   counter.Value=counterAdd.Value;  	
-                   //UserCodeBlockStart-PreSave
-                   //UserCodeBlockEnd-PreSave
-                   await db.SaveChangesAsync();
 
-                   result.Name=counter.Name;
-                   result.Value=counter.Value;
-                   //UserCodeBlockStart-PreResult
-                   //UserCodeBlockEnd-PreResult
-                   return result;
-               }
-           }
-          catch (Exception e)
+        /// <summary>  </summary>
+        /// <param name="invoiceAdd">this is a test</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// ///
+
+        /// </remarks>
+        public async Task<ICounterView> CounterAdd(ICounterAdd counterAdd)
+        {
+            try
+            {
+                var result = new CounterView();
+                using (var db = new InvoiceContext())
                 {
-                    LogFactory.GetLogger().Log(LogLevel.Error,e);
-                    return new CounterView(){__CQRSSuccessful = false,__CQRSErrorMessage = "Unable to create CounterView",__CQRSStatusCode = 500};             
-                } 
-           }
-	}
+                    var counter = new Database.Counter();
+                    db.Counters.Add(counter);
+                    counter.Name = counterAdd.Name;
+                    counter.Value = counterAdd.Value;
+                    //UserCodeBlockStart-PreSave
+                    //UserCodeBlockEnd-PreSave
+
+                    await db.SaveChangesAsync();
+
+                    result.Name = counter.Name;
+                    result.Value = counter.Value;
+                    //UserCodeBlockStart-PreResult
+                    //UserCodeBlockEnd-PreResult
+                    return result;
+                }
+            }
+            catch (Exception e)
+            {
+                LogFactory.GetLogger().Log(LogLevel.Error, e);
+                return new CounterView() { __CQRSSuccessful = false, __CQRSErrorMessage = "Unable to create CounterView", __CQRSStatusCode = 500 };
+            }
+        }
+    }
 
 
 
 }
-

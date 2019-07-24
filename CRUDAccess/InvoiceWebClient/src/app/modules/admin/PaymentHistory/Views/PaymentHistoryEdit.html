@@ -1,0 +1,49 @@
+<!-- ALLOWOVERWRITE-38E5BEF26A6F05E93EFF02524FF1CBD0 -->
+
+
+ <form [formGroup]="paymentHistoryForm" class="form-horizontal css-form" role="form" (ngSubmit)="update()">
+        <mat-tab-group >        	
+        	 <mat-tab label="Main">        	 
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="amount" id="paymentHistoryAmount" type="number" placeholder="Amount"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="paymentDate" id="paymentHistoryPaymentDate" type="date" placeholder="PaymentDate"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+        	 			</div>
+        	 		</div>
+        	 		<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
+        	 			<div fxFlex>	
+				    	            	    				
+			                         <mat-form-field>                            
+			                                <input matInput formControlName="reference" id="paymentHistoryReference" type="text" placeholder="Reference"  required/>
+									</mat-form-field>                       
+			                        
+        	 			</div>
+        	 		</div>
+			 </mat-tab>
+
+        	 
+    	
+        	 
+        	 
+        	 </mat-tab-group>
+   <div style="padding-top: 10px;">
+	    <button mat-raised-button color="primary" ng-click="save()">Save</button>
+   </div>
+        	 
+   </form>
